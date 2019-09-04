@@ -327,16 +327,16 @@ MQTT_SafeStrip_publisher::publish(
 
 bool
 MQTT_SafeStrip_publisher::publish(
-  HMI_inputs const & S, int * mid
+  HMIinputsByApp_active const & S, int * mid
 ) {
   char    topic[1000];
-  uint8_t buffer[HMI_inputs_size];
-  HMI_inputs_MQTT_topic( &S, topic, 1000 );
-  HMI_inputs_to_buffer( &S, buffer );
+  uint8_t buffer[HMIinputsByApp_active_size];
+  HMIinputsByApp_active_MQTT_topic( &S, topic, 1000 );
+  HMIinputsByApp_active_to_buffer( &S, buffer );
   int ret = this->mosqpp::mosquittopp::publish(
     mid,
     topic,
-    HMI_inputs_size,
+    HMIinputsByApp_active_size,
     buffer,
     this->qos,
     false
@@ -847,7 +847,7 @@ MQTT_SafeStrip_subscriber::on_connect( int result ) {
     this->subscribe( nullptr, topic );
     HMI_activations_MQTT_alltopics( topic, 1000 );
     this->subscribe( nullptr, topic );
-    HMI_inputs_MQTT_alltopics( topic, 1000 );
+    HMIinputsByApp_active_MQTT_alltopics( topic, 1000 );
     this->subscribe( nullptr, topic );
     HMIinputsByApp_MQTT_alltopics( topic, 1000 );
     this->subscribe( nullptr, topic );
@@ -931,13 +931,13 @@ MQTT_SafeStrip_subscriber::on_message(
     #ifdef DEBUG
     HMI_activations_print( &HMI_activations_data );
     #endif
-  } else if ( HMI_inputs_MQTT_compare( message->topic ) == 0 ) {
+  } else if ( HMIinputsByApp_active_MQTT_compare( message->topic ) == 0 ) {
     MQTT_MESSAGE_DEBUG("MQTT_SafeStrip_subscriber::on_message TOPIC: " << message->topic );
     // Add mutex for sync
-    buffer_to_HMI_inputs( ptr, &this->HMI_inputs_data );
+    buffer_to_HMIinputsByApp_active( ptr, &this->HMIinputsByApp_active_data );
     // Add mutex for sync
     #ifdef DEBUG
-    HMI_inputs_print( &HMI_inputs_data );
+    HMIinputsByApp_active_print( &HMIinputsByApp_active_data );
     #endif
   } else if ( HMIinputsByApp_MQTT_compare( message->topic ) == 0 ) {
     MQTT_MESSAGE_DEBUG("MQTT_SafeStrip_subscriber::on_message TOPIC: " << message->topic );
@@ -1094,10 +1094,10 @@ MQTT_SafeStrip_subscriber::get_last_HMI_activations( HMI_activations & S ) const
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 void
-MQTT_SafeStrip_subscriber::get_last_HMI_inputs( HMI_inputs & S ) const
+MQTT_SafeStrip_subscriber::get_last_HMIinputsByApp_active( HMIinputsByApp_active & S ) const
 {
   // Add mutex for sync
-  std::memcpy( &S, &this->HMI_inputs_data, sizeof( HMI_inputs ) );
+  std::memcpy( &S, &this->HMIinputsByApp_active_data, sizeof( HMIinputsByApp_active ) );
   // Add mutex for sync
 }
 

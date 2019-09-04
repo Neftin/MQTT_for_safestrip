@@ -24,7 +24,7 @@
 #include "MAPEM_message.h"
 #include "DSS_inputs.h"
 #include "HMI_activations.h"
-#include "HMI_inputs.h"
+#include "HMIinputsByApp_active.h"
 #include "HMIinputsByApp.h"
 #include "ObstacleInteractionData.h"
 #include "FirstTrajectoryMotorPrimitivesParameters.h"
@@ -59,7 +59,7 @@ public:
   bool publish( MAPEM_message const & S, int * mid = nullptr );
   bool publish( DSS_inputs const & S, int * mid = nullptr );
   bool publish( HMI_activations const & S, int * mid = nullptr );
-  bool publish( HMI_inputs const & S, int * mid = nullptr );
+  bool publish( HMIinputsByApp_active const & S, int * mid = nullptr );
   bool publish( HMIinputsByApp const & S, int * mid = nullptr );
   bool publish( ObstacleInteractionData const & S, int * mid = nullptr );
   bool publish( FirstTrajectoryMotorPrimitivesParameters const & S, int * mid = nullptr );
@@ -80,7 +80,7 @@ class MQTT_SafeStrip_subscriber : public mosqpp::mosquittopp {
   MAPEM_message MAPEM_message_data;
   DSS_inputs DSS_inputs_data;
   HMI_activations HMI_activations_data;
-  HMI_inputs HMI_inputs_data;
+  HMIinputsByApp_active HMIinputsByApp_active_data;
   HMIinputsByApp HMIinputsByApp_data;
   ObstacleInteractionData ObstacleInteractionData_data;
   FirstTrajectoryMotorPrimitivesParameters FirstTrajectoryMotorPrimitivesParameters_data;
@@ -150,7 +150,7 @@ public:
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
   void
-  get_last_HMI_inputs( HMI_inputs & S ) const;
+  get_last_HMIinputsByApp_active( HMIinputsByApp_active & S ) const;
 
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

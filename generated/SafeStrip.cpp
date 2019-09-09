@@ -695,16 +695,62 @@ MQTT_SafeStrip_publisher::publish(
 
 bool
 MQTT_SafeStrip_publisher::publish(
-  VirtualToll const & S, int * mid
+  VirtualToll_input const & S, int * mid
 ) {
   char    topic[1000];
-  uint8_t buffer[VirtualToll_size];
-  VirtualToll_MQTT_topic( &S, topic, 1000 );
-  VirtualToll_to_buffer( &S, buffer );
+  uint8_t buffer[VirtualToll_input_size];
+  VirtualToll_input_MQTT_topic( &S, topic, 1000 );
+  VirtualToll_input_to_buffer( &S, buffer );
   int ret = this->mosqpp::mosquittopp::publish(
     mid,
     topic,
-    VirtualToll_size,
+    VirtualToll_input_size,
+    buffer,
+    this->qos,
+    false
+  );
+  switch ( ret ) {
+  case MOSQ_ERR_SUCCESS:
+    break;
+  case MOSQ_ERR_INVAL:
+    std::cout << "publish SafeStrip: the input parameters were invalid.\n";
+    break;
+  case MOSQ_ERR_NOMEM:
+    std::cout << "publish SafeStrip: an out of memory condition occurred.";
+    break;
+  case MOSQ_ERR_NO_CONN:
+    std::cout << "publish SafeStrip: the client isn’t connected to a broker.";
+    break;
+  case MOSQ_ERR_PROTOCOL:
+    std::cout << "publish SafeStrip: there is a protocol error communicating with the broker.";
+    break;
+  case MOSQ_ERR_PAYLOAD_SIZE:
+    std::cout << "publish SafeStrip: payloadlen is too large.";
+    break;
+  //case MOSQ_ERR_MALFORMED_UTF8:
+  //  std::cout << "publish SafeStrip: malformed utf8\n";
+  //  break;
+  default:
+    std::cout << "publish SafeStrip: return = " << ret << "\n";
+  }
+  return ret == MOSQ_ERR_SUCCESS;
+}
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+bool
+MQTT_SafeStrip_publisher::publish(
+  VirtualToll_output const & S, int * mid
+) {
+  char    topic[1000];
+  uint8_t buffer[VirtualToll_output_size];
+  VirtualToll_output_MQTT_topic( &S, topic, 1000 );
+  VirtualToll_output_to_buffer( &S, buffer );
+  int ret = this->mosqpp::mosquittopp::publish(
+    mid,
+    topic,
+    VirtualToll_output_size,
     buffer,
     this->qos,
     false
@@ -863,7 +909,9 @@ MQTT_SafeStrip_subscriber::on_connect( int result ) {
     this->subscribe( nullptr, topic );
     ParkingApplication_MQTT_alltopics( topic, 1000 );
     this->subscribe( nullptr, topic );
-    VirtualToll_MQTT_alltopics( topic, 1000 );
+    VirtualToll_input_MQTT_alltopics( topic, 1000 );
+    this->subscribe( nullptr, topic );
+    VirtualToll_output_MQTT_alltopics( topic, 1000 );
     this->subscribe( nullptr, topic );
     VMS_VDS_MQTT_alltopics( topic, 1000 );
     this->subscribe( nullptr, topic );
@@ -995,13 +1043,21 @@ MQTT_SafeStrip_subscriber::on_message(
     #ifdef DEBUG
     ParkingApplication_print( &ParkingApplication_data );
     #endif
-  } else if ( VirtualToll_MQTT_compare( message->topic ) == 0 ) {
+  } else if ( VirtualToll_input_MQTT_compare( message->topic ) == 0 ) {
     MQTT_MESSAGE_DEBUG("MQTT_SafeStrip_subscriber::on_message TOPIC: " << message->topic );
     // Add mutex for sync
-    buffer_to_VirtualToll( ptr, &this->VirtualToll_data );
+    buffer_to_VirtualToll_input( ptr, &this->VirtualToll_input_data );
     // Add mutex for sync
     #ifdef DEBUG
-    VirtualToll_print( &VirtualToll_data );
+    VirtualToll_input_print( &VirtualToll_input_data );
+    #endif
+  } else if ( VirtualToll_output_MQTT_compare( message->topic ) == 0 ) {
+    MQTT_MESSAGE_DEBUG("MQTT_SafeStrip_subscriber::on_message TOPIC: " << message->topic );
+    // Add mutex for sync
+    buffer_to_VirtualToll_output( ptr, &this->VirtualToll_output_data );
+    // Add mutex for sync
+    #ifdef DEBUG
+    VirtualToll_output_print( &VirtualToll_output_data );
     #endif
   } else if ( VMS_VDS_MQTT_compare( message->topic ) == 0 ) {
     MQTT_MESSAGE_DEBUG("MQTT_SafeStrip_subscriber::on_message TOPIC: " << message->topic );
@@ -1182,10 +1238,21 @@ MQTT_SafeStrip_subscriber::get_last_ParkingApplication( ParkingApplication & S )
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 void
-MQTT_SafeStrip_subscriber::get_last_VirtualToll( VirtualToll & S ) const
+MQTT_SafeStrip_subscriber::get_last_VirtualToll_input( VirtualToll_input & S ) const
 {
   // Add mutex for sync
-  std::memcpy( &S, &this->VirtualToll_data, sizeof( VirtualToll ) );
+  std::memcpy( &S, &this->VirtualToll_input_data, sizeof( VirtualToll_input ) );
+  // Add mutex for sync
+}
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+void
+MQTT_SafeStrip_subscriber::get_last_VirtualToll_output( VirtualToll_output & S ) const
+{
+  // Add mutex for sync
+  std::memcpy( &S, &this->VirtualToll_output_data, sizeof( VirtualToll_output ) );
   // Add mutex for sync
 }
 

@@ -32,7 +32,8 @@
 #include "StrainGauge.h"
 #include "AutomationLevel.h"
 #include "ParkingApplication.h"
-#include "VirtualToll.h"
+#include "VirtualToll_input.h"
+#include "VirtualToll_output.h"
 #include "VMS_VDS.h"
 #include "RoadDataFrictionInputs.h"
 
@@ -67,7 +68,8 @@ public:
   bool publish( StrainGauge const & S, int * mid = nullptr );
   bool publish( AutomationLevel const & S, int * mid = nullptr );
   bool publish( ParkingApplication const & S, int * mid = nullptr );
-  bool publish( VirtualToll const & S, int * mid = nullptr );
+  bool publish( VirtualToll_input const & S, int * mid = nullptr );
+  bool publish( VirtualToll_output const & S, int * mid = nullptr );
   bool publish( VMS_VDS const & S, int * mid = nullptr );
   bool publish( RoadDataFrictionInputs const & S, int * mid = nullptr );
 };
@@ -88,7 +90,8 @@ class MQTT_SafeStrip_subscriber : public mosqpp::mosquittopp {
   StrainGauge StrainGauge_data;
   AutomationLevel AutomationLevel_data;
   ParkingApplication ParkingApplication_data;
-  VirtualToll VirtualToll_data;
+  VirtualToll_input VirtualToll_input_data;
+  VirtualToll_output VirtualToll_output_data;
   VMS_VDS VMS_VDS_data;
   RoadDataFrictionInputs RoadDataFrictionInputs_data;
 public:
@@ -198,7 +201,13 @@ public:
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
   void
-  get_last_VirtualToll( VirtualToll & S ) const;
+  get_last_VirtualToll_input( VirtualToll_input & S ) const;
+
+
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  void
+  get_last_VirtualToll_output( VirtualToll_output & S ) const;
 
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

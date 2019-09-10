@@ -21,21 +21,21 @@
 #include "HostVehicle.h"
 #include "CAM_message.h"
 #include "DENM_message.h"
+#include "Strip_CAM.h"
 #include "MAPEM_message.h"
-#include "DSS_inputs.h"
 #include "HMI_activations.h"
 #include "HMIinputsByApp_active.h"
 #include "HMIinputsByApp.h"
-#include "ObstacleInteractionData.h"
 #include "FirstTrajectoryMotorPrimitivesParameters.h"
 #include "ManouevreTypes.h"
 #include "StrainGauge.h"
 #include "AutomationLevel.h"
-#include "ParkingApplication.h"
+#include "ParkingStatus.h"
+#include "ParkingEvent.h"
+#include "ParkingOutput.h"
 #include "VirtualToll_input.h"
 #include "VirtualToll_output.h"
-#include "VMS_VDS.h"
-#include "RoadDataFrictionInputs.h"
+#include "EnvironmentData.h"
 
 class MQTT_SafeStrip_publisher : public mosqpp::mosquittopp {
 private:
@@ -57,21 +57,21 @@ public:
   bool publish( HostVehicle const & S, int * mid = nullptr );
   bool publish( CAM_message const & S, int * mid = nullptr );
   bool publish( DENM_message const & S, int * mid = nullptr );
+  bool publish( Strip_CAM const & S, int * mid = nullptr );
   bool publish( MAPEM_message const & S, int * mid = nullptr );
-  bool publish( DSS_inputs const & S, int * mid = nullptr );
   bool publish( HMI_activations const & S, int * mid = nullptr );
   bool publish( HMIinputsByApp_active const & S, int * mid = nullptr );
   bool publish( HMIinputsByApp const & S, int * mid = nullptr );
-  bool publish( ObstacleInteractionData const & S, int * mid = nullptr );
   bool publish( FirstTrajectoryMotorPrimitivesParameters const & S, int * mid = nullptr );
   bool publish( ManouevreTypes const & S, int * mid = nullptr );
   bool publish( StrainGauge const & S, int * mid = nullptr );
   bool publish( AutomationLevel const & S, int * mid = nullptr );
-  bool publish( ParkingApplication const & S, int * mid = nullptr );
+  bool publish( ParkingStatus const & S, int * mid = nullptr );
+  bool publish( ParkingEvent const & S, int * mid = nullptr );
+  bool publish( ParkingOutput const & S, int * mid = nullptr );
   bool publish( VirtualToll_input const & S, int * mid = nullptr );
   bool publish( VirtualToll_output const & S, int * mid = nullptr );
-  bool publish( VMS_VDS const & S, int * mid = nullptr );
-  bool publish( RoadDataFrictionInputs const & S, int * mid = nullptr );
+  bool publish( EnvironmentData const & S, int * mid = nullptr );
 };
 
 
@@ -79,21 +79,21 @@ class MQTT_SafeStrip_subscriber : public mosqpp::mosquittopp {
   HostVehicle HostVehicle_data;
   CAM_message CAM_message_data;
   DENM_message DENM_message_data;
+  Strip_CAM Strip_CAM_data;
   MAPEM_message MAPEM_message_data;
-  DSS_inputs DSS_inputs_data;
   HMI_activations HMI_activations_data;
   HMIinputsByApp_active HMIinputsByApp_active_data;
   HMIinputsByApp HMIinputsByApp_data;
-  ObstacleInteractionData ObstacleInteractionData_data;
   FirstTrajectoryMotorPrimitivesParameters FirstTrajectoryMotorPrimitivesParameters_data;
   ManouevreTypes ManouevreTypes_data;
   StrainGauge StrainGauge_data;
   AutomationLevel AutomationLevel_data;
-  ParkingApplication ParkingApplication_data;
+  ParkingStatus ParkingStatus_data;
+  ParkingEvent ParkingEvent_data;
+  ParkingOutput ParkingOutput_data;
   VirtualToll_input VirtualToll_input_data;
   VirtualToll_output VirtualToll_output_data;
-  VMS_VDS VMS_VDS_data;
-  RoadDataFrictionInputs RoadDataFrictionInputs_data;
+  EnvironmentData EnvironmentData_data;
 public:
   MQTT_SafeStrip_subscriber( char const id[], bool clean_session = true)
   : mosqpp::mosquittopp( id, clean_session )
@@ -135,13 +135,13 @@ public:
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
   void
-  get_last_MAPEM_message( MAPEM_message & S ) const;
+  get_last_Strip_CAM( Strip_CAM & S ) const;
 
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
   void
-  get_last_DSS_inputs( DSS_inputs & S ) const;
+  get_last_MAPEM_message( MAPEM_message & S ) const;
 
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -160,12 +160,6 @@ public:
 
   void
   get_last_HMIinputsByApp( HMIinputsByApp & S ) const;
-
-
-  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-  void
-  get_last_ObstacleInteractionData( ObstacleInteractionData & S ) const;
 
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -195,7 +189,19 @@ public:
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
   void
-  get_last_ParkingApplication( ParkingApplication & S ) const;
+  get_last_ParkingStatus( ParkingStatus & S ) const;
+
+
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  void
+  get_last_ParkingEvent( ParkingEvent & S ) const;
+
+
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  void
+  get_last_ParkingOutput( ParkingOutput & S ) const;
 
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -213,13 +219,7 @@ public:
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
   void
-  get_last_VMS_VDS( VMS_VDS & S ) const;
-
-
-  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-  void
-  get_last_RoadDataFrictionInputs( RoadDataFrictionInputs & S ) const;
+  get_last_EnvironmentData( EnvironmentData & S ) const;
 
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

@@ -17,7 +17,7 @@ void
 DENM_message_print( DENM_message const * S ) {
   int i_count;
   printf( "UTC_time                                        = %llu\n", S->UTC_time);
-  printf( "v2x_header_msgID                                = %u\n", S->v2x_header_msgID);
+  printf( "v2x_header_StationID                            = %d\n", S->v2x_header_StationID);
   printf( "v2x_header_originationStationID                 = %d\n", S->v2x_header_originationStationID);
   printf( "v2x_denm_sequenceNumber                         = %hu\n", S->v2x_denm_sequenceNumber);
   printf( "v2x_denm_detectionTime                          = %llu\n", S->v2x_denm_detectionTime);
@@ -41,6 +41,7 @@ DENM_message_print( DENM_message const * S ) {
     printf( "v2x_denm_EventHistory_deltaLongitude[%d]        = %d\n", i_count, S->v2x_denm_EventHistory_deltaLongitude[i_count]);
   for ( i_count=0; i_count<10; ++i_count )
     printf( "v2x_denm_EventHistory_deltaAltitude[%d]         = %d\n", i_count, S->v2x_denm_EventHistory_deltaAltitude[i_count]);
+  printf( "v2x_denm_alacarte_LanePosition                  = %d\n", S->v2x_denm_alacarte_LanePosition);
 }
 
 
@@ -53,7 +54,7 @@ DENM_message_to_buffer(
   int i_count;
   uint8_t * ptr = buffer;
   ptr += uint64_to_buffer( S->UTC_time, ptr );
-  ptr += uint32_to_buffer( S->v2x_header_msgID, ptr );
+  ptr += int32_to_buffer( S->v2x_header_StationID, ptr );
   ptr += int32_to_buffer( S->v2x_header_originationStationID, ptr );
   ptr += uint16_to_buffer( S->v2x_denm_sequenceNumber, ptr );
   ptr += uint64_to_buffer( S->v2x_denm_detectionTime, ptr );
@@ -77,6 +78,7 @@ DENM_message_to_buffer(
     { ptr += int32_to_buffer( S->v2x_denm_EventHistory_deltaLongitude[i_count], ptr ); }
   for ( i_count=0; i_count<10; ++i_count )
     { ptr += int32_to_buffer( S->v2x_denm_EventHistory_deltaAltitude[i_count], ptr ); }
+  ptr += int32_to_buffer( S->v2x_denm_alacarte_LanePosition, ptr );
 }
 
 
@@ -89,7 +91,7 @@ buffer_to_DENM_message(
   int i_count;
   uint8_t const * ptr = buffer;
   ptr += buffer_to_uint64( ptr, &S->UTC_time );
-  ptr += buffer_to_uint32( ptr, &S->v2x_header_msgID );
+  ptr += buffer_to_int32( ptr, &S->v2x_header_StationID );
   ptr += buffer_to_int32( ptr, &S->v2x_header_originationStationID );
   ptr += buffer_to_uint16( ptr, &S->v2x_denm_sequenceNumber );
   ptr += buffer_to_uint64( ptr, &S->v2x_denm_detectionTime );
@@ -113,6 +115,7 @@ buffer_to_DENM_message(
     { ptr += buffer_to_int32( ptr, & S->v2x_denm_EventHistory_deltaLongitude[i_count] ); }
   for ( i_count=0; i_count<10; ++i_count )
     { ptr += buffer_to_int32( ptr, & S->v2x_denm_EventHistory_deltaAltitude[i_count] ); }
+  ptr += buffer_to_int32( ptr, &S->v2x_denm_alacarte_LanePosition );
 }
 
 

@@ -4,7 +4,7 @@
 \*/
 
 #include "buffer_defines.h"
-#include "RoadDataFrictionInputs.h"
+#include "EnvironmentData.h"
 #include <stdio.h>
 #include <string.h>
 
@@ -12,9 +12,9 @@
   extern "C" {
 #endif
 
-/* print RoadDataFrictionInputs struct on stdio */
+/* print EnvironmentData struct on stdio */
 void
-RoadDataFrictionInputs_print( RoadDataFrictionInputs const * S ) {
+EnvironmentData_print( EnvironmentData const * S ) {
   int i_count;
   printf( "StripID                = %u\n", S->StripID);
   printf( "Fog                    = %u\n", S->Fog);
@@ -32,10 +32,10 @@ RoadDataFrictionInputs_print( RoadDataFrictionInputs const * S ) {
 }
 
 
-/* serialize RoadDataFrictionInputs struct to buffer */
+/* serialize EnvironmentData struct to buffer */
 void
-RoadDataFrictionInputs_to_buffer(
-  RoadDataFrictionInputs const * S,
+EnvironmentData_to_buffer(
+  EnvironmentData const * S,
   uint8_t buffer[]
 ) {
   int i_count;
@@ -56,11 +56,11 @@ RoadDataFrictionInputs_to_buffer(
 }
 
 
-/* get buffer and un-serialize to RoadDataFrictionInputs struct */
+/* get buffer and un-serialize to EnvironmentData struct */
 void
-buffer_to_RoadDataFrictionInputs(
+buffer_to_EnvironmentData(
   uint8_t const buffer[],
-  RoadDataFrictionInputs * S
+  EnvironmentData * S
 ) {
   int i_count;
   uint8_t const * ptr = buffer;
@@ -80,29 +80,29 @@ buffer_to_RoadDataFrictionInputs(
 }
 
 
-/* build topic for RoadDataFrictionInputs struct */
+/* build topic for EnvironmentData struct */
 void
-RoadDataFrictionInputs_MQTT_topic(
-  RoadDataFrictionInputs const * S,
+EnvironmentData_MQTT_topic(
+  EnvironmentData const * S,
   char topic[],
   int topic_max_len
 ) {
-  char const * base_topic = "SafeStrip/RoadDataFrictionInputs";
+  char const * base_topic = "SafeStrip/EnvironmentData";
   snprintf( topic, topic_max_len, "%s/%d", base_topic, S->StripID );
 }
 
 int
-RoadDataFrictionInputs_MQTT_compare( char const topic[] ) {
-  int topic_len = 32;
-  char const * topic_ref = "SafeStrip/RoadDataFrictionInputs";
+EnvironmentData_MQTT_compare( char const topic[] ) {
+  int topic_len = 25;
+  char const * topic_ref = "SafeStrip/EnvironmentData";
   return strncmp( topic, topic_ref, topic_len );
 }
 
 
-/* build topic for RoadDataFrictionInputs struct */
+/* build topic for EnvironmentData struct */
 void
-RoadDataFrictionInputs_MQTT_alltopics( char topic[], int topic_max_len ) {
-  char const * base_topic = "SafeStrip/RoadDataFrictionInputs";
+EnvironmentData_MQTT_alltopics( char topic[], int topic_max_len ) {
+  char const * base_topic = "SafeStrip/EnvironmentData";
   snprintf( topic, topic_max_len, "%s/#", base_topic );
 }
 

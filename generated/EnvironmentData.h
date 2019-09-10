@@ -3,14 +3,14 @@
   Automatically generated
 \*/
 
-#ifndef ROADDATAFRICTIONINPUTS_H
-#define ROADDATAFRICTIONINPUTS_H
+#ifndef ENVIRONMENTDATA_H
+#define ENVIRONMENTDATA_H
 
 #ifdef __cplusplus
   extern "C" {
 #endif
 
-/* C structure for RoadDataFrictionInputs */
+/* C structure for EnvironmentData */
 typedef struct {
   uint32_t StripID;                     /* ID_of_the_strip_0=RSB_ */
   uint32_t Fog;                         /* TO_BE_DEFINED */
@@ -24,41 +24,41 @@ typedef struct {
   uint8_t  water_layer;                 /* thickness_of_the_layer,_it_saturates_at_7_millimeters_0_=_no_presence */
   uint8_t  show_layer;                  /* thickness_of_the_layer,_it_saturates_at_7_millimeters_0_=_no_presence */
   uint8_t  ice_layer;                   /* thickness_of_the_layer,_it_saturates_at_7_millimeters_0_=_no_presence */
-} RoadDataFrictionInputs;
+} EnvironmentData;
 
-/* size of the serialized version of struct RoadDataFrictionInputs */
-#define RoadDataFrictionInputs_size 43
+/* size of the serialized version of struct EnvironmentData */
+#define EnvironmentData_size 43
 
 
-/* print RoadDataFrictionInputs struct on stdio */
+/* print EnvironmentData struct on stdio */
 extern
 void
-buffer_to_RoadDataFrictionInputs( uint8_t const buffer[], RoadDataFrictionInputs * S );
+buffer_to_EnvironmentData( uint8_t const buffer[], EnvironmentData * S );
 
-/* serialize RoadDataFrictionInputs struct to buffer */
+/* serialize EnvironmentData struct to buffer */
 extern
 void
-RoadDataFrictionInputs_to_buffer( RoadDataFrictionInputs const * S, uint8_t buffer[] );
+EnvironmentData_to_buffer( EnvironmentData const * S, uint8_t buffer[] );
 
-/* get buffer and un-serialize to RoadDataFrictionInputs struct */
+/* get buffer and un-serialize to EnvironmentData struct */
 extern
 void
-RoadDataFrictionInputs_print( RoadDataFrictionInputs const * S );
+EnvironmentData_print( EnvironmentData const * S );
 
-/* build topic for RoadDataFrictionInputs struct */
+/* build topic for EnvironmentData struct */
 extern
 void
-RoadDataFrictionInputs_MQTT_topic( RoadDataFrictionInputs const * S, char topic[], int topic_len );
+EnvironmentData_MQTT_topic( EnvironmentData const * S, char topic[], int topic_len );
 
-/* check topic for RoadDataFrictionInputs struct */
+/* check topic for EnvironmentData struct */
 extern
 int
-RoadDataFrictionInputs_MQTT_compare( char const topic[] );
+EnvironmentData_MQTT_compare( char const topic[] );
 
-/* build topic for RoadDataFrictionInputs struct */
+/* build topic for EnvironmentData struct */
 extern
 void
-RoadDataFrictionInputs_MQTT_alltopics( char topic[], int topic_len );
+EnvironmentData_MQTT_alltopics( char topic[], int topic_len );
 #ifdef __cplusplus
 };
 #endif

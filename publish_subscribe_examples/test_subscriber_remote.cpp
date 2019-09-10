@@ -20,7 +20,7 @@ clean_exit( int signum ) {
 int
 main() {
 
-  MQTT_SafeStrip_subscriber mqtt_subscriber("subscriber");
+  MQTT_SafeStrip_subscriber mqtt_subscriber("test_subscriber1");
 
 
   int debug;
@@ -36,7 +36,6 @@ main() {
   mqtt_subscriber.tls_insecure_set( true );
   debug = mqtt_subscriber.tls_opts_set( 0 , protocol , NULL );
   
-  //mqtt.connect( "192.168.0.106", 1883, 60 );
   debug = mqtt_subscriber.connect( server_address , 8883 , 60 );
   cout << "Connect ... \n" << debug << "\n";
 

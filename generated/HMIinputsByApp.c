@@ -1,6 +1,7 @@
 
 /*\
   Automatically generated
+  And manually modified Giammarco Valenti 2019/09/10
 \*/
 
 #include "buffer_defines.h"
@@ -17,6 +18,7 @@ void
 HMIinputsByApp_print( HMIinputsByApp const * S ) {
   printf( "UTC_time              = %llu\n", S->UTC_time);
   printf( "OutputID              = %u\n", S->OutputID);
+  printf( "StationID             = %u\n", S->StationID);
   printf( "WarningLevel          = %hhu\n", S->WarningLevel);
   printf( "J0f                   = %lg\n", S->J0f);
   printf( "TargetDistancef       = %lg\n", S->TargetDistancef);
@@ -35,6 +37,7 @@ HMIinputsByApp_to_buffer(
   uint8_t * ptr = buffer;
   ptr += uint64_to_buffer( S->UTC_time, ptr );
   ptr += uint32_to_buffer( S->OutputID, ptr );
+  ptr += uint32_to_buffer( S->StationID, ptr );
   ptr += uint8_to_buffer( S->WarningLevel, ptr );
   ptr += double_to_buffer( S->J0f, ptr );
   ptr += double_to_buffer( S->TargetDistancef, ptr );
@@ -53,6 +56,7 @@ buffer_to_HMIinputsByApp(
   uint8_t const * ptr = buffer;
   ptr += buffer_to_uint64( ptr, &S->UTC_time );
   ptr += buffer_to_uint32( ptr, &S->OutputID );
+  ptr += buffer_to_uint32( ptr, &S->StationID );
   ptr += buffer_to_uint8( ptr, &S->WarningLevel );
   ptr += buffer_to_double( ptr, &S->J0f );
   ptr += buffer_to_double( ptr, &S->TargetDistancef );
@@ -70,7 +74,7 @@ HMIinputsByApp_MQTT_topic(
   int topic_max_len
 ) {
   char const * base_topic = "SafeStrip/HMIinputsByApp";
-  snprintf( topic, topic_max_len, "%s/%d", base_topic, S->OutputID );
+  snprintf( topic, topic_max_len, "%s/%d/%d", base_topic, S->OutputID , S->StationID ); // !!! MANUAL MODIFICATION HERE
 }
 
 int

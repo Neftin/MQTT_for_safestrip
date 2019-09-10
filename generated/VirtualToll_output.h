@@ -13,13 +13,14 @@
 /* C structure for VirtualToll_output */
 typedef struct {
   uint64_t UTC_time;                   /* Time_at_which_the_signal_is_sent:_Stanrdard_UTC_time_is_used */
+  uint32_t RFID_ID[3];                 /* ID_by_RFID */
   int32_t  virtual_gate_distance;      /* distance_of_the_second_strip:_the_toll_gate_is_represented_by_the_second_strip._If_this_strip_is_the_toll_gate,_use_0. */
-  uint8_t  payment_confirmation;       /* 0_if_not_confirmed,_1_if_confirmed */
   uint32_t payment_amount;             /* payment_amount_of_the_toll_in_cents_(100_=_1_euro) */
+  uint8_t  payment_confirmation;       /* 0_if_not_confirmed,_1_if_confirmed */
 } VirtualToll_output;
 
 /* size of the serialized version of struct VirtualToll_output */
-#define VirtualToll_output_size 17
+#define VirtualToll_output_size 29
 
 
 /* print VirtualToll_output struct on stdio */

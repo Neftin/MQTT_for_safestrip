@@ -13,7 +13,7 @@
 /* C structure for DENM_message */
 typedef struct {
   uint64_t UTC_time;                                             /* Time_at_which_the_signal_is_sent:_Stanrdard_UTC_time_is_used */
-  uint32_t v2x_header_msgID;                                     /* messageID_INTEGER{_denm(1),cam(2),_poi(3),_spat(4),_map(5),_ivi(6),_ev-rsr(7)_}_(0..255) */
+  int32_t  v2x_header_StationID;                                 /* Identifier_of_the_vehicle_(from_RFID_or_other_identification) */
   int32_t  v2x_header_originationStationID;                      /* Unique_indentifier_for_verhicle_or_RSU */
   uint16_t v2x_denm_sequenceNumber;                              /*  */
   uint64_t v2x_denm_detectionTime;                               /* The_value_for_TimestampIts_for_2007-01-01T00:00:00.000Z_is_94_694_401_000_milliseconds,_which_includes_one_leap_second_insertion_since_2004-01-01T00:00:00.000Z.|TimestampIts_::=_INTEGER_{utcStartOf2004(0),_oneMillisecAfterUTCStartOf2004(1)} */
@@ -27,17 +27,18 @@ typedef struct {
   uint8_t  v2x_denm_relevanceTrafficDirection;                   /* RelevanceTrafficDirection_::=_ENUMERATED_{allTrafficDirections(0),|upstreamTraffic(1),_downstreamTraffic(2),_oppositeTraffic(3)} */
   int32_t  v2x_denm_validityDuration;                            /* ValidityDuration_::=_INTEGER_{timeOfDetection(0),_oneSecondAfterDetection(1)} */
   uint8_t  v2x_denm_stationType;                                 /* StationType_::=_INTEGER_{unknown(0),_pedestrian(1),_cyclist(2),_moped(3),_motorcycle(4),_passengerCar(5),_bus(6),_lightTruck(7),_heavyTruck(8),_trailer(9),_specialVehicles(10),_tram(11),_roadSideUnit(15)} */
-  int32_t  v2x_denm_eventType_CauseCode;                         /* trafficCondition_(1),_|_accident_(2),_|_roadworks_(3),_|_adverseWeatherCondition-Adhesion_(6),_hazardousLocation-SurfaceCondition_(9),_humanPresenceOnTheRoad_(12),_|_wrongWayDriving_(14),_adverseWeatherCondition-ExtremeWeatherCondition_(17),_adverseWeatherCondition-Visibility_(18),_adverseWeatherCondition-Precipitation_(19)_|_collisionRisk_(97),_|_signalViolation_(98),_|_dangerousSituation_(99) */
+  int32_t  v2x_denm_eventType_CauseCode;                         /* trafficCondition_(1),_|_accident_(2),_|_roadworks_(3),_|_adverseWeatherCondition-Adhesion_(6),_hazardousLocation-SurfaceCondition_(9),_humanPresenceOnTheRoad_(12),_|_wrongWayDriving_(14),_adverseWeatherCondition-ExtremeWeatherCondition_(17),_adverseWeatherCondition-Visibility_(18),_adverseWeatherCondition-Precipitation_(19)_|_collisionRisk_(97),_|_signalViolation_(98),_|_dangerousSituation_(99)_|_100_=_Augmented_positioning */
   int32_t  v2x_denm_eventType_SubCauseCode;                      /* SAFE_STRIP_relevant_:_(see_v2x_denm_eventType_CauseCode)SubCauseCode_example:__collisionRisk_SubCauseCode:_Cunavailable(0),_longitudinalCollisionRisk(1),_crossingCollisionRisk(2),_lateralCollisionRisk(3),_vulnerableRoadUser(4) */
   uint16_t v2x_denm_frictionCoefficient_value;                   /* Value_of_the_friction_coefficient_estimated_(CUSTOM)_65535_=_unavailable */
   uint16_t v2x_denm_frictionCoefficient_confidence;              /* Confidence_of_the_value_of_the_friction_coefficient_(CUSTOM)_65535_=_unavailable */
   int32_t  v2x_denm_EventHistory_deltaLatitude[10];              /* DeltaLatitude_::=_INTEGER_{oneMicrodegreeNorth_(10),_oneMicrodegreeSouth(-10),_unavailable(131072)}_used_ */
   int32_t  v2x_denm_EventHistory_deltaLongitude[10];             /* DeltaLongitude_::=_INTEGER_{oneMicrodegreeEast_(10),_oneMicrodegreeWest(-10),_unavailable(131072)}_(-131071..131072) */
   int32_t  v2x_denm_EventHistory_deltaAltitude[10];              /* DeltaAltitude_::=_INTEGER_{oneCentimeterUp_(1),_oneCentimeterDown_(-1),|unavailable(12800)}_(-12700..12800) */
+  int32_t  v2x_denm_alacarte_LanePosition;                       /* lateral_position_in_the_lane_in_centimeters */
 } DENM_message;
 
 /* size of the serialized version of struct DENM_message */
-#define DENM_message_size 189
+#define DENM_message_size 193
 
 
 /* print DENM_message struct on stdio */

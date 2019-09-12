@@ -15,11 +15,10 @@
 /* print ParkingOutput struct on stdio */
 void
 ParkingOutput_print( ParkingOutput const * S ) {
-  int i_count;
   printf( "UTC_time                   = %llu\n", S->UTC_time);
   printf( "OutputID                   = %d\n", S->OutputID);
-  for ( i_count=0; i_count<100; ++i_count )
-    printf( "Payment_Amount[%d]         = %u\n", i_count, S->Payment_Amount[i_count]);
+  printf( "RFID_ID                    = %u\n", S->RFID_ID);
+  printf( "Payment_Amount             = %u\n", S->Payment_Amount);
   printf( "Payment_and_parking_status = %u\n", S->Payment_and_parking_status);
 }
 
@@ -30,12 +29,11 @@ ParkingOutput_to_buffer(
   ParkingOutput const * S,
   uint8_t buffer[]
 ) {
-  int i_count;
   uint8_t * ptr = buffer;
   ptr += uint64_to_buffer( S->UTC_time, ptr );
   ptr += int32_to_buffer( S->OutputID, ptr );
-  for ( i_count=0; i_count<100; ++i_count )
-    { ptr += uint32_to_buffer( S->Payment_Amount[i_count], ptr ); }
+  ptr += uint32_to_buffer( S->RFID_ID, ptr );
+  ptr += uint32_to_buffer( S->Payment_Amount, ptr );
   ptr += uint32_to_buffer( S->Payment_and_parking_status, ptr );
 }
 
@@ -46,12 +44,11 @@ buffer_to_ParkingOutput(
   uint8_t const buffer[],
   ParkingOutput * S
 ) {
-  int i_count;
   uint8_t const * ptr = buffer;
   ptr += buffer_to_uint64( ptr, &S->UTC_time );
   ptr += buffer_to_int32( ptr, &S->OutputID );
-  for ( i_count=0; i_count<100; ++i_count )
-    { ptr += buffer_to_uint32( ptr, & S->Payment_Amount[i_count] ); }
+  ptr += buffer_to_uint32( ptr, &S->RFID_ID );
+  ptr += buffer_to_uint32( ptr, &S->Payment_Amount );
   ptr += buffer_to_uint32( ptr, &S->Payment_and_parking_status );
 }
 

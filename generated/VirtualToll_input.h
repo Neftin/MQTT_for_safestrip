@@ -17,11 +17,11 @@ typedef struct {
   int32_t  virtual_gate_distance;      /* distance_of_the_second_strip:_the_toll_gate_is_represented_by_the_second_strip._If_this_strip_is_the_toll_gate,_use_0. */
   uint32_t StripID;                    /* ID_of_the_strip_0=RSB_ */
   uint32_t RSB_ID;                     /* Unique_indentifier_for_verhicle_or_RSU */
-  uint32_t RFID_ID[3];                 /* ID_by_RFID */
+  uint32_t RFID_ID;                    /* ID_by_RFID */
 } VirtualToll_input;
 
 /* size of the serialized version of struct VirtualToll_input */
-#define VirtualToll_input_size 36
+#define VirtualToll_input_size 28
 
 
 /* print VirtualToll_input struct on stdio */

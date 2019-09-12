@@ -1,7 +1,6 @@
 
 /*\
   Automatically generated
-  And manually modified Giammarco Valenti 2019/09/10
 \*/
 
 #include "buffer_defines.h"
@@ -74,7 +73,7 @@ HMIinputsByApp_MQTT_topic(
   int topic_max_len
 ) {
   char const * base_topic = "SafeStrip/HMIinputsByApp";
-  snprintf( topic, topic_max_len, "%s/%d/%d", base_topic, S->OutputID , S->StationID ); // !!! MANUAL MODIFICATION HERE
+  snprintf( topic, topic_max_len, "%s/%d", base_topic, S->OutputID );
 }
 
 int

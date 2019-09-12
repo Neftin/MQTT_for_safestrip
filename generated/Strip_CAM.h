@@ -26,11 +26,11 @@ typedef struct {
   uint16_t Speed;                                       /* Unit_0,01_m/s_._Speed_not_available_set_16383 */
   uint16_t VehicleLength;                               /* Unit_0,1_m._Set_to_1_023_if_the_information_in_unavailable. */
   uint8_t  VehicleWidth;                                /* Unit_0,1_m._Set_to_62_if_the_information_is|unavailable */
-  int16_t  LongitudinalAcceleration;                    /* Unit_0,1__m/s^2._Negative_values_indicate_that_the_vehicle_is_braking._Positive_values_indicate_that_the_vehicle_is_accelerating._Set_to_161_when_unavailable. */
+  int32_t  LongitudinalAcceleration;                    /* Unit_0,1__m/s^2._Negative_values_indicate_that_the_vehicle_is_braking._Positive_values_indicate_that_the_vehicle_is_accelerating._Set_to_161_when_unavailable. */
 } Strip_CAM;
 
 /* size of the serialized version of struct Strip_CAM */
-#define Strip_CAM_size 50
+#define Strip_CAM_size 52
 
 
 /* print Strip_CAM struct on stdio */

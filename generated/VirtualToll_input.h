@@ -13,7 +13,6 @@
 /* C structure for VirtualToll_input */
 typedef struct {
   uint64_t UTC_time;                   /* Time_at_which_the_signal_is_sent:_Stanrdard_UTC_time_is_used */
-  int32_t  strip_type;                 /* !!!_To_define */
   int32_t  virtual_gate_distance;      /* distance_of_the_second_strip:_the_toll_gate_is_represented_by_the_second_strip._If_this_strip_is_the_toll_gate,_use_0. */
   uint32_t StripID;                    /* ID_of_the_strip_0=RSB_ */
   uint32_t RSB_ID;                     /* Unique_indentifier_for_verhicle_or_RSU */
@@ -21,7 +20,7 @@ typedef struct {
 } VirtualToll_input;
 
 /* size of the serialized version of struct VirtualToll_input */
-#define VirtualToll_input_size 28
+#define VirtualToll_input_size 24
 
 
 /* print VirtualToll_input struct on stdio */

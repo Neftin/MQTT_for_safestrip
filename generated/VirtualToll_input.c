@@ -16,7 +16,6 @@
 void
 VirtualToll_input_print( VirtualToll_input const * S ) {
   printf( "UTC_time              = %llu\n", S->UTC_time);
-  printf( "strip_type            = %d\n", S->strip_type);
   printf( "virtual_gate_distance = %d\n", S->virtual_gate_distance);
   printf( "StripID               = %u\n", S->StripID);
   printf( "RSB_ID                = %u\n", S->RSB_ID);
@@ -32,7 +31,6 @@ VirtualToll_input_to_buffer(
 ) {
   uint8_t * ptr = buffer;
   ptr += uint64_to_buffer( S->UTC_time, ptr );
-  ptr += int32_to_buffer( S->strip_type, ptr );
   ptr += int32_to_buffer( S->virtual_gate_distance, ptr );
   ptr += uint32_to_buffer( S->StripID, ptr );
   ptr += uint32_to_buffer( S->RSB_ID, ptr );
@@ -48,7 +46,6 @@ buffer_to_VirtualToll_input(
 ) {
   uint8_t const * ptr = buffer;
   ptr += buffer_to_uint64( ptr, &S->UTC_time );
-  ptr += buffer_to_int32( ptr, &S->strip_type );
   ptr += buffer_to_int32( ptr, &S->virtual_gate_distance );
   ptr += buffer_to_uint32( ptr, &S->StripID );
   ptr += buffer_to_uint32( ptr, &S->RSB_ID );

@@ -20,7 +20,7 @@ ParkingEvent_print( ParkingEvent const * S ) {
   printf( "RSB_ID   = %u\n", S->RSB_ID);
   printf( "RFID_ID  = %u\n", S->RFID_ID);
   printf( "StripID  = %u\n", S->StripID);
-  printf( "Event_   = %hhu\n", S->Event_);
+  printf( "Event    = %hhu\n", S->Event);
 }
 
 
@@ -36,7 +36,7 @@ ParkingEvent_to_buffer(
   ptr += uint32_to_buffer( S->RSB_ID, ptr );
   ptr += uint32_to_buffer( S->RFID_ID, ptr );
   ptr += uint32_to_buffer( S->StripID, ptr );
-  ptr += uint8_to_buffer( S->Event_, ptr );
+  ptr += uint8_to_buffer( S->Event, ptr );
 }
 
 
@@ -52,7 +52,7 @@ buffer_to_ParkingEvent(
   ptr += buffer_to_uint32( ptr, &S->RSB_ID );
   ptr += buffer_to_uint32( ptr, &S->RFID_ID );
   ptr += buffer_to_uint32( ptr, &S->StripID );
-  ptr += buffer_to_uint8( ptr, &S->Event_ );
+  ptr += buffer_to_uint8( ptr, &S->Event );
 }
 
 

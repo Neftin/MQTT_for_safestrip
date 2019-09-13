@@ -17,7 +17,7 @@ typedef struct {
   uint32_t RSB_ID;        /* Unique_indentifier_for_verhicle_or_RSU */
   uint32_t RFID_ID;       /* ID_by_RFID */
   uint32_t StripID;       /* ID_of_the_strip_sending_event */
-  uint8_t  Event_;        /* 0_=_exit_,_1_=_entering,_2_=_unknown */
+  uint8_t  Event;         /* 0_=_exit_,_1_=_entering,_2_=_unknown */
 } ParkingEvent;
 
 /* size of the serialized version of struct ParkingEvent */

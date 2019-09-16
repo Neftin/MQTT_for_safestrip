@@ -21,7 +21,8 @@ typedef struct {
 } ParkingEvent;
 
 /* size of the serialized version of struct ParkingEvent */
-#define ParkingEvent_size 25
+#define ParkingEvent_size  25
+#define ParkingEvent_n_fields 6
 
 
 /* print ParkingEvent struct on stdio */

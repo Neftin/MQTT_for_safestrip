@@ -40,7 +40,8 @@ typedef struct {
 } CAM_message;
 
 /* size of the serialized version of struct CAM_message */
-#define CAM_message_size 182
+#define CAM_message_size  182
+#define CAM_message_n_fields 25
 
 
 /* print CAM_message struct on stdio */

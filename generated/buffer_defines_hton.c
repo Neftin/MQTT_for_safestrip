@@ -1,13 +1,9 @@
 #include "buffer_defines.h"
-#include <string.h>
 
-#if defined(_WIN32) || defined(WIN32) || defined(_WIN64) || defined(WIN64)
-  #include <Ws2tcpip.h>
-#elif defined(__MACH__) || defined(__linux__)
-  #include <string.h>
-  #include <unistd.h>
+#ifdef UDP_ON_WINDOWS
+  #include <Winsock.h>
+#else
   #include <arpa/inet.h>
-  #include <sys/socket.h>
 #endif
 
 static
@@ -21,7 +17,7 @@ htonll_local( uint64_t n ) {
   return (hi << 32) + lo;
 }
 
-// --------------------------------------------------
+/* -------------------------------------------------- */
 
 uint32_t
 int8_to_buffer( int8_t in, uint8_t buffer[1] ) {

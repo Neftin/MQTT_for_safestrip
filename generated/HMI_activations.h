@@ -17,7 +17,8 @@ typedef struct {
 } HMI_activations;
 
 /* size of the serialized version of struct HMI_activations */
-#define HMI_activations_size 8
+#define HMI_activations_size  8
+#define HMI_activations_n_fields 2
 
 
 /* print HMI_activations struct on stdio */

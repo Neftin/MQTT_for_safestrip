@@ -20,7 +20,8 @@ typedef struct {
 } VirtualToll_output;
 
 /* size of the serialized version of struct VirtualToll_output */
-#define VirtualToll_output_size 21
+#define VirtualToll_output_size  21
+#define VirtualToll_output_n_fields 5
 
 
 /* print VirtualToll_output struct on stdio */

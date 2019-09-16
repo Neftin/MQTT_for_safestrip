@@ -27,7 +27,8 @@ typedef struct {
 } EnvironmentData;
 
 /* size of the serialized version of struct EnvironmentData */
-#define EnvironmentData_size 43
+#define EnvironmentData_size  43
+#define EnvironmentData_n_fields 12
 
 
 /* print EnvironmentData struct on stdio */

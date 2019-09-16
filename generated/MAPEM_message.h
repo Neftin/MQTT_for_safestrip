@@ -36,7 +36,8 @@ typedef struct {
 } MAPEM_message;
 
 /* size of the serialized version of struct MAPEM_message */
-#define MAPEM_message_size 1802
+#define MAPEM_message_size  1802
+#define MAPEM_message_n_fields 21
 
 
 /* print MAPEM_message struct on stdio */

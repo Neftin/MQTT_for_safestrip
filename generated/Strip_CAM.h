@@ -30,7 +30,8 @@ typedef struct {
 } Strip_CAM;
 
 /* size of the serialized version of struct Strip_CAM */
-#define Strip_CAM_size 52
+#define Strip_CAM_size  52
+#define Strip_CAM_n_fields 15
 
 
 /* print Strip_CAM struct on stdio */

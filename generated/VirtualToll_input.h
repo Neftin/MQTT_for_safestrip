@@ -20,7 +20,8 @@ typedef struct {
 } VirtualToll_input;
 
 /* size of the serialized version of struct VirtualToll_input */
-#define VirtualToll_input_size 24
+#define VirtualToll_input_size  24
+#define VirtualToll_input_n_fields 5
 
 
 /* print VirtualToll_input struct on stdio */

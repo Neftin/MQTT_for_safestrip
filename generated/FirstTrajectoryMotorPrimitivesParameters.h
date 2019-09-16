@@ -39,7 +39,8 @@ typedef struct {
 } FirstTrajectoryMotorPrimitivesParameters;
 
 /* size of the serialized version of struct FirstTrajectoryMotorPrimitivesParameters */
-#define FirstTrajectoryMotorPrimitivesParameters_size 188
+#define FirstTrajectoryMotorPrimitivesParameters_size  188
+#define FirstTrajectoryMotorPrimitivesParameters_n_fields 24
 
 
 /* print FirstTrajectoryMotorPrimitivesParameters struct on stdio */

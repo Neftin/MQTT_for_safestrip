@@ -19,7 +19,8 @@ typedef struct {
 } ParkingStatus;
 
 /* size of the serialized version of struct ParkingStatus */
-#define ParkingStatus_size 56
+#define ParkingStatus_size  56
+#define ParkingStatus_n_fields 4
 
 
 /* print ParkingStatus struct on stdio */

@@ -27,7 +27,8 @@ typedef struct {
 } HostVehicle;
 
 /* size of the serialized version of struct HostVehicle */
-#define HostVehicle_size 85
+#define HostVehicle_size  85
+#define HostVehicle_n_fields 12
 
 
 /* print HostVehicle struct on stdio */

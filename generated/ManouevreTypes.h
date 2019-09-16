@@ -21,7 +21,8 @@ typedef struct {
 } ManouevreTypes;
 
 /* size of the serialized version of struct ManouevreTypes */
-#define ManouevreTypes_size 16
+#define ManouevreTypes_size  16
+#define ManouevreTypes_n_fields 6
 
 
 /* print ManouevreTypes struct on stdio */

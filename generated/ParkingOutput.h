@@ -20,7 +20,8 @@ typedef struct {
 } ParkingOutput;
 
 /* size of the serialized version of struct ParkingOutput */
-#define ParkingOutput_size 24
+#define ParkingOutput_size  24
+#define ParkingOutput_n_fields 5
 
 
 /* print ParkingOutput struct on stdio */

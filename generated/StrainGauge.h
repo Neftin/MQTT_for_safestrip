@@ -22,7 +22,8 @@ typedef struct {
 } StrainGauge;
 
 /* size of the serialized version of struct StrainGauge */
-#define StrainGauge_size 44
+#define StrainGauge_size  44
+#define StrainGauge_n_fields 7
 
 
 /* print StrainGauge struct on stdio */

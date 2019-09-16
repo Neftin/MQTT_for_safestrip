@@ -17,7 +17,8 @@ typedef struct {
 } AutomationLevel;
 
 /* size of the serialized version of struct AutomationLevel */
-#define AutomationLevel_size 9
+#define AutomationLevel_size  9
+#define AutomationLevel_n_fields 2
 
 
 /* print AutomationLevel struct on stdio */

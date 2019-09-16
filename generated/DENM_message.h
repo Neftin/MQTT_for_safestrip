@@ -38,7 +38,8 @@ typedef struct {
 } DENM_message;
 
 /* size of the serialized version of struct DENM_message */
-#define DENM_message_size 193
+#define DENM_message_size  193
+#define DENM_message_n_fields 23
 
 
 /* print DENM_message struct on stdio */

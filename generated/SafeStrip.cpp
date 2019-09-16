@@ -19,7 +19,7 @@ MQTT_SafeStrip_publisher::~MQTT_SafeStrip_publisher() {
   mosqpp::lib_cleanup();
 }
 
-// on_connect is called by thread each time we exeperience a server connection
+/* on_connect is called by thread each time we exeperience a server connection */
 
 void
 MQTT_SafeStrip_publisher::on_connect( int rc ) {
@@ -28,7 +28,7 @@ MQTT_SafeStrip_publisher::on_connect( int rc ) {
   );
 }
 
-// on_disconnect is called by thread each time we experience a server disconnection
+/* on_disconnect is called by thread each time we experience a server disconnection */
 
 void
 MQTT_SafeStrip_publisher::on_disconnect( int rc ) {
@@ -37,8 +37,8 @@ MQTT_SafeStrip_publisher::on_disconnect( int rc ) {
   );
 }
 
-// on_publish is called each time a message succeed to be sent to broker.
-// The parameter is the message id you can set when publish.
+/* on_publish is called each time a message succeed to be sent to broker. */
+/* The parameter is the message id you can set when publish.              */
 void
 MQTT_SafeStrip_publisher::on_publish( int mid ) {
   MQTT_MESSAGE_DEBUG(
@@ -47,7 +47,7 @@ MQTT_SafeStrip_publisher::on_publish( int mid ) {
 }
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 bool
 MQTT_SafeStrip_publisher::publish(
@@ -83,9 +83,11 @@ MQTT_SafeStrip_publisher::publish(
   case MOSQ_ERR_PAYLOAD_SIZE:
     std::cout << "publish SafeStrip: payloadlen is too large.";
     break;
-  //case MOSQ_ERR_MALFORMED_UTF8:
-  //  std::cout << "publish SafeStrip: malformed utf8\n";
-  //  break;
+  /*
+  case MOSQ_ERR_MALFORMED_UTF8:      
+    std::cout << "publish SafeStrip: malformed utf8\n";
+    break; 
+  */
   default:
     std::cout << "publish SafeStrip: return = " << ret << "\n";
   }
@@ -93,7 +95,7 @@ MQTT_SafeStrip_publisher::publish(
 }
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 bool
 MQTT_SafeStrip_publisher::publish(
@@ -129,9 +131,11 @@ MQTT_SafeStrip_publisher::publish(
   case MOSQ_ERR_PAYLOAD_SIZE:
     std::cout << "publish SafeStrip: payloadlen is too large.";
     break;
-  //case MOSQ_ERR_MALFORMED_UTF8:
-  //  std::cout << "publish SafeStrip: malformed utf8\n";
-  //  break;
+  /*
+  case MOSQ_ERR_MALFORMED_UTF8:      
+    std::cout << "publish SafeStrip: malformed utf8\n";
+    break; 
+  */
   default:
     std::cout << "publish SafeStrip: return = " << ret << "\n";
   }
@@ -139,7 +143,7 @@ MQTT_SafeStrip_publisher::publish(
 }
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 bool
 MQTT_SafeStrip_publisher::publish(
@@ -175,9 +179,11 @@ MQTT_SafeStrip_publisher::publish(
   case MOSQ_ERR_PAYLOAD_SIZE:
     std::cout << "publish SafeStrip: payloadlen is too large.";
     break;
-  //case MOSQ_ERR_MALFORMED_UTF8:
-  //  std::cout << "publish SafeStrip: malformed utf8\n";
-  //  break;
+  /*
+  case MOSQ_ERR_MALFORMED_UTF8:      
+    std::cout << "publish SafeStrip: malformed utf8\n";
+    break; 
+  */
   default:
     std::cout << "publish SafeStrip: return = " << ret << "\n";
   }
@@ -185,7 +191,7 @@ MQTT_SafeStrip_publisher::publish(
 }
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 bool
 MQTT_SafeStrip_publisher::publish(
@@ -221,9 +227,11 @@ MQTT_SafeStrip_publisher::publish(
   case MOSQ_ERR_PAYLOAD_SIZE:
     std::cout << "publish SafeStrip: payloadlen is too large.";
     break;
-  //case MOSQ_ERR_MALFORMED_UTF8:
-  //  std::cout << "publish SafeStrip: malformed utf8\n";
-  //  break;
+  /*
+  case MOSQ_ERR_MALFORMED_UTF8:      
+    std::cout << "publish SafeStrip: malformed utf8\n";
+    break; 
+  */
   default:
     std::cout << "publish SafeStrip: return = " << ret << "\n";
   }
@@ -231,7 +239,7 @@ MQTT_SafeStrip_publisher::publish(
 }
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 bool
 MQTT_SafeStrip_publisher::publish(
@@ -267,9 +275,11 @@ MQTT_SafeStrip_publisher::publish(
   case MOSQ_ERR_PAYLOAD_SIZE:
     std::cout << "publish SafeStrip: payloadlen is too large.";
     break;
-  //case MOSQ_ERR_MALFORMED_UTF8:
-  //  std::cout << "publish SafeStrip: malformed utf8\n";
-  //  break;
+  /*
+  case MOSQ_ERR_MALFORMED_UTF8:      
+    std::cout << "publish SafeStrip: malformed utf8\n";
+    break; 
+  */
   default:
     std::cout << "publish SafeStrip: return = " << ret << "\n";
   }
@@ -277,7 +287,7 @@ MQTT_SafeStrip_publisher::publish(
 }
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 bool
 MQTT_SafeStrip_publisher::publish(
@@ -313,9 +323,11 @@ MQTT_SafeStrip_publisher::publish(
   case MOSQ_ERR_PAYLOAD_SIZE:
     std::cout << "publish SafeStrip: payloadlen is too large.";
     break;
-  //case MOSQ_ERR_MALFORMED_UTF8:
-  //  std::cout << "publish SafeStrip: malformed utf8\n";
-  //  break;
+  /*
+  case MOSQ_ERR_MALFORMED_UTF8:      
+    std::cout << "publish SafeStrip: malformed utf8\n";
+    break; 
+  */
   default:
     std::cout << "publish SafeStrip: return = " << ret << "\n";
   }
@@ -323,7 +335,7 @@ MQTT_SafeStrip_publisher::publish(
 }
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 bool
 MQTT_SafeStrip_publisher::publish(
@@ -359,9 +371,11 @@ MQTT_SafeStrip_publisher::publish(
   case MOSQ_ERR_PAYLOAD_SIZE:
     std::cout << "publish SafeStrip: payloadlen is too large.";
     break;
-  //case MOSQ_ERR_MALFORMED_UTF8:
-  //  std::cout << "publish SafeStrip: malformed utf8\n";
-  //  break;
+  /*
+  case MOSQ_ERR_MALFORMED_UTF8:      
+    std::cout << "publish SafeStrip: malformed utf8\n";
+    break; 
+  */
   default:
     std::cout << "publish SafeStrip: return = " << ret << "\n";
   }
@@ -369,7 +383,7 @@ MQTT_SafeStrip_publisher::publish(
 }
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 bool
 MQTT_SafeStrip_publisher::publish(
@@ -405,9 +419,11 @@ MQTT_SafeStrip_publisher::publish(
   case MOSQ_ERR_PAYLOAD_SIZE:
     std::cout << "publish SafeStrip: payloadlen is too large.";
     break;
-  //case MOSQ_ERR_MALFORMED_UTF8:
-  //  std::cout << "publish SafeStrip: malformed utf8\n";
-  //  break;
+  /*
+  case MOSQ_ERR_MALFORMED_UTF8:      
+    std::cout << "publish SafeStrip: malformed utf8\n";
+    break; 
+  */
   default:
     std::cout << "publish SafeStrip: return = " << ret << "\n";
   }
@@ -415,7 +431,7 @@ MQTT_SafeStrip_publisher::publish(
 }
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 bool
 MQTT_SafeStrip_publisher::publish(
@@ -451,9 +467,11 @@ MQTT_SafeStrip_publisher::publish(
   case MOSQ_ERR_PAYLOAD_SIZE:
     std::cout << "publish SafeStrip: payloadlen is too large.";
     break;
-  //case MOSQ_ERR_MALFORMED_UTF8:
-  //  std::cout << "publish SafeStrip: malformed utf8\n";
-  //  break;
+  /*
+  case MOSQ_ERR_MALFORMED_UTF8:      
+    std::cout << "publish SafeStrip: malformed utf8\n";
+    break; 
+  */
   default:
     std::cout << "publish SafeStrip: return = " << ret << "\n";
   }
@@ -461,7 +479,7 @@ MQTT_SafeStrip_publisher::publish(
 }
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 bool
 MQTT_SafeStrip_publisher::publish(
@@ -497,9 +515,11 @@ MQTT_SafeStrip_publisher::publish(
   case MOSQ_ERR_PAYLOAD_SIZE:
     std::cout << "publish SafeStrip: payloadlen is too large.";
     break;
-  //case MOSQ_ERR_MALFORMED_UTF8:
-  //  std::cout << "publish SafeStrip: malformed utf8\n";
-  //  break;
+  /*
+  case MOSQ_ERR_MALFORMED_UTF8:      
+    std::cout << "publish SafeStrip: malformed utf8\n";
+    break; 
+  */
   default:
     std::cout << "publish SafeStrip: return = " << ret << "\n";
   }
@@ -507,7 +527,7 @@ MQTT_SafeStrip_publisher::publish(
 }
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 bool
 MQTT_SafeStrip_publisher::publish(
@@ -543,9 +563,11 @@ MQTT_SafeStrip_publisher::publish(
   case MOSQ_ERR_PAYLOAD_SIZE:
     std::cout << "publish SafeStrip: payloadlen is too large.";
     break;
-  //case MOSQ_ERR_MALFORMED_UTF8:
-  //  std::cout << "publish SafeStrip: malformed utf8\n";
-  //  break;
+  /*
+  case MOSQ_ERR_MALFORMED_UTF8:      
+    std::cout << "publish SafeStrip: malformed utf8\n";
+    break; 
+  */
   default:
     std::cout << "publish SafeStrip: return = " << ret << "\n";
   }
@@ -553,7 +575,7 @@ MQTT_SafeStrip_publisher::publish(
 }
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 bool
 MQTT_SafeStrip_publisher::publish(
@@ -589,9 +611,11 @@ MQTT_SafeStrip_publisher::publish(
   case MOSQ_ERR_PAYLOAD_SIZE:
     std::cout << "publish SafeStrip: payloadlen is too large.";
     break;
-  //case MOSQ_ERR_MALFORMED_UTF8:
-  //  std::cout << "publish SafeStrip: malformed utf8\n";
-  //  break;
+  /*
+  case MOSQ_ERR_MALFORMED_UTF8:      
+    std::cout << "publish SafeStrip: malformed utf8\n";
+    break; 
+  */
   default:
     std::cout << "publish SafeStrip: return = " << ret << "\n";
   }
@@ -599,7 +623,7 @@ MQTT_SafeStrip_publisher::publish(
 }
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 bool
 MQTT_SafeStrip_publisher::publish(
@@ -635,9 +659,11 @@ MQTT_SafeStrip_publisher::publish(
   case MOSQ_ERR_PAYLOAD_SIZE:
     std::cout << "publish SafeStrip: payloadlen is too large.";
     break;
-  //case MOSQ_ERR_MALFORMED_UTF8:
-  //  std::cout << "publish SafeStrip: malformed utf8\n";
-  //  break;
+  /*
+  case MOSQ_ERR_MALFORMED_UTF8:      
+    std::cout << "publish SafeStrip: malformed utf8\n";
+    break; 
+  */
   default:
     std::cout << "publish SafeStrip: return = " << ret << "\n";
   }
@@ -645,7 +671,7 @@ MQTT_SafeStrip_publisher::publish(
 }
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 bool
 MQTT_SafeStrip_publisher::publish(
@@ -681,9 +707,11 @@ MQTT_SafeStrip_publisher::publish(
   case MOSQ_ERR_PAYLOAD_SIZE:
     std::cout << "publish SafeStrip: payloadlen is too large.";
     break;
-  //case MOSQ_ERR_MALFORMED_UTF8:
-  //  std::cout << "publish SafeStrip: malformed utf8\n";
-  //  break;
+  /*
+  case MOSQ_ERR_MALFORMED_UTF8:      
+    std::cout << "publish SafeStrip: malformed utf8\n";
+    break; 
+  */
   default:
     std::cout << "publish SafeStrip: return = " << ret << "\n";
   }
@@ -691,7 +719,7 @@ MQTT_SafeStrip_publisher::publish(
 }
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 bool
 MQTT_SafeStrip_publisher::publish(
@@ -727,9 +755,11 @@ MQTT_SafeStrip_publisher::publish(
   case MOSQ_ERR_PAYLOAD_SIZE:
     std::cout << "publish SafeStrip: payloadlen is too large.";
     break;
-  //case MOSQ_ERR_MALFORMED_UTF8:
-  //  std::cout << "publish SafeStrip: malformed utf8\n";
-  //  break;
+  /*
+  case MOSQ_ERR_MALFORMED_UTF8:      
+    std::cout << "publish SafeStrip: malformed utf8\n";
+    break; 
+  */
   default:
     std::cout << "publish SafeStrip: return = " << ret << "\n";
   }
@@ -737,7 +767,7 @@ MQTT_SafeStrip_publisher::publish(
 }
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 bool
 MQTT_SafeStrip_publisher::publish(
@@ -773,9 +803,11 @@ MQTT_SafeStrip_publisher::publish(
   case MOSQ_ERR_PAYLOAD_SIZE:
     std::cout << "publish SafeStrip: payloadlen is too large.";
     break;
-  //case MOSQ_ERR_MALFORMED_UTF8:
-  //  std::cout << "publish SafeStrip: malformed utf8\n";
-  //  break;
+  /*
+  case MOSQ_ERR_MALFORMED_UTF8:      
+    std::cout << "publish SafeStrip: malformed utf8\n";
+    break; 
+  */
   default:
     std::cout << "publish SafeStrip: return = " << ret << "\n";
   }
@@ -783,7 +815,7 @@ MQTT_SafeStrip_publisher::publish(
 }
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 bool
 MQTT_SafeStrip_publisher::publish(
@@ -819,9 +851,11 @@ MQTT_SafeStrip_publisher::publish(
   case MOSQ_ERR_PAYLOAD_SIZE:
     std::cout << "publish SafeStrip: payloadlen is too large.";
     break;
-  //case MOSQ_ERR_MALFORMED_UTF8:
-  //  std::cout << "publish SafeStrip: malformed utf8\n";
-  //  break;
+  /*
+  case MOSQ_ERR_MALFORMED_UTF8:      
+    std::cout << "publish SafeStrip: malformed utf8\n";
+    break; 
+  */
   default:
     std::cout << "publish SafeStrip: return = " << ret << "\n";
   }
@@ -829,7 +863,7 @@ MQTT_SafeStrip_publisher::publish(
 }
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 bool
 MQTT_SafeStrip_publisher::publish(
@@ -865,9 +899,11 @@ MQTT_SafeStrip_publisher::publish(
   case MOSQ_ERR_PAYLOAD_SIZE:
     std::cout << "publish SafeStrip: payloadlen is too large.";
     break;
-  //case MOSQ_ERR_MALFORMED_UTF8:
-  //  std::cout << "publish SafeStrip: malformed utf8\n";
-  //  break;
+  /*
+  case MOSQ_ERR_MALFORMED_UTF8:      
+    std::cout << "publish SafeStrip: malformed utf8\n";
+    break; 
+  */
   default:
     std::cout << "publish SafeStrip: return = " << ret << "\n";
   }
@@ -875,7 +911,7 @@ MQTT_SafeStrip_publisher::publish(
 }
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 void
 MQTT_SafeStrip_subscriber::on_connect( int result ) {
@@ -922,7 +958,7 @@ MQTT_SafeStrip_subscriber::on_connect( int result ) {
   }
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 void
 MQTT_SafeStrip_subscriber::on_message(
@@ -933,145 +969,145 @@ MQTT_SafeStrip_subscriber::on_message(
     std::cerr << "Skipping empty payload!\n";
   } else if ( HostVehicle_MQTT_compare( message->topic ) == 0 ) {
     MQTT_MESSAGE_DEBUG("MQTT_SafeStrip_subscriber::on_message TOPIC: " << message->topic );
-    // Add mutex for sync
+    /* Add mutex for sync */
     buffer_to_HostVehicle( ptr, &this->HostVehicle_data );
-    // Add mutex for sync
+    /* Add mutex for sync */
     #ifdef DEBUG
     HostVehicle_print( &HostVehicle_data );
     #endif
   } else if ( CAM_message_MQTT_compare( message->topic ) == 0 ) {
     MQTT_MESSAGE_DEBUG("MQTT_SafeStrip_subscriber::on_message TOPIC: " << message->topic );
-    // Add mutex for sync
+    /* Add mutex for sync */
     buffer_to_CAM_message( ptr, &this->CAM_message_data );
-    // Add mutex for sync
+    /* Add mutex for sync */
     #ifdef DEBUG
     CAM_message_print( &CAM_message_data );
     #endif
   } else if ( DENM_message_MQTT_compare( message->topic ) == 0 ) {
     MQTT_MESSAGE_DEBUG("MQTT_SafeStrip_subscriber::on_message TOPIC: " << message->topic );
-    // Add mutex for sync
+    /* Add mutex for sync */
     buffer_to_DENM_message( ptr, &this->DENM_message_data );
-    // Add mutex for sync
+    /* Add mutex for sync */
     #ifdef DEBUG
     DENM_message_print( &DENM_message_data );
     #endif
   } else if ( Strip_CAM_MQTT_compare( message->topic ) == 0 ) {
     MQTT_MESSAGE_DEBUG("MQTT_SafeStrip_subscriber::on_message TOPIC: " << message->topic );
-    // Add mutex for sync
+    /* Add mutex for sync */
     buffer_to_Strip_CAM( ptr, &this->Strip_CAM_data );
-    // Add mutex for sync
+    /* Add mutex for sync */
     #ifdef DEBUG
     Strip_CAM_print( &Strip_CAM_data );
     #endif
   } else if ( MAPEM_message_MQTT_compare( message->topic ) == 0 ) {
     MQTT_MESSAGE_DEBUG("MQTT_SafeStrip_subscriber::on_message TOPIC: " << message->topic );
-    // Add mutex for sync
+    /* Add mutex for sync */
     buffer_to_MAPEM_message( ptr, &this->MAPEM_message_data );
-    // Add mutex for sync
+    /* Add mutex for sync */
     #ifdef DEBUG
     MAPEM_message_print( &MAPEM_message_data );
     #endif
   } else if ( HMI_activations_MQTT_compare( message->topic ) == 0 ) {
     MQTT_MESSAGE_DEBUG("MQTT_SafeStrip_subscriber::on_message TOPIC: " << message->topic );
-    // Add mutex for sync
+    /* Add mutex for sync */
     buffer_to_HMI_activations( ptr, &this->HMI_activations_data );
-    // Add mutex for sync
+    /* Add mutex for sync */
     #ifdef DEBUG
     HMI_activations_print( &HMI_activations_data );
     #endif
   } else if ( HMIinputsByApp_active_MQTT_compare( message->topic ) == 0 ) {
     MQTT_MESSAGE_DEBUG("MQTT_SafeStrip_subscriber::on_message TOPIC: " << message->topic );
-    // Add mutex for sync
+    /* Add mutex for sync */
     buffer_to_HMIinputsByApp_active( ptr, &this->HMIinputsByApp_active_data );
-    // Add mutex for sync
+    /* Add mutex for sync */
     #ifdef DEBUG
     HMIinputsByApp_active_print( &HMIinputsByApp_active_data );
     #endif
   } else if ( HMIinputsByApp_MQTT_compare( message->topic ) == 0 ) {
     MQTT_MESSAGE_DEBUG("MQTT_SafeStrip_subscriber::on_message TOPIC: " << message->topic );
-    // Add mutex for sync
+    /* Add mutex for sync */
     buffer_to_HMIinputsByApp( ptr, &this->HMIinputsByApp_data );
-    // Add mutex for sync
+    /* Add mutex for sync */
     #ifdef DEBUG
     HMIinputsByApp_print( &HMIinputsByApp_data );
     #endif
   } else if ( FirstTrajectoryMotorPrimitivesParameters_MQTT_compare( message->topic ) == 0 ) {
     MQTT_MESSAGE_DEBUG("MQTT_SafeStrip_subscriber::on_message TOPIC: " << message->topic );
-    // Add mutex for sync
+    /* Add mutex for sync */
     buffer_to_FirstTrajectoryMotorPrimitivesParameters( ptr, &this->FirstTrajectoryMotorPrimitivesParameters_data );
-    // Add mutex for sync
+    /* Add mutex for sync */
     #ifdef DEBUG
     FirstTrajectoryMotorPrimitivesParameters_print( &FirstTrajectoryMotorPrimitivesParameters_data );
     #endif
   } else if ( ManouevreTypes_MQTT_compare( message->topic ) == 0 ) {
     MQTT_MESSAGE_DEBUG("MQTT_SafeStrip_subscriber::on_message TOPIC: " << message->topic );
-    // Add mutex for sync
+    /* Add mutex for sync */
     buffer_to_ManouevreTypes( ptr, &this->ManouevreTypes_data );
-    // Add mutex for sync
+    /* Add mutex for sync */
     #ifdef DEBUG
     ManouevreTypes_print( &ManouevreTypes_data );
     #endif
   } else if ( StrainGauge_MQTT_compare( message->topic ) == 0 ) {
     MQTT_MESSAGE_DEBUG("MQTT_SafeStrip_subscriber::on_message TOPIC: " << message->topic );
-    // Add mutex for sync
+    /* Add mutex for sync */
     buffer_to_StrainGauge( ptr, &this->StrainGauge_data );
-    // Add mutex for sync
+    /* Add mutex for sync */
     #ifdef DEBUG
     StrainGauge_print( &StrainGauge_data );
     #endif
   } else if ( AutomationLevel_MQTT_compare( message->topic ) == 0 ) {
     MQTT_MESSAGE_DEBUG("MQTT_SafeStrip_subscriber::on_message TOPIC: " << message->topic );
-    // Add mutex for sync
+    /* Add mutex for sync */
     buffer_to_AutomationLevel( ptr, &this->AutomationLevel_data );
-    // Add mutex for sync
+    /* Add mutex for sync */
     #ifdef DEBUG
     AutomationLevel_print( &AutomationLevel_data );
     #endif
   } else if ( ParkingStatus_MQTT_compare( message->topic ) == 0 ) {
     MQTT_MESSAGE_DEBUG("MQTT_SafeStrip_subscriber::on_message TOPIC: " << message->topic );
-    // Add mutex for sync
+    /* Add mutex for sync */
     buffer_to_ParkingStatus( ptr, &this->ParkingStatus_data );
-    // Add mutex for sync
+    /* Add mutex for sync */
     #ifdef DEBUG
     ParkingStatus_print( &ParkingStatus_data );
     #endif
   } else if ( ParkingEvent_MQTT_compare( message->topic ) == 0 ) {
     MQTT_MESSAGE_DEBUG("MQTT_SafeStrip_subscriber::on_message TOPIC: " << message->topic );
-    // Add mutex for sync
+    /* Add mutex for sync */
     buffer_to_ParkingEvent( ptr, &this->ParkingEvent_data );
-    // Add mutex for sync
+    /* Add mutex for sync */
     #ifdef DEBUG
     ParkingEvent_print( &ParkingEvent_data );
     #endif
   } else if ( ParkingOutput_MQTT_compare( message->topic ) == 0 ) {
     MQTT_MESSAGE_DEBUG("MQTT_SafeStrip_subscriber::on_message TOPIC: " << message->topic );
-    // Add mutex for sync
+    /* Add mutex for sync */
     buffer_to_ParkingOutput( ptr, &this->ParkingOutput_data );
-    // Add mutex for sync
+    /* Add mutex for sync */
     #ifdef DEBUG
     ParkingOutput_print( &ParkingOutput_data );
     #endif
   } else if ( VirtualToll_input_MQTT_compare( message->topic ) == 0 ) {
     MQTT_MESSAGE_DEBUG("MQTT_SafeStrip_subscriber::on_message TOPIC: " << message->topic );
-    // Add mutex for sync
+    /* Add mutex for sync */
     buffer_to_VirtualToll_input( ptr, &this->VirtualToll_input_data );
-    // Add mutex for sync
+    /* Add mutex for sync */
     #ifdef DEBUG
     VirtualToll_input_print( &VirtualToll_input_data );
     #endif
   } else if ( VirtualToll_output_MQTT_compare( message->topic ) == 0 ) {
     MQTT_MESSAGE_DEBUG("MQTT_SafeStrip_subscriber::on_message TOPIC: " << message->topic );
-    // Add mutex for sync
+    /* Add mutex for sync */
     buffer_to_VirtualToll_output( ptr, &this->VirtualToll_output_data );
-    // Add mutex for sync
+    /* Add mutex for sync */
     #ifdef DEBUG
     VirtualToll_output_print( &VirtualToll_output_data );
     #endif
   } else if ( EnvironmentData_MQTT_compare( message->topic ) == 0 ) {
     MQTT_MESSAGE_DEBUG("MQTT_SafeStrip_subscriber::on_message TOPIC: " << message->topic );
-    // Add mutex for sync
+    /* Add mutex for sync */
     buffer_to_EnvironmentData( ptr, &this->EnvironmentData_data );
-    // Add mutex for sync
+    /* Add mutex for sync */
     #ifdef DEBUG
     EnvironmentData_print( &EnvironmentData_data );
     #endif
@@ -1081,204 +1117,204 @@ MQTT_SafeStrip_subscriber::on_message(
 }
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 void
 MQTT_SafeStrip_subscriber::get_last_HostVehicle( HostVehicle & S ) const
 {
-  // Add mutex for sync
+  /* Add mutex for sync */
   std::memcpy( &S, &this->HostVehicle_data, sizeof( HostVehicle ) );
-  // Add mutex for sync
+  /* Add mutex for sync */
 }
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 void
 MQTT_SafeStrip_subscriber::get_last_CAM_message( CAM_message & S ) const
 {
-  // Add mutex for sync
+  /* Add mutex for sync */
   std::memcpy( &S, &this->CAM_message_data, sizeof( CAM_message ) );
-  // Add mutex for sync
+  /* Add mutex for sync */
 }
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 void
 MQTT_SafeStrip_subscriber::get_last_DENM_message( DENM_message & S ) const
 {
-  // Add mutex for sync
+  /* Add mutex for sync */
   std::memcpy( &S, &this->DENM_message_data, sizeof( DENM_message ) );
-  // Add mutex for sync
+  /* Add mutex for sync */
 }
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 void
 MQTT_SafeStrip_subscriber::get_last_Strip_CAM( Strip_CAM & S ) const
 {
-  // Add mutex for sync
+  /* Add mutex for sync */
   std::memcpy( &S, &this->Strip_CAM_data, sizeof( Strip_CAM ) );
-  // Add mutex for sync
+  /* Add mutex for sync */
 }
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 void
 MQTT_SafeStrip_subscriber::get_last_MAPEM_message( MAPEM_message & S ) const
 {
-  // Add mutex for sync
+  /* Add mutex for sync */
   std::memcpy( &S, &this->MAPEM_message_data, sizeof( MAPEM_message ) );
-  // Add mutex for sync
+  /* Add mutex for sync */
 }
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 void
 MQTT_SafeStrip_subscriber::get_last_HMI_activations( HMI_activations & S ) const
 {
-  // Add mutex for sync
+  /* Add mutex for sync */
   std::memcpy( &S, &this->HMI_activations_data, sizeof( HMI_activations ) );
-  // Add mutex for sync
+  /* Add mutex for sync */
 }
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 void
 MQTT_SafeStrip_subscriber::get_last_HMIinputsByApp_active( HMIinputsByApp_active & S ) const
 {
-  // Add mutex for sync
+  /* Add mutex for sync */
   std::memcpy( &S, &this->HMIinputsByApp_active_data, sizeof( HMIinputsByApp_active ) );
-  // Add mutex for sync
+  /* Add mutex for sync */
 }
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 void
 MQTT_SafeStrip_subscriber::get_last_HMIinputsByApp( HMIinputsByApp & S ) const
 {
-  // Add mutex for sync
+  /* Add mutex for sync */
   std::memcpy( &S, &this->HMIinputsByApp_data, sizeof( HMIinputsByApp ) );
-  // Add mutex for sync
+  /* Add mutex for sync */
 }
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 void
 MQTT_SafeStrip_subscriber::get_last_FirstTrajectoryMotorPrimitivesParameters( FirstTrajectoryMotorPrimitivesParameters & S ) const
 {
-  // Add mutex for sync
+  /* Add mutex for sync */
   std::memcpy( &S, &this->FirstTrajectoryMotorPrimitivesParameters_data, sizeof( FirstTrajectoryMotorPrimitivesParameters ) );
-  // Add mutex for sync
+  /* Add mutex for sync */
 }
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 void
 MQTT_SafeStrip_subscriber::get_last_ManouevreTypes( ManouevreTypes & S ) const
 {
-  // Add mutex for sync
+  /* Add mutex for sync */
   std::memcpy( &S, &this->ManouevreTypes_data, sizeof( ManouevreTypes ) );
-  // Add mutex for sync
+  /* Add mutex for sync */
 }
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 void
 MQTT_SafeStrip_subscriber::get_last_StrainGauge( StrainGauge & S ) const
 {
-  // Add mutex for sync
+  /* Add mutex for sync */
   std::memcpy( &S, &this->StrainGauge_data, sizeof( StrainGauge ) );
-  // Add mutex for sync
+  /* Add mutex for sync */
 }
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 void
 MQTT_SafeStrip_subscriber::get_last_AutomationLevel( AutomationLevel & S ) const
 {
-  // Add mutex for sync
+  /* Add mutex for sync */
   std::memcpy( &S, &this->AutomationLevel_data, sizeof( AutomationLevel ) );
-  // Add mutex for sync
+  /* Add mutex for sync */
 }
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 void
 MQTT_SafeStrip_subscriber::get_last_ParkingStatus( ParkingStatus & S ) const
 {
-  // Add mutex for sync
+  /* Add mutex for sync */
   std::memcpy( &S, &this->ParkingStatus_data, sizeof( ParkingStatus ) );
-  // Add mutex for sync
+  /* Add mutex for sync */
 }
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 void
 MQTT_SafeStrip_subscriber::get_last_ParkingEvent( ParkingEvent & S ) const
 {
-  // Add mutex for sync
+  /* Add mutex for sync */
   std::memcpy( &S, &this->ParkingEvent_data, sizeof( ParkingEvent ) );
-  // Add mutex for sync
+  /* Add mutex for sync */
 }
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 void
 MQTT_SafeStrip_subscriber::get_last_ParkingOutput( ParkingOutput & S ) const
 {
-  // Add mutex for sync
+  /* Add mutex for sync */
   std::memcpy( &S, &this->ParkingOutput_data, sizeof( ParkingOutput ) );
-  // Add mutex for sync
+  /* Add mutex for sync */
 }
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 void
 MQTT_SafeStrip_subscriber::get_last_VirtualToll_input( VirtualToll_input & S ) const
 {
-  // Add mutex for sync
+  /* Add mutex for sync */
   std::memcpy( &S, &this->VirtualToll_input_data, sizeof( VirtualToll_input ) );
-  // Add mutex for sync
+  /* Add mutex for sync */
 }
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 void
 MQTT_SafeStrip_subscriber::get_last_VirtualToll_output( VirtualToll_output & S ) const
 {
-  // Add mutex for sync
+  /* Add mutex for sync */
   std::memcpy( &S, &this->VirtualToll_output_data, sizeof( VirtualToll_output ) );
-  // Add mutex for sync
+  /* Add mutex for sync */
 }
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 void
 MQTT_SafeStrip_subscriber::get_last_EnvironmentData( EnvironmentData & S ) const
 {
-  // Add mutex for sync
+  /* Add mutex for sync */
   std::memcpy( &S, &this->EnvironmentData_data, sizeof( EnvironmentData ) );
-  // Add mutex for sync
+  /* Add mutex for sync */
 }
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-// EOF: SafeStrip.cpp
+/* EOF: SafeStrip.cpp */

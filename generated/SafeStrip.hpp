@@ -114,118 +114,118 @@ public:
   on_message( const struct mosquitto_message *message );
 
 
-  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
   void
   get_last_HostVehicle( HostVehicle & S ) const;
 
 
-  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
   void
   get_last_CAM_message( CAM_message & S ) const;
 
 
-  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
   void
   get_last_DENM_message( DENM_message & S ) const;
 
 
-  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
   void
   get_last_Strip_CAM( Strip_CAM & S ) const;
 
 
-  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
   void
   get_last_MAPEM_message( MAPEM_message & S ) const;
 
 
-  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
   void
   get_last_HMI_activations( HMI_activations & S ) const;
 
 
-  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
   void
   get_last_HMIinputsByApp_active( HMIinputsByApp_active & S ) const;
 
 
-  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
   void
   get_last_HMIinputsByApp( HMIinputsByApp & S ) const;
 
 
-  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
   void
   get_last_FirstTrajectoryMotorPrimitivesParameters( FirstTrajectoryMotorPrimitivesParameters & S ) const;
 
 
-  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
   void
   get_last_ManouevreTypes( ManouevreTypes & S ) const;
 
 
-  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
   void
   get_last_StrainGauge( StrainGauge & S ) const;
 
 
-  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
   void
   get_last_AutomationLevel( AutomationLevel & S ) const;
 
 
-  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
   void
   get_last_ParkingStatus( ParkingStatus & S ) const;
 
 
-  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
   void
   get_last_ParkingEvent( ParkingEvent & S ) const;
 
 
-  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
   void
   get_last_ParkingOutput( ParkingOutput & S ) const;
 
 
-  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
   void
   get_last_VirtualToll_input( VirtualToll_input & S ) const;
 
 
-  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
   void
   get_last_VirtualToll_output( VirtualToll_output & S ) const;
 
 
-  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
   void
   get_last_EnvironmentData( EnvironmentData & S ) const;
 
 
-  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 };
 
 #endif
 
-// EOF: SafeStrip.hpp
+/* EOF: SafeStrip.hpp */

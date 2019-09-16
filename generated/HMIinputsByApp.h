@@ -24,7 +24,8 @@ typedef struct {
 } HMIinputsByApp;
 
 /* size of the serialized version of struct HMIinputsByApp */
-#define HMIinputsByApp_size 46
+#define HMIinputsByApp_size  46
+#define HMIinputsByApp_n_fields 9
 
 
 /* print HMIinputsByApp struct on stdio */

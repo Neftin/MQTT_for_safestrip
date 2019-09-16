@@ -7,6 +7,10 @@
 #ifndef __BUFFER_DEFINES_HH
 #define __BUFFER_DEFINES_HH
 
+#if defined(_WIN32) || defined(WIN32) || defined(_WIN64) || defined(WIN64)
+  #define UDP_ON_WINDOWS
+#endif
+
 #ifdef __cplusplus
   #include <cstdint>
   using std::int32_t;
@@ -17,6 +21,11 @@
 #else
   #include <stdint.h>
 #endif
+
+#include <stdlib.h>
+#include <string.h>
+#include <errno.h>
+#include <stdio.h>
 
 extern uint32_t uint8_to_buffer ( uint8_t  in, uint8_t buffer[1] );
 extern uint32_t int8_to_buffer  ( int8_t   in, uint8_t buffer[1] );
@@ -42,6 +51,19 @@ extern uint32_t buffer_to_double( uint8_t const buffer[8], double   * out );
 
 #ifdef __cplusplus
 }
+#endif
+
+#ifdef MATLAB_MEX_FILE
+  #include "simstruc.h"
+  #ifdef SS_STDIO_AVAILABLE
+    #ifndef UDP_printf
+      #define UDP_printf ssPrintf
+    #endif
+  #endif
+#endif
+
+#ifndef UDP_printf
+  #define UDP_printf printf
 #endif
 
 #endif

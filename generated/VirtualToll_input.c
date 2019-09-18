@@ -16,6 +16,9 @@
 void
 VirtualToll_input_print( VirtualToll_input const * S ) {
   printf( "UTC_time              = %llu\n", S->UTC_time);
+  printf( "StationType           = %hhu\n", S->StationType);
+  printf( "position_latitude     = %d\n", S->position_latitude);
+  printf( "position_longitude    = %d\n", S->position_longitude);
   printf( "virtual_gate_distance = %d\n", S->virtual_gate_distance);
   printf( "StripID               = %u\n", S->StripID);
   printf( "RSB_ID                = %u\n", S->RSB_ID);
@@ -31,6 +34,9 @@ VirtualToll_input_to_buffer(
 ) {
   uint8_t * ptr = buffer;
   ptr += uint64_to_buffer( S->UTC_time, ptr );
+  ptr += uint8_to_buffer( S->StationType, ptr );
+  ptr += int32_to_buffer( S->position_latitude, ptr );
+  ptr += int32_to_buffer( S->position_longitude, ptr );
   ptr += int32_to_buffer( S->virtual_gate_distance, ptr );
   ptr += uint32_to_buffer( S->StripID, ptr );
   ptr += uint32_to_buffer( S->RSB_ID, ptr );
@@ -46,6 +52,9 @@ buffer_to_VirtualToll_input(
 ) {
   uint8_t const * ptr = buffer;
   ptr += buffer_to_uint64( ptr, &S->UTC_time );
+  ptr += buffer_to_uint8( ptr, &S->StationType );
+  ptr += buffer_to_int32( ptr, &S->position_latitude );
+  ptr += buffer_to_int32( ptr, &S->position_longitude );
   ptr += buffer_to_int32( ptr, &S->virtual_gate_distance );
   ptr += buffer_to_uint32( ptr, &S->StripID );
   ptr += buffer_to_uint32( ptr, &S->RSB_ID );

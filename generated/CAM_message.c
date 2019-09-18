@@ -15,7 +15,6 @@
 /* print CAM_message struct on stdio */
 void
 CAM_message_print( CAM_message const * S ) {
-  int i_count;
   printf( "UTC_time                                       = %llu\n", S->UTC_time);
   printf( "v2x_cam_header_msgID                           = %u\n", S->v2x_cam_header_msgID);
   printf( "v2x_cam_header_originationStationID            = %u\n", S->v2x_cam_header_originationStationID);
@@ -38,12 +37,6 @@ CAM_message_print( CAM_message const * S ) {
   printf( "v2x_cam_LateralAcceleration                    = %hd\n", S->v2x_cam_LateralAcceleration);
   printf( "v2x_cam_VehicleRole                            = %hu\n", S->v2x_cam_VehicleRole);
   printf( "v2x_cam_ExteriorLights_status                  = %hhu\n", S->v2x_cam_ExteriorLights_status);
-  for ( i_count=0; i_count<10; ++i_count )
-    printf( "v2x_cam_PathHistory_deltaLatitude[%d]          = %d\n", i_count, S->v2x_cam_PathHistory_deltaLatitude[i_count]);
-  for ( i_count=0; i_count<10; ++i_count )
-    printf( "v2x_cam_PathHistory_deltaLongitude[%d]         = %d\n", i_count, S->v2x_cam_PathHistory_deltaLongitude[i_count]);
-  for ( i_count=0; i_count<10; ++i_count )
-    printf( "v2x_cam_PathHistory_deltaAltitude[%d]          = %d\n", i_count, S->v2x_cam_PathHistory_deltaAltitude[i_count]);
 }
 
 
@@ -53,7 +46,6 @@ CAM_message_to_buffer(
   CAM_message const * S,
   uint8_t buffer[]
 ) {
-  int i_count;
   uint8_t * ptr = buffer;
   ptr += uint64_to_buffer( S->UTC_time, ptr );
   ptr += uint32_to_buffer( S->v2x_cam_header_msgID, ptr );
@@ -77,12 +69,6 @@ CAM_message_to_buffer(
   ptr += int16_to_buffer( S->v2x_cam_LateralAcceleration, ptr );
   ptr += uint16_to_buffer( S->v2x_cam_VehicleRole, ptr );
   ptr += uint8_to_buffer( S->v2x_cam_ExteriorLights_status, ptr );
-  for ( i_count=0; i_count<10; ++i_count )
-    { ptr += int32_to_buffer( S->v2x_cam_PathHistory_deltaLatitude[i_count], ptr ); }
-  for ( i_count=0; i_count<10; ++i_count )
-    { ptr += int32_to_buffer( S->v2x_cam_PathHistory_deltaLongitude[i_count], ptr ); }
-  for ( i_count=0; i_count<10; ++i_count )
-    { ptr += int32_to_buffer( S->v2x_cam_PathHistory_deltaAltitude[i_count], ptr ); }
 }
 
 
@@ -92,7 +78,6 @@ buffer_to_CAM_message(
   uint8_t const buffer[],
   CAM_message * S
 ) {
-  int i_count;
   uint8_t const * ptr = buffer;
   ptr += buffer_to_uint64( ptr, &S->UTC_time );
   ptr += buffer_to_uint32( ptr, &S->v2x_cam_header_msgID );
@@ -116,12 +101,6 @@ buffer_to_CAM_message(
   ptr += buffer_to_int16( ptr, &S->v2x_cam_LateralAcceleration );
   ptr += buffer_to_uint16( ptr, &S->v2x_cam_VehicleRole );
   ptr += buffer_to_uint8( ptr, &S->v2x_cam_ExteriorLights_status );
-  for ( i_count=0; i_count<10; ++i_count )
-    { ptr += buffer_to_int32( ptr, & S->v2x_cam_PathHistory_deltaLatitude[i_count] ); }
-  for ( i_count=0; i_count<10; ++i_count )
-    { ptr += buffer_to_int32( ptr, & S->v2x_cam_PathHistory_deltaLongitude[i_count] ); }
-  for ( i_count=0; i_count<10; ++i_count )
-    { ptr += buffer_to_int32( ptr, & S->v2x_cam_PathHistory_deltaAltitude[i_count] ); }
 }
 
 

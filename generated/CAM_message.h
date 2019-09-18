@@ -34,14 +34,11 @@ typedef struct {
   int16_t  v2x_cam_LateralAcceleration;                         /* Unit_0,1_m/s^2._Negative:_acc._towards_right_side._Positive:_acc._towards_left_side_of_vehicle._Set_to_161_when_unavailable. */
   uint16_t v2x_cam_VehicleRole;                                 /* VehicleRole_::=_ENUMERATED_{default(0),_publicTransport(1),|specialTransport(2),_dangerousGoods(3),_roadWork(4),_rescue(5),|emergency(6),_safetyCar(7),|agriculture(8),commercial(9),military(10),roadOperator(11),taxi(12),|reserved1(13),_reserved2(14),_reserved3(15)} */
   uint8_t  v2x_cam_ExteriorLights_status;                       /* 0_=_RELEASED;_1_=_PRESSED_for_every_light_command.|ExteriorLights_::=_BIT_STRING_{|lowBeamHeadlightsOn_(0),|highBeamHeadlightsOn_(1),|leftTurnSignalOn_(2),|rightTurnSignalOn_(3),|daytimeRunningLightsOn_(4),|reverseLightOn_(5),|fogLightOn_(6),|parkingLightsOn_(7)|}_(SIZE(8)) */
-  int32_t  v2x_cam_PathHistory_deltaLatitude[10];               /* DeltaLatitude_::=_INTEGER_{oneMicrodegreeNorth_(10),_oneMicrodegreeSouth(-10),_unavailable(131072)} */
-  int32_t  v2x_cam_PathHistory_deltaLongitude[10];              /* DeltaLongitude_::=_INTEGER_{oneMicrodegreeEast_(10),_oneMicrodegreeWest(-10),_unavailable(131072)}_(-131071..131072) */
-  int32_t  v2x_cam_PathHistory_deltaAltitude[10];               /* DeltaAltitude_::=_INTEGER_{oneCentimeterUp_(1),_oneCentimeterDown_(-1),|unavailable(12800)}_(-12700..12800) */
 } CAM_message;
 
 /* size of the serialized version of struct CAM_message */
-#define CAM_message_size  182
-#define CAM_message_n_fields 25
+#define CAM_message_size  62
+#define CAM_message_n_fields 22
 
 
 /* print CAM_message struct on stdio */

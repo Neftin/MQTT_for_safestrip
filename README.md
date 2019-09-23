@@ -1,4 +1,11 @@
 # MQTT for safestrip #
+## Introduction ##
+
+This library Allows to send/receive trough MQTT C-structures contained in generated folder.
+The structures are generated from the excel file signalMap (see folder)
+
+## FOLDERS ##
+
 This repository contains the library for the MQTT communication of the project SAFESTRIP
 
 * **Signal_map** contains the excel file with all the signals of the MQTT communication
@@ -11,4 +18,3 @@ This repository contains the library for the MQTT communication of the project S
 
 * Use always the last version of the library
 * It is retrocompatible with code developed with older versions, unless there are some signal changed/deleted you are using
-

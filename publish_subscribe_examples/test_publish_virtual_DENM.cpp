@@ -11,6 +11,7 @@ main() {
   // initialize the subscriber object
   MQTT_SafeStrip_publisher  mqtt_publisher("publisher");
 
+  // Connection
   cout << "Connect ... \n";
   mqtt_publisher.connect( "127.0.0.1", 1883, 60 );
 
@@ -22,7 +23,7 @@ main() {
     // trigger mosquitto callbacks
     mqtt_publisher.loop(1, 1);
 
-    // Sending
+    // Define message
     DENM_message denm;
     
     denm.v2x_header_msgID                                = j;
@@ -44,13 +45,7 @@ main() {
     denm.v2x_denm_frictionCoefficient_value              = 0;
     denm.v2x_denm_frictionCoefficient_confidence         = 0;
 
-    for(int iii = 0; iii < 10; iii++)
-    {
-      denm.v2x_denm_EventHistory_deltaLongitude[iii] = iii;
-      denm.v2x_denm_EventHistory_deltaLatitude[iii] = 2*iii;
-      denm.v2x_denm_EventHistory_deltaAltitude[iii] = 3*iii;
-    }
-    
+    // Send message
     mqtt_publisher.publish( denm );
 
     std::this_thread::sleep_for(std::chrono::milliseconds(1000));

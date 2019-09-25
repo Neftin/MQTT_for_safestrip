@@ -15,33 +15,27 @@
 /* print DENM_message struct on stdio */
 void
 DENM_message_print( DENM_message const * S ) {
-  int i_count;
-  printf( "UTC_time                                        = %llu\n", S->UTC_time);
-  printf( "v2x_header_StationID                            = %d\n", S->v2x_header_StationID);
-  printf( "v2x_header_originationStationID                 = %d\n", S->v2x_header_originationStationID);
-  printf( "v2x_denm_sequenceNumber                         = %hu\n", S->v2x_denm_sequenceNumber);
-  printf( "v2x_denm_detectionTime                          = %llu\n", S->v2x_denm_detectionTime);
-  printf( "v2x_denm_eventPosition_latitude                 = %d\n", S->v2x_denm_eventPosition_latitude);
-  printf( "v2x_denm_eventPosition_longitude                = %d\n", S->v2x_denm_eventPosition_longitude);
-  printf( "v2x_denm_ConfidenceEllipse_semiMajor            = %d\n", S->v2x_denm_ConfidenceEllipse_semiMajor);
-  printf( "v2x_denm_ConfidenceEllipse_semiMinor            = %d\n", S->v2x_denm_ConfidenceEllipse_semiMinor);
-  printf( "v2x_denm_ConfidenceEllipse_semiMajorOrientation = %d\n", S->v2x_denm_ConfidenceEllipse_semiMajorOrientation);
-  printf( "v2x_denm_eventPosition_altitude                 = %d\n", S->v2x_denm_eventPosition_altitude);
-  printf( "v2x_denm_relevanceDistance                      = %hhu\n", S->v2x_denm_relevanceDistance);
-  printf( "v2x_denm_relevanceTrafficDirection              = %hhu\n", S->v2x_denm_relevanceTrafficDirection);
-  printf( "v2x_denm_validityDuration                       = %d\n", S->v2x_denm_validityDuration);
-  printf( "v2x_denm_stationType                            = %hhu\n", S->v2x_denm_stationType);
-  printf( "v2x_denm_eventType_CauseCode                    = %d\n", S->v2x_denm_eventType_CauseCode);
-  printf( "v2x_denm_eventType_SubCauseCode                 = %d\n", S->v2x_denm_eventType_SubCauseCode);
-  printf( "v2x_denm_frictionCoefficient_value              = %hu\n", S->v2x_denm_frictionCoefficient_value);
-  printf( "v2x_denm_frictionCoefficient_confidence         = %hu\n", S->v2x_denm_frictionCoefficient_confidence);
-  for ( i_count=0; i_count<10; ++i_count )
-    printf( "v2x_denm_EventHistory_deltaLatitude[%d]         = %d\n", i_count, S->v2x_denm_EventHistory_deltaLatitude[i_count]);
-  for ( i_count=0; i_count<10; ++i_count )
-    printf( "v2x_denm_EventHistory_deltaLongitude[%d]        = %d\n", i_count, S->v2x_denm_EventHistory_deltaLongitude[i_count]);
-  for ( i_count=0; i_count<10; ++i_count )
-    printf( "v2x_denm_EventHistory_deltaAltitude[%d]         = %d\n", i_count, S->v2x_denm_EventHistory_deltaAltitude[i_count]);
-  printf( "v2x_denm_alacarte_LanePosition                  = %d\n", S->v2x_denm_alacarte_LanePosition);
+  printf( "UTC_time                                                                   = %llu\n", S->UTC_time);
+  printf( "v2x_header_StationID                                                       = %u\n", S->v2x_header_StationID);
+  printf( "v2x_header_originationStationID                                            = %u\n", S->v2x_header_originationStationID);
+  printf( "v2x_denm_sequenceNumber                                                    = %hu\n", S->v2x_denm_sequenceNumber);
+  printf( "v2x_denm_detectionTime                                                     = %llu\n", S->v2x_denm_detectionTime);
+  printf( "v2x_denm_eventPosition_latitude                                            = %d\n", S->v2x_denm_eventPosition_latitude);
+  printf( "v2x_denm_eventPosition_longitude                                           = %d\n", S->v2x_denm_eventPosition_longitude);
+  printf( "v2x_denm_ConfidenceEllipse_semiMajor                                       = %d\n", S->v2x_denm_ConfidenceEllipse_semiMajor);
+  printf( "v2x_denm_ConfidenceEllipse_semiMinor                                       = %d\n", S->v2x_denm_ConfidenceEllipse_semiMinor);
+  printf( "v2x_denm_ConfidenceEllipse_semiMajorOrientation                            = %d\n", S->v2x_denm_ConfidenceEllipse_semiMajorOrientation);
+  printf( "v2x_denm_eventPosition_altitude                                            = %d\n", S->v2x_denm_eventPosition_altitude);
+  printf( "v2x_denm_relevanceDistance                                                 = %hhu\n", S->v2x_denm_relevanceDistance);
+  printf( "v2x_denm_relevanceTrafficDirection                                         = %hhu\n", S->v2x_denm_relevanceTrafficDirection);
+  printf( "v2x_denm_validityDuration                                                  = %d\n", S->v2x_denm_validityDuration);
+  printf( "v2x_denm_stationType                                                       = %hhu\n", S->v2x_denm_stationType);
+  printf( "v2x_denm_eventType_CauseCode                                               = %d\n", S->v2x_denm_eventType_CauseCode);
+  printf( "v2x_denm_eventType_SubCauseCode                                            = %d\n", S->v2x_denm_eventType_SubCauseCode);
+  printf( "v2x_denm_frictionCoefficient_value                                         = %hu\n", S->v2x_denm_frictionCoefficient_value);
+  printf( "v2x_denm_frictionCoefficient_confidence                                    = %hu\n", S->v2x_denm_frictionCoefficient_confidence);
+  printf( "v2x_denm_alacarte_LanePosition                                             = %d\n", S->v2x_denm_alacarte_LanePosition);
+  printf( "v2x_denm_alacarte_RoadWorksContainerExtended_closedLanes_DrivingLaneStatus = %u\n", S->v2x_denm_alacarte_RoadWorksContainerExtended_closedLanes_DrivingLaneStatus);
 }
 
 
@@ -51,11 +45,10 @@ DENM_message_to_buffer(
   DENM_message const * S,
   uint8_t buffer[]
 ) {
-  int i_count;
   uint8_t * ptr = buffer;
   ptr += uint64_to_buffer( S->UTC_time, ptr );
-  ptr += int32_to_buffer( S->v2x_header_StationID, ptr );
-  ptr += int32_to_buffer( S->v2x_header_originationStationID, ptr );
+  ptr += uint32_to_buffer( S->v2x_header_StationID, ptr );
+  ptr += uint32_to_buffer( S->v2x_header_originationStationID, ptr );
   ptr += uint16_to_buffer( S->v2x_denm_sequenceNumber, ptr );
   ptr += uint64_to_buffer( S->v2x_denm_detectionTime, ptr );
   ptr += int32_to_buffer( S->v2x_denm_eventPosition_latitude, ptr );
@@ -72,13 +65,8 @@ DENM_message_to_buffer(
   ptr += int32_to_buffer( S->v2x_denm_eventType_SubCauseCode, ptr );
   ptr += uint16_to_buffer( S->v2x_denm_frictionCoefficient_value, ptr );
   ptr += uint16_to_buffer( S->v2x_denm_frictionCoefficient_confidence, ptr );
-  for ( i_count=0; i_count<10; ++i_count )
-    { ptr += int32_to_buffer( S->v2x_denm_EventHistory_deltaLatitude[i_count], ptr ); }
-  for ( i_count=0; i_count<10; ++i_count )
-    { ptr += int32_to_buffer( S->v2x_denm_EventHistory_deltaLongitude[i_count], ptr ); }
-  for ( i_count=0; i_count<10; ++i_count )
-    { ptr += int32_to_buffer( S->v2x_denm_EventHistory_deltaAltitude[i_count], ptr ); }
   ptr += int32_to_buffer( S->v2x_denm_alacarte_LanePosition, ptr );
+  ptr += uint32_to_buffer( S->v2x_denm_alacarte_RoadWorksContainerExtended_closedLanes_DrivingLaneStatus, ptr );
 }
 
 
@@ -88,11 +76,10 @@ buffer_to_DENM_message(
   uint8_t const buffer[],
   DENM_message * S
 ) {
-  int i_count;
   uint8_t const * ptr = buffer;
   ptr += buffer_to_uint64( ptr, &S->UTC_time );
-  ptr += buffer_to_int32( ptr, &S->v2x_header_StationID );
-  ptr += buffer_to_int32( ptr, &S->v2x_header_originationStationID );
+  ptr += buffer_to_uint32( ptr, &S->v2x_header_StationID );
+  ptr += buffer_to_uint32( ptr, &S->v2x_header_originationStationID );
   ptr += buffer_to_uint16( ptr, &S->v2x_denm_sequenceNumber );
   ptr += buffer_to_uint64( ptr, &S->v2x_denm_detectionTime );
   ptr += buffer_to_int32( ptr, &S->v2x_denm_eventPosition_latitude );
@@ -109,13 +96,8 @@ buffer_to_DENM_message(
   ptr += buffer_to_int32( ptr, &S->v2x_denm_eventType_SubCauseCode );
   ptr += buffer_to_uint16( ptr, &S->v2x_denm_frictionCoefficient_value );
   ptr += buffer_to_uint16( ptr, &S->v2x_denm_frictionCoefficient_confidence );
-  for ( i_count=0; i_count<10; ++i_count )
-    { ptr += buffer_to_int32( ptr, & S->v2x_denm_EventHistory_deltaLatitude[i_count] ); }
-  for ( i_count=0; i_count<10; ++i_count )
-    { ptr += buffer_to_int32( ptr, & S->v2x_denm_EventHistory_deltaLongitude[i_count] ); }
-  for ( i_count=0; i_count<10; ++i_count )
-    { ptr += buffer_to_int32( ptr, & S->v2x_denm_EventHistory_deltaAltitude[i_count] ); }
   ptr += buffer_to_int32( ptr, &S->v2x_denm_alacarte_LanePosition );
+  ptr += buffer_to_uint32( ptr, &S->v2x_denm_alacarte_RoadWorksContainerExtended_closedLanes_DrivingLaneStatus );
 }
 
 

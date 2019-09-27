@@ -14,6 +14,7 @@
 typedef struct {
   uint64_t UTC_time;                                    /* Time_at_which_the_signal_is_sent:_Stanrdard_UTC_time_is_used */
   uint32_t originationStationID;                        /* Unique_indentifier_for_RSU */
+  uint32_t StripID;                                     /* ID_of_the_strip */
   uint32_t RFID_ID;                                     /* Unique_indentifier_for_verhicle */
   uint8_t  StationType;                                 /* unknown(0),_pedestrian(1),_cyclist(2),_moped(3),_motorcycle(4),_passengerCar(5),_bus(6),_lightTruck(7),_heavyTruck(8),_trailer(9),_specialVehicles(10),_tram(11),_roadSideUnit(15) */
   int32_t  Latitude;                                    /* Unit_0,1_microdegree._Referred_to_front_bumper_position._Positive:_NORTH._Negative:_SOUTH._Raw_value_set_to_900_000_001_when_unavailable. */
@@ -30,8 +31,8 @@ typedef struct {
 } Strip_CAM;
 
 /* size of the serialized version of struct Strip_CAM */
-#define Strip_CAM_size  52
-#define Strip_CAM_n_fields 15
+#define Strip_CAM_size  56
+#define Strip_CAM_n_fields 16
 
 
 /* print Strip_CAM struct on stdio */

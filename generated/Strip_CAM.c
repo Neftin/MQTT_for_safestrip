@@ -17,6 +17,7 @@ void
 Strip_CAM_print( Strip_CAM const * S ) {
   printf( "UTC_time                               = %llu\n", S->UTC_time);
   printf( "originationStationID                   = %u\n", S->originationStationID);
+  printf( "StripID                                = %u\n", S->StripID);
   printf( "RFID_ID                                = %u\n", S->RFID_ID);
   printf( "StationType                            = %hhu\n", S->StationType);
   printf( "Latitude                               = %d\n", S->Latitude);
@@ -42,6 +43,7 @@ Strip_CAM_to_buffer(
   uint8_t * ptr = buffer;
   ptr += uint64_to_buffer( S->UTC_time, ptr );
   ptr += uint32_to_buffer( S->originationStationID, ptr );
+  ptr += uint32_to_buffer( S->StripID, ptr );
   ptr += uint32_to_buffer( S->RFID_ID, ptr );
   ptr += uint8_to_buffer( S->StationType, ptr );
   ptr += int32_to_buffer( S->Latitude, ptr );
@@ -67,6 +69,7 @@ buffer_to_Strip_CAM(
   uint8_t const * ptr = buffer;
   ptr += buffer_to_uint64( ptr, &S->UTC_time );
   ptr += buffer_to_uint32( ptr, &S->originationStationID );
+  ptr += buffer_to_uint32( ptr, &S->StripID );
   ptr += buffer_to_uint32( ptr, &S->RFID_ID );
   ptr += buffer_to_uint8( ptr, &S->StationType );
   ptr += buffer_to_int32( ptr, &S->Latitude );

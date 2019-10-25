@@ -31,6 +31,7 @@ Strip_CAM_print( Strip_CAM const * S ) {
   printf( "VehicleLength                          = %hu\n", S->VehicleLength);
   printf( "VehicleWidth                           = %hhu\n", S->VehicleWidth);
   printf( "LongitudinalAcceleration               = %d\n", S->LongitudinalAcceleration);
+  printf( "Lane_ID                                = %hhu\n", S->Lane_ID);
 }
 
 
@@ -57,6 +58,7 @@ Strip_CAM_to_buffer(
   ptr += uint16_to_buffer( S->VehicleLength, ptr );
   ptr += uint8_to_buffer( S->VehicleWidth, ptr );
   ptr += int32_to_buffer( S->LongitudinalAcceleration, ptr );
+  ptr += uint8_to_buffer( S->Lane_ID, ptr );
 }
 
 
@@ -83,6 +85,7 @@ buffer_to_Strip_CAM(
   ptr += buffer_to_uint16( ptr, &S->VehicleLength );
   ptr += buffer_to_uint8( ptr, &S->VehicleWidth );
   ptr += buffer_to_int32( ptr, &S->LongitudinalAcceleration );
+  ptr += buffer_to_uint8( ptr, &S->Lane_ID );
 }
 
 

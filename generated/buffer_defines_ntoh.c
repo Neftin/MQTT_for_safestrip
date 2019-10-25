@@ -1,5 +1,12 @@
 #include "buffer_defines.h"
 
+#ifdef __GNUC__
+#pragma GCC diagnostic ignored "-Wunreachable-code-return"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic ignored "-Wunreachable-code-return"
+#endif
+
 #ifdef UDP_ON_WINDOWS
   #include <Winsock.h>
 #else
@@ -91,7 +98,9 @@ buffer_to_int64( uint8_t const buffer[8], int64_t * out ) {
   static
   double
   unpack754( uint64_t i, uint32_t bits, uint32_t expbits ) {
-    double res;
+    double   res;
+    uint64_t bias;
+    uint64_t shift;
     uint32_t significandbits = bits - expbits - 1; /* -1 for sign bit */
     if ( i == 0 ) return 0;
     /* pull the significand */
@@ -99,8 +108,8 @@ buffer_to_int64( uint8_t const buffer[8], int64_t * out ) {
     res /= (double)(1<<significandbits); /* mask */
     res += 1.0; /* add the one back on */
     /* deal with the exponent */
-    uint64_t bias  = maskOfBits(expbits-1);
-    uint64_t shift = (i>>significandbits) & maskOfBits(expbits);
+    bias  = maskOfBits(expbits-1);
+    shift = (i>>significandbits) & maskOfBits(expbits);
     while ( shift > bias ) { res *= 2.0; --shift; }
     while ( shift < bias ) { res /= 2.0; ++shift; }
     /* sign it */
@@ -111,9 +120,11 @@ buffer_to_int64( uint8_t const buffer[8], int64_t * out ) {
   uint32_t
   buffer_to_float( uint8_t const buffer[4], float *out) {
     uint32_t tmp32;
+    uint64_t tmp64;
+    double   tmpd;
     buffer_to_uint32( buffer, &tmp32 );
-    uint64_t tmp64 = (uint64_t)tmp32;
-    double tmpd = unpack754( tmp64, 32, 8 );
+    tmp64 = (uint64_t)tmp32;
+    tmpd = unpack754( tmp64, 32, 8 );
     *out = (float)tmpd;
     return sizeof(float);
   }

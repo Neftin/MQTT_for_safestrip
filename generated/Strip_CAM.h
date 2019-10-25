@@ -28,11 +28,12 @@ typedef struct {
   uint16_t VehicleLength;                               /* Unit_0,1_m._Set_to_1_023_if_the_information_in_unavailable. */
   uint8_t  VehicleWidth;                                /* Unit_0,1_m._Set_to_62_if_the_information_is|unavailable */
   int32_t  LongitudinalAcceleration;                    /* Unit_0,1__m/s^2._Negative_values_indicate_that_the_vehicle_is_braking._Positive_values_indicate_that_the_vehicle_is_accelerating._Set_to_161_when_unavailable. */
+  uint8_t  Lane_ID;                                     /* This_number_depends_on_the_lanes_coded_in_the_intersection,_refer_to_the_map_ */
 } Strip_CAM;
 
 /* size of the serialized version of struct Strip_CAM */
-#define Strip_CAM_size  56
-#define Strip_CAM_n_fields 16
+#define Strip_CAM_size  57
+#define Strip_CAM_n_fields 17
 
 
 /* print Strip_CAM struct on stdio */

@@ -12,12 +12,12 @@
 
 /* C structure for ParkingEvent */
 typedef struct {
-  uint64_t UTC_time;      /* Time_at_which_the_signal_is_sent:_Stanrdard_UTC_time_is_used */
-  int32_t  OutputID;      /* 1_=_VRU_Cooperative_Safety_App_|_2_=_Merging_Support_|_3_=_Rail_Crossing_and_Roadworks_|_4_=_Personalized_VMS_|_5_=_Virtual_Toll_|_6_=_ParkingBooking */
-  uint32_t RSB_ID;        /* Unique_indentifier_for_verhicle_or_RSU */
-  uint32_t RFID_ID;       /* ID_by_RFID */
-  uint32_t StripID;       /* ID_of_the_strip_sending_event */
-  uint8_t  Event;         /* 0_=_exit_,_1_=_entering,_2_=_unknown */
+  uint64_t UTC_time;      /* MISSING */
+  int32_t  OutputID;      /* MISSING */
+  uint32_t RSB_ID;        /* MISSING */
+  uint32_t RFID_ID;       /* MISSING */
+  uint32_t StripID;       /* MISSING */
+  uint8_t  Event;         /* MISSING */
 } ParkingEvent;
 
 /* size of the serialized version of struct ParkingEvent */

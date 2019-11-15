@@ -12,18 +12,18 @@
 
 /* C structure for HostVehicle */
 typedef struct {
-  uint64_t UTC_time;                              /* Time_at_which_the_signal_is_sent:_Stanrdard_UTC_time_is_used */
-  double   Speed_vehicle_network;                 /* Filtered_longitudinal_velocity_from__odometer */
-  double   LongAcc_vehicle_network;               /* Filtered_longitudinal_acceleration */
-  double   LatAcc_vehicle_network;                /* Filtered_lateral_acceleration */
-  double   YawRate_vehicle_network;               /* Note_that_yaw-rate_is_the_derivative_of_the_heading,_i.e._chassis_rotation_rate,_not_speed_rotation_rate */
-  double   SteerWheel_vehicle_network;            /* Positive_when_the_car_is_turning_left */
-  double   SteerWheelSpeed_vehicle_network;       /* Derivative_of_steering_wheel_angle */
-  double   BrakePressure_vehicle_network;         /* Used_instead_of_brake_pedal_position */
-  double   GasPedPos_vehicle_network;             /* Gas_pedal_position */
-  uint8_t  BrakePedalSwitch_vehicle_network;      /* 0_=_UNKNOWN;_1_=_RELEASED;_2_=_PRESSED */
-  int32_t  VehicleType;                           /*  */
-  double   VehicleBarLongPos;                     /* Distance_to_front_bumper */
+  uint64_t UTC_time;                              /* MISSING */
+  double   Speed_vehicle_network;                 /* MISSING */
+  double   LongAcc_vehicle_network;               /* MISSING */
+  double   LatAcc_vehicle_network;                /* MISSING */
+  double   YawRate_vehicle_network;               /* MISSING */
+  double   SteerWheel_vehicle_network;            /* MISSING */
+  double   SteerWheelSpeed_vehicle_network;       /* MISSING */
+  double   BrakePressure_vehicle_network;         /* MISSING */
+  double   GasPedPos_vehicle_network;             /* MISSING */
+  uint8_t  BrakePedalSwitch_vehicle_network;      /* MISSING */
+  int32_t  VehicleType;                           /* MISSING */
+  double   VehicleBarLongPos;                     /* MISSING */
 } HostVehicle;
 
 /* size of the serialized version of struct HostVehicle */

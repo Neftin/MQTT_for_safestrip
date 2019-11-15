@@ -12,10 +12,10 @@
 
 /* C structure for ParkingStatus */
 typedef struct {
-  uint64_t UTC_time;                     /* Time_at_which_the_signal_is_sent:_Stanrdard_UTC_time_is_used */
-  int32_t  OutputID;                     /* 1_=_VRU_Cooperative_Safety_App_|_2_=_Merging_Support_|_3_=_Rail_Crossing_and_Roadworks_|_4_=_Personalized_VMS_|_5_=_Virtual_Toll_|_6_=_ParkingBooking */
-  uint32_t IDs_free_patkings[10];        /* ID_of_the_strips_associated_to_the_free_parking_slots */
-  uint32_t Number_of_free_parkings;      /* Number_of_the_free_parking_slots */
+  uint64_t UTC_time;                     /* MISSING */
+  int32_t  OutputID;                     /* MISSING */
+  uint32_t IDs_free_patkings[10];        /* MISSING */
+  uint32_t Number_of_free_parkings;      /* MISSING */
 } ParkingStatus;
 
 /* size of the serialized version of struct ParkingStatus */

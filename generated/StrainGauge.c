@@ -15,13 +15,12 @@
 /* print StrainGauge struct on stdio */
 void
 StrainGauge_print( StrainGauge const * S ) {
-  printf( "UTC_time                     = %llu\n", S->UTC_time);
-  printf( "StripID                      = %u\n", S->StripID);
-  printf( "Strain_gauge_Sensor_ID       = %u\n", S->Strain_gauge_Sensor_ID);
-  printf( "Strain_gauge_Cumulative_time = %lg\n", S->Strain_gauge_Cumulative_time);
-  printf( "Strain_gage_output_voltage   = %lg\n", S->Strain_gage_output_voltage);
-  printf( "Estimated_remaining_life     = %u\n", S->Estimated_remaining_life);
-  printf( "Remaininglifeprobability     = %lg\n", S->Remaininglifeprobability);
+  printf( "UTC_time                = %llu\n", S->UTC_time);
+  printf( "StripID                 = %u\n", S->StripID);
+  printf( "Strain_gauge_Sensor_ID  = %d\n", S->Strain_gauge_Sensor_ID);
+  printf( "Strain_gauge_Amplitude  = %lg\n", S->Strain_gauge_Amplitude);
+  printf( "Strain_gauge_event_time = %lg\n", S->Strain_gauge_event_time);
+  printf( "Exponential_decay       = %lg\n", S->Exponential_decay);
 }
 
 
@@ -34,11 +33,10 @@ StrainGauge_to_buffer(
   uint8_t * ptr = buffer;
   ptr += uint64_to_buffer( S->UTC_time, ptr );
   ptr += uint32_to_buffer( S->StripID, ptr );
-  ptr += uint32_to_buffer( S->Strain_gauge_Sensor_ID, ptr );
-  ptr += double_to_buffer( S->Strain_gauge_Cumulative_time, ptr );
-  ptr += double_to_buffer( S->Strain_gage_output_voltage, ptr );
-  ptr += uint32_to_buffer( S->Estimated_remaining_life, ptr );
-  ptr += double_to_buffer( S->Remaininglifeprobability, ptr );
+  ptr += int32_to_buffer( S->Strain_gauge_Sensor_ID, ptr );
+  ptr += double_to_buffer( S->Strain_gauge_Amplitude, ptr );
+  ptr += double_to_buffer( S->Strain_gauge_event_time, ptr );
+  ptr += double_to_buffer( S->Exponential_decay, ptr );
 }
 
 
@@ -51,11 +49,10 @@ buffer_to_StrainGauge(
   uint8_t const * ptr = buffer;
   ptr += buffer_to_uint64( ptr, &S->UTC_time );
   ptr += buffer_to_uint32( ptr, &S->StripID );
-  ptr += buffer_to_uint32( ptr, &S->Strain_gauge_Sensor_ID );
-  ptr += buffer_to_double( ptr, &S->Strain_gauge_Cumulative_time );
-  ptr += buffer_to_double( ptr, &S->Strain_gage_output_voltage );
-  ptr += buffer_to_uint32( ptr, &S->Estimated_remaining_life );
-  ptr += buffer_to_double( ptr, &S->Remaininglifeprobability );
+  ptr += buffer_to_int32( ptr, &S->Strain_gauge_Sensor_ID );
+  ptr += buffer_to_double( ptr, &S->Strain_gauge_Amplitude );
+  ptr += buffer_to_double( ptr, &S->Strain_gauge_event_time );
+  ptr += buffer_to_double( ptr, &S->Exponential_decay );
 }
 
 

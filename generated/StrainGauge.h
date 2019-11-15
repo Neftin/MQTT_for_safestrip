@@ -12,18 +12,17 @@
 
 /* C structure for StrainGauge */
 typedef struct {
-  uint64_t UTC_time;                          /* Time_at_which_the_signal_is_sent:_Stanrdard_UTC_time_is_used */
-  uint32_t StripID;                           /* ID_of_the_strip */
-  uint32_t Strain_gauge_Sensor_ID;            /*  */
-  double   Strain_gauge_Cumulative_time;      /*  */
-  double   Strain_gage_output_voltage;        /*  */
-  uint32_t Estimated_remaining_life;          /*  */
-  double   Remaininglifeprobability;          /*  */
+  uint64_t UTC_time;                     /* MISSING */
+  uint32_t StripID;                      /* MISSING */
+  int32_t  Strain_gauge_Sensor_ID;       /* MISSING */
+  double   Strain_gauge_Amplitude;       /* MISSING */
+  double   Strain_gauge_event_time;      /* MISSING */
+  double   Exponential_decay;            /* MISSING */
 } StrainGauge;
 
 /* size of the serialized version of struct StrainGauge */
-#define StrainGauge_size  44
-#define StrainGauge_n_fields 7
+#define StrainGauge_size  40
+#define StrainGauge_n_fields 6
 
 
 /* print StrainGauge struct on stdio */

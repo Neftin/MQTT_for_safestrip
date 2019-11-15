@@ -12,8 +12,8 @@
 
 /* C structure for HMI_activations */
 typedef struct {
-  uint32_t UTC_time;         /* 1_=_VRU_Cooperative_Safety_App_|_2_=_Merging_Support_|_3_=_Rail_Crossing_and_Roadworks_|_4_=_Personalized_VMS_|_5_=_Virtual_Toll_|_6_=_ParkingBooking */
-  uint32_t apps_active;      /* bit_(from_LSB_as_0th_bit)_0_=_VRU_Cooperative_Safety_App_|_1_=_Merging_Support_|_2_=_Rail_Crossing_and_Roadworks_|_3_=_Personalized_VMS_|_4_=_Virtual_Toll_|_5_=_ParkingBooking */
+  uint32_t UTC_time;         /* MISSING */
+  uint32_t apps_active;      /* MISSING */
 } HMI_activations;
 
 /* size of the serialized version of struct HMI_activations */

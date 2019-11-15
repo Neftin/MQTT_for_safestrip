@@ -12,8 +12,8 @@
 
 /* C structure for AutomationLevel */
 typedef struct {
-  uint64_t UTC_time;              /* Time_at_which_the_signal_is_sent:_Stanrdard_UTC_time_is_used */
-  uint8_t  Automation_Level;      /* SAE_standard */
+  uint64_t UTC_time;              /* MISSING */
+  uint8_t  Automation_Level;      /* MISSING */
 } AutomationLevel;
 
 /* size of the serialized version of struct AutomationLevel */

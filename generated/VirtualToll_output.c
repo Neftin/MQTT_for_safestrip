@@ -23,6 +23,17 @@ VirtualToll_output_print( VirtualToll_output const * S ) {
 }
 
 
+/* print VirtualToll_output struct on file_stream */
+void
+VirtualToll_output_fileprint( VirtualToll_output const * S , FILE * file_stream ) {
+  fprintf( file_stream , "UTC_time              = %llu\n", S->UTC_time);
+  fprintf( file_stream , "RFID_ID               = %u\n", S->RFID_ID);
+  fprintf( file_stream , "virtual_gate_distance = %d\n", S->virtual_gate_distance);
+  fprintf( file_stream , "payment_amount        = %u\n", S->payment_amount);
+  fprintf( file_stream , "payment_confirmation  = %hhu\n", S->payment_confirmation);
+}
+
+
 /* serialize VirtualToll_output struct to buffer */
 void
 VirtualToll_output_to_buffer(

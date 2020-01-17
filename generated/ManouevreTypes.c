@@ -24,6 +24,18 @@ ManouevreTypes_print( ManouevreTypes const * S ) {
 }
 
 
+/* print ManouevreTypes struct on file_stream */
+void
+ManouevreTypes_fileprint( ManouevreTypes const * S , FILE * file_stream ) {
+  fprintf( file_stream , "UTC_time                = %llu\n", S->UTC_time);
+  fprintf( file_stream , "OutputID                = %d\n", S->OutputID);
+  fprintf( file_stream , "FirstManoeuverTypeLong  = %hhu\n", S->FirstManoeuverTypeLong);
+  fprintf( file_stream , "FirstManoeuverTypeLat   = %hhu\n", S->FirstManoeuverTypeLat);
+  fprintf( file_stream , "SecondManoeuverTypeLong = %hhu\n", S->SecondManoeuverTypeLong);
+  fprintf( file_stream , "SecondManoeuverTypeLat  = %hhu\n", S->SecondManoeuverTypeLat);
+}
+
+
 /* serialize ManouevreTypes struct to buffer */
 void
 ManouevreTypes_to_buffer(

@@ -50,6 +50,44 @@ MAPEM_message_print( MAPEM_message const * S ) {
 }
 
 
+/* print MAPEM_message struct on file_stream */
+void
+MAPEM_message_fileprint( MAPEM_message const * S , FILE * file_stream ) {
+  int i_count;
+  fprintf( file_stream , "UTC_time                                                   = %llu\n", S->UTC_time);
+  fprintf( file_stream , "v2x_header_msgID                                           = %u\n", S->v2x_header_msgID);
+  fprintf( file_stream , "v2x_header_originationStationID                            = %u\n", S->v2x_header_originationStationID);
+  fprintf( file_stream , "v2x_map_intersection_name                                  = %hhu\n", S->v2x_map_intersection_name);
+  fprintf( file_stream , "v2x_map_intersection_id                                    = %u\n", S->v2x_map_intersection_id);
+  fprintf( file_stream , "v2x_map_intersection_refLatitude                           = %d\n", S->v2x_map_intersection_refLatitude);
+  fprintf( file_stream , "v2x_map_intersection_refLongitude                          = %d\n", S->v2x_map_intersection_refLongitude);
+  fprintf( file_stream , "v2x_map_intersection_refAltitude                           = %d\n", S->v2x_map_intersection_refAltitude);
+  fprintf( file_stream , "v2x_map_intersection_laneWidth                             = %d\n", S->v2x_map_intersection_laneWidth);
+  fprintf( file_stream , "v2x_map_intersection_speedLimitType                        = %hhu\n", S->v2x_map_intersection_speedLimitType);
+  fprintf( file_stream , "v2x_map_intersection_speedLimitValue                       = %d\n", S->v2x_map_intersection_speedLimitValue);
+  for ( i_count=0; i_count<16; ++i_count )
+    fprintf( file_stream , "v2x_map_intersection_LaneSet_ID[%d]                        = %hhu\n", i_count, S->v2x_map_intersection_LaneSet_ID[i_count]);
+  for ( i_count=0; i_count<16; ++i_count )
+    fprintf( file_stream , "v2x_map_intersection_LaneSet_approach_ID[%d]               = %hhu\n", i_count, S->v2x_map_intersection_LaneSet_approach_ID[i_count]);
+  for ( i_count=0; i_count<16; ++i_count )
+    fprintf( file_stream , "v2x_map_intersection_LaneSet_laneAttributes_directionalUse[%d] = %hhu\n", i_count, S->v2x_map_intersection_LaneSet_laneAttributes_directionalUse[i_count]);
+  for ( i_count=0; i_count<160; ++i_count )
+    fprintf( file_stream , "v2x_map_intersection_LaneSet_nodeList_Xoffset[%d]          = %d\n", i_count, S->v2x_map_intersection_LaneSet_nodeList_Xoffset[i_count]);
+  for ( i_count=0; i_count<160; ++i_count )
+    fprintf( file_stream , "v2x_map_intersection_LaneSet_nodeList_Yoffset[%d]          = %d\n", i_count, S->v2x_map_intersection_LaneSet_nodeList_Yoffset[i_count]);
+  for ( i_count=0; i_count<16; ++i_count )
+    fprintf( file_stream , "v2x_map_intersection_LaneSet_laneAttributes_LaneTypeValue[%d] = %hu\n", i_count, S->v2x_map_intersection_LaneSet_laneAttributes_LaneTypeValue[i_count]);
+  for ( i_count=0; i_count<16; ++i_count )
+    fprintf( file_stream , "v2x_map_intersection_LaneType_ID[%d]                       = %hhu\n", i_count, S->v2x_map_intersection_LaneType_ID[i_count]);
+  for ( i_count=0; i_count<96; ++i_count )
+    fprintf( file_stream , "v2x_map_intersection_ConnectingLane_allowedManeuvers[%d]   = %hu\n", i_count, S->v2x_map_intersection_ConnectingLane_allowedManeuvers[i_count]);
+  for ( i_count=0; i_count<96; ++i_count )
+    fprintf( file_stream , "v2x_map_intersection_LaneSet_connectingLaneID[%d]          = %hhu\n", i_count, S->v2x_map_intersection_LaneSet_connectingLaneID[i_count]);
+  for ( i_count=0; i_count<96; ++i_count )
+    fprintf( file_stream , "v2x_map_intersection_LaneSet_connectingLaneSignalGroup[%d] = %hhu\n", i_count, S->v2x_map_intersection_LaneSet_connectingLaneSignalGroup[i_count]);
+}
+
+
 /* serialize MAPEM_message struct to buffer */
 void
 MAPEM_message_to_buffer(

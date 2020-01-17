@@ -10,6 +10,8 @@
   extern "C" {
 #endif
 
+#include<stdio.h> /* Necessary to recognize FILE type */
+
 /* C structure for HMIinputsByApp */
 typedef struct {
   uint64_t UTC_time;                   /* MISSING */
@@ -42,6 +44,11 @@ HMIinputsByApp_to_buffer( HMIinputsByApp const * S, uint8_t buffer[] );
 extern
 void
 HMIinputsByApp_print( HMIinputsByApp const * S );
+
+/* get buffer and un-serialize to HMIinputsByApp struct */
+extern
+void
+HMIinputsByApp_fileprint( HMIinputsByApp const * S , FILE * file_stream );
 
 /* build topic for HMIinputsByApp struct */
 extern

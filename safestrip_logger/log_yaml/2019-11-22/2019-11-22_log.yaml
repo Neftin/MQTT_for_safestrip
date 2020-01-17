@@ -1,0 +1,3164 @@
+MSG_1574422745946:
+  payload: 68690a
+  time_stamp_local: '1574422745946'
+  topic: SafeStrip/CAM
+MSG_1574422745948:
+  payload: 53544154453a20302c2054454d5056414c3a203237303230
+  time_stamp_local: '1574422745948'
+  topic: SafeStrip/RSBs/RSB03/VMS/event/temperature
+MSG_1574422745949:
+  payload: 53544154453a20322c2054454d5056414c3a203437303230
+  time_stamp_local: '1574422745949'
+  topic: SafeStrip/RSBs/RSB04/VMS/event/temperature
+MSG_1574422747469:
+  payload: 0000016e92e899330000000600000194000000130000006700
+  time_stamp_local: '1574422747469'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574422747517:
+  payload: 8398e8926e01000006000001
+  time_stamp_local: '1574422747517'
+  topic: SafeStrip/ParkingOutput
+MSG_1574422758983:
+  payload: 0000016e92e8c62d0000000600000194000000130000006701
+  time_stamp_local: '1574422758983'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574422759031:
+  payload: 7dc5e8926e01000006000001
+  time_stamp_local: '1574422759031'
+  topic: SafeStrip/ParkingOutput
+MSG_1574422765029:
+  payload: 0000016e92e8ddca0000000600000194000000130000006700
+  time_stamp_local: '1574422765029'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574422765078:
+  payload: 1cdde8926e01000006000001
+  time_stamp_local: '1574422765078'
+  topic: SafeStrip/ParkingOutput
+MSG_1574422776560:
+  payload: 0000016e92e90ad70000000600000194000000130000006701
+  time_stamp_local: '1574422776560'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574422776609:
+  payload: 270ae9926e01000006000001
+  time_stamp_local: '1574422776609'
+  topic: SafeStrip/ParkingOutput
+MSG_1574422782600:
+  payload: 0000016e92e922590000000600000194000000130000006700
+  time_stamp_local: '1574422782600'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574422782673:
+  payload: bf21e9926e01000006000001
+  time_stamp_local: '1574422782673'
+  topic: SafeStrip/ParkingOutput
+MSG_1574422794112:
+  payload: 0000016e92e94f660000000600000194000000130000006701
+  time_stamp_local: '1574422794112'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574422794160:
+  payload: b64ee9926e01000006000001
+  time_stamp_local: '1574422794160'
+  topic: SafeStrip/ParkingOutput
+MSG_1574422800136:
+  payload: 0000016e92e966ed0000000600000194000000130000006700
+  time_stamp_local: '1574422800136'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574422800184:
+  payload: 3e66e9926e01000006000001
+  time_stamp_local: '1574422800184'
+  topic: SafeStrip/ParkingOutput
+MSG_1574422811644:
+  payload: 0000016e92e993e30000000600000194000000130000006701
+  time_stamp_local: '1574422811644'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574422811695:
+  payload: 3293e9926e01000006000001
+  time_stamp_local: '1574422811695'
+  topic: SafeStrip/ParkingOutput
+MSG_1574422817671:
+  payload: 0000016e92e9ab6e0000000600000194000000130000006700
+  time_stamp_local: '1574422817671'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574422817719:
+  payload: beaae9926e01000006000001
+  time_stamp_local: '1574422817719'
+  topic: SafeStrip/ParkingOutput
+MSG_1574422829194:
+  payload: 0000016e92e9d8700000000600000194000000130000006701
+  time_stamp_local: '1574422829194'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574422829242:
+  payload: c0d7e9926e01000006000001
+  time_stamp_local: '1574422829242'
+  topic: SafeStrip/ParkingOutput
+MSG_1574422835211:
+  payload: 0000016e92e9eff20000000600000194000000130000006700
+  time_stamp_local: '1574422835211'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574422835259:
+  payload: 41efe9926e01000006000001
+  time_stamp_local: '1574422835259'
+  topic: SafeStrip/ParkingOutput
+MSG_1574422846728:
+  payload: 0000016e92ea1cee0000000600000194000000130000006701
+  time_stamp_local: '1574422846728'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574422846775:
+  payload: 3d1cea926e01000006000001
+  time_stamp_local: '1574422846775'
+  topic: SafeStrip/ParkingOutput
+MSG_1574422852760:
+  payload: 0000016e92ea347f0000000600000194000000130000006700
+  time_stamp_local: '1574422852760'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574422852808:
+  payload: ce33ea926e01000006000001
+  time_stamp_local: '1574422852808'
+  topic: SafeStrip/ParkingOutput
+MSG_1574423230424:
+  payload: 68690a
+  time_stamp_local: '1574423230424'
+  topic: SafeStrip/CAM
+MSG_1574423230425:
+  payload: 53544154453a20302c2054454d5056414c3a203237303230
+  time_stamp_local: '1574423230425'
+  topic: SafeStrip/RSBs/RSB03/VMS/event/temperature
+MSG_1574423230430:
+  payload: 53544154453a20322c2054454d5056414c3a203437303230
+  time_stamp_local: '1574423230430'
+  topic: SafeStrip/RSBs/RSB04/VMS/event/temperature
+MSG_1574423266092:
+  payload: 0000016e92f083130000000600000194000000130000006701
+  time_stamp_local: '1574423266092'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574423266140:
+  payload: 6182f0926e01000006000001
+  time_stamp_local: '1574423266140'
+  topic: SafeStrip/ParkingOutput
+MSG_1574423272120:
+  payload: 0000016e92f09a9e0000000600000194000000130000006700
+  time_stamp_local: '1574423272120'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574423272168:
+  payload: ed99f0926e01000006000001
+  time_stamp_local: '1574423272168'
+  topic: SafeStrip/ParkingOutput
+MSG_1574423283643:
+  payload: 0000016e92f0c7a10000000600000194000000130000006701
+  time_stamp_local: '1574423283643'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574423283690:
+  payload: efc6f0926e01000006000001
+  time_stamp_local: '1574423283690'
+  topic: SafeStrip/ParkingOutput
+MSG_1574423289675:
+  payload: 0000016e92f0df320000000600000194000000130000006700
+  time_stamp_local: '1574423289675'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574423289724:
+  payload: 80def0926e01000006000001
+  time_stamp_local: '1574423289724'
+  topic: SafeStrip/ParkingOutput
+MSG_1574423301210:
+  payload: 0000016e92f10c400000000600000194000000130000006701
+  time_stamp_local: '1574423301210'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574423301258:
+  payload: 8f0bf1926e01000006000001
+  time_stamp_local: '1574423301258'
+  topic: SafeStrip/ParkingOutput
+MSG_1574423855424:
+  payload: 68690a
+  time_stamp_local: '1574423855424'
+  topic: SafeStrip/CAM
+MSG_1574423855424:
+  payload: 53544154453a20302c2054454d5056414c3a203237303230
+  time_stamp_local: '1574423855424'
+  topic: SafeStrip/RSBs/RSB03/VMS/event/temperature
+MSG_1574423855430:
+  payload: 53544154453a20322c2054454d5056414c3a203437303230
+  time_stamp_local: '1574423855430'
+  topic: SafeStrip/RSBs/RSB04/VMS/event/temperature
+MSG_1574423879267:
+  payload: 0000016e92f9de4d0000000600000194000000130000006700
+  time_stamp_local: '1574423879267'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574423879314:
+  payload: 92ddf9926e01000006000001
+  time_stamp_local: '1574423879314'
+  topic: SafeStrip/ParkingOutput
+MSG_1574423890779:
+  payload: 0000016e92fa0b450000000600000194000000130000006701
+  time_stamp_local: '1574423890779'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574423890827:
+  payload: 8a0afa926e01000006000001
+  time_stamp_local: '1574423890827'
+  topic: SafeStrip/ParkingOutput
+MSG_1574423896796:
+  payload: 0000016e92fa22c50000000600000194000000130000006700
+  time_stamp_local: '1574423896796'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574423896844:
+  payload: 0b22fa926e01000006000001
+  time_stamp_local: '1574423896844'
+  topic: SafeStrip/ParkingOutput
+MSG_1574423908311:
+  payload: 0000016e92fa4fc20000000600000194000000130000006701
+  time_stamp_local: '1574423908311'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574423908359:
+  payload: 064ffa926e01000006000001
+  time_stamp_local: '1574423908359'
+  topic: SafeStrip/ParkingOutput
+MSG_1574423914326:
+  payload: 0000016e92fa67400000000600000194000000130000006700
+  time_stamp_local: '1574423914326'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574423914375:
+  payload: 8466fa926e01000006000001
+  time_stamp_local: '1574423914375'
+  topic: SafeStrip/ParkingOutput
+MSG_1574423925841:
+  payload: 0000016e92fa943a0000000600000194000000130000006701
+  time_stamp_local: '1574423925841'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574423925888:
+  payload: 7f93fa926e01000006000001
+  time_stamp_local: '1574423925888'
+  topic: SafeStrip/ParkingOutput
+MSG_1574423931862:
+  payload: 0000016e92faabc00000000600000194000000130000006700
+  time_stamp_local: '1574423931862'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574423931909:
+  payload: 05abfa926e01000006000001
+  time_stamp_local: '1574423931909'
+  topic: SafeStrip/ParkingOutput
+MSG_1574423943373:
+  payload: 0000016e92fad8b80000000600000194000000130000006701
+  time_stamp_local: '1574423943373'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574423943421:
+  payload: fbd7fa926e01000006000001
+  time_stamp_local: '1574423943421'
+  topic: SafeStrip/ParkingOutput
+MSG_1574423949388:
+  payload: 0000016e92faf0360000000600000194000000130000006700
+  time_stamp_local: '1574423949388'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574423949435:
+  payload: 7aeffa926e01000006000001
+  time_stamp_local: '1574423949435'
+  topic: SafeStrip/ParkingOutput
+MSG_1574423960901:
+  payload: 0000016e92fb1d2f0000000600000194000000130000006701
+  time_stamp_local: '1574423960901'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574423960949:
+  payload: 731cfb926e01000006000001
+  time_stamp_local: '1574423960949'
+  topic: SafeStrip/ParkingOutput
+MSG_1574423966909:
+  payload: 0000016e92fb34a70000000600000194000000130000006700
+  time_stamp_local: '1574423966909'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574423966960:
+  payload: eb33fb926e01000006000001
+  time_stamp_local: '1574423966960'
+  topic: SafeStrip/ParkingOutput
+MSG_1574423978420:
+  payload: 0000016e92fb619f0000000600000194000000130000006701
+  time_stamp_local: '1574423978420'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574423978468:
+  payload: e260fb926e01000006000001
+  time_stamp_local: '1574423978468'
+  topic: SafeStrip/ParkingOutput
+MSG_1574423984433:
+  payload: 0000016e92fb791b0000000600000194000000130000006700
+  time_stamp_local: '1574423984433'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574423984481:
+  payload: 5f78fb926e01000006000001
+  time_stamp_local: '1574423984481'
+  topic: SafeStrip/ParkingOutput
+MSG_1574423995946:
+  payload: 0000016e92fba6130000000600000194000000130000006701
+  time_stamp_local: '1574423995946'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574423995993:
+  payload: 57a5fb926e01000006000001
+  time_stamp_local: '1574423995993'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424001954:
+  payload: 0000016e92fbbd8c0000000600000194000000130000006700
+  time_stamp_local: '1574424001954'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424002002:
+  payload: d0bcfb926e01000006000001
+  time_stamp_local: '1574424002002'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424013468:
+  payload: 0000016e92fbea860000000600000194000000130000006701
+  time_stamp_local: '1574424013468'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424013516:
+  payload: cae9fb926e01000006000001
+  time_stamp_local: '1574424013516'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424019482:
+  payload: 0000016e92fc02020000000600000194000000130000006700
+  time_stamp_local: '1574424019482'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424019531:
+  payload: 4701fc926e01000006000001
+  time_stamp_local: '1574424019531'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424030996:
+  payload: 0000016e92fc2efe0000000600000194000000130000006701
+  time_stamp_local: '1574424030996'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424031044:
+  payload: 422efc926e01000006000001
+  time_stamp_local: '1574424031044'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424037004:
+  payload: 0000016e92fc46770000000600000194000000130000006700
+  time_stamp_local: '1574424037004'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424037054:
+  payload: ba45fc926e01000006000001
+  time_stamp_local: '1574424037054'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424048531:
+  payload: 0000016e92fc73740000000600000194000000130000006701
+  time_stamp_local: '1574424048531'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424048570:
+  payload: b772fc926e01000006000001
+  time_stamp_local: '1574424048570'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424054533:
+  payload: 0000016e92fc8af10000000600000194000000130000006700
+  time_stamp_local: '1574424054533'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424054585:
+  payload: 338afc926e01000006000001
+  time_stamp_local: '1574424054585'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424066047:
+  payload: 0000016e92fcb7ea0000000600000194000000130000006701
+  time_stamp_local: '1574424066047'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424066096:
+  payload: 2db7fc926e01000006000001
+  time_stamp_local: '1574424066096'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424072065:
+  payload: 0000016e92fccf690000000600000194000000130000006700
+  time_stamp_local: '1574424072065'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424072114:
+  payload: afcefc926e01000006000001
+  time_stamp_local: '1574424072114'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424083570:
+  payload: 0000016e92fcfc5c0000000600000194000000130000006701
+  time_stamp_local: '1574424083570'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424083619:
+  payload: a0fbfc926e01000006000001
+  time_stamp_local: '1574424083619'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424089582:
+  payload: 0000016e92fd13d70000000600000194000000130000006700
+  time_stamp_local: '1574424089582'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424089629:
+  payload: 1a13fd926e01000006000001
+  time_stamp_local: '1574424089629'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424101099:
+  payload: 0000016e92fd40d50000000600000194000000130000006701
+  time_stamp_local: '1574424101099'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424101147:
+  payload: 1840fd926e01000006000001
+  time_stamp_local: '1574424101147'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424107119:
+  payload: 0000016e92fd58590000000600000194000000130000006700
+  time_stamp_local: '1574424107119'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424107166:
+  payload: 9c57fd926e01000006000001
+  time_stamp_local: '1574424107166'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424118637:
+  payload: 0000016e92fd85570000000600000194000000130000006701
+  time_stamp_local: '1574424118637'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424118685:
+  payload: 9a84fd926e01000006000001
+  time_stamp_local: '1574424118685'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424124653:
+  payload: 0000016e92fd9cd70000000600000194000000130000006700
+  time_stamp_local: '1574424124653'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424124701:
+  payload: 1a9cfd926e01000006000001
+  time_stamp_local: '1574424124701'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424136170:
+  payload: 0000016e92fdc9d50000000600000194000000130000006701
+  time_stamp_local: '1574424136170'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424136219:
+  payload: 18c9fd926e01000006000001
+  time_stamp_local: '1574424136219'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424142192:
+  payload: 0000016e92fde1530000000600000194000000130000006700
+  time_stamp_local: '1574424142192'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424142241:
+  payload: 9de0fd926e01000006000001
+  time_stamp_local: '1574424142241'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424153696:
+  payload: 0000016e92fe0e4a0000000600000194000000130000006701
+  time_stamp_local: '1574424153696'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424153745:
+  payload: 8e0dfe926e01000006000001
+  time_stamp_local: '1574424153745'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424159706:
+  payload: 0000016e92fe25c50000000600000194000000130000006700
+  time_stamp_local: '1574424159706'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424159757:
+  payload: 0825fe926e01000006000001
+  time_stamp_local: '1574424159757'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424171220:
+  payload: 0000016e92fe52be0000000600000194000000130000006701
+  time_stamp_local: '1574424171220'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424171270:
+  payload: 0252fe926e01000006000001
+  time_stamp_local: '1574424171270'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424177232:
+  payload: 0000016e92fe6a3a0000000600000194000000130000006700
+  time_stamp_local: '1574424177232'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424177281:
+  payload: 7d69fe926e01000006000001
+  time_stamp_local: '1574424177281'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424188752:
+  payload: 0000016e92fe973a0000000600000194000000130000006701
+  time_stamp_local: '1574424188752'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424188803:
+  payload: 7e96fe926e01000006000001
+  time_stamp_local: '1574424188803'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424194771:
+  payload: 0000016e92feaebd0000000600000194000000130000006700
+  time_stamp_local: '1574424194771'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424194820:
+  payload: 00aefe926e01000006000001
+  time_stamp_local: '1574424194820'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424206286:
+  payload: 0000016e92fedbb80000000600000194000000130000006701
+  time_stamp_local: '1574424206286'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424206335:
+  payload: fcdafe926e01000006000001
+  time_stamp_local: '1574424206335'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424212296:
+  payload: 0000016e92fef3310000000600000194000000130000006700
+  time_stamp_local: '1574424212296'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424212346:
+  payload: 75f2fe926e01000006000001
+  time_stamp_local: '1574424212346'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424223812:
+  payload: 0000016e92ff202c0000000600000194000000130000006701
+  time_stamp_local: '1574424223812'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424223861:
+  payload: 711fff926e01000006000001
+  time_stamp_local: '1574424223861'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424229829:
+  payload: 0000016e92ff37af0000000600000194000000130000006700
+  time_stamp_local: '1574424229829'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424229878:
+  payload: f236ff926e01000006000001
+  time_stamp_local: '1574424229878'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424241343:
+  payload: 0000016e92ff64a90000000600000194000000130000006701
+  time_stamp_local: '1574424241343'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424241392:
+  payload: ec63ff926e01000006000001
+  time_stamp_local: '1574424241392'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424247346:
+  payload: 0000016e92ff7c1d0000000600000194000000130000006700
+  time_stamp_local: '1574424247346'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424247396:
+  payload: 607bff926e01000006000001
+  time_stamp_local: '1574424247396'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424258860:
+  payload: 0000016e92ffa9160000000600000194000000130000006701
+  time_stamp_local: '1574424258860'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424258908:
+  payload: 58a8ff926e01000006000001
+  time_stamp_local: '1574424258908'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424264876:
+  payload: 0000016e92ffc0960000000600000194000000130000006700
+  time_stamp_local: '1574424264876'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424264925:
+  payload: d8bfff926e01000006000001
+  time_stamp_local: '1574424264925'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424276394:
+  payload: 0000016e92ffed920000000600000194000000130000006701
+  time_stamp_local: '1574424276394'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424276444:
+  payload: d8ecff926e01000006000001
+  time_stamp_local: '1574424276444'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424282398:
+  payload: 0000016e930005090000000600000194000000130000006700
+  time_stamp_local: '1574424282398'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424282447:
+  payload: 4c0400936e01000006000001
+  time_stamp_local: '1574424282447'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424293920:
+  payload: 0000016e9300320a0000000600000194000000130000006701
+  time_stamp_local: '1574424293920'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424293971:
+  payload: 4c3100936e01000006000001
+  time_stamp_local: '1574424293971'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424299934:
+  payload: 0000016e930049870000000600000194000000130000006700
+  time_stamp_local: '1574424299934'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424299982:
+  payload: ca4800936e01000006000001
+  time_stamp_local: '1574424299982'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424311440:
+  payload: 0000016e9300767a0000000600000194000000130000006701
+  time_stamp_local: '1574424311440'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424311491:
+  payload: bc7500936e01000006000001
+  time_stamp_local: '1574424311491'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424317455:
+  payload: 0000016e93008dfa0000000600000194000000130000006700
+  time_stamp_local: '1574424317455'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424317505:
+  payload: 3c8d00936e01000006000001
+  time_stamp_local: '1574424317505'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424328972:
+  payload: 0000016e9300baf70000000600000194000000130000006701
+  time_stamp_local: '1574424328972'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424329020:
+  payload: 38ba00936e01000006000001
+  time_stamp_local: '1574424329020'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424334983:
+  payload: 0000016e9300d2720000000600000194000000130000006700
+  time_stamp_local: '1574424334983'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424335033:
+  payload: b4d100936e01000006000001
+  time_stamp_local: '1574424335033'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424346502:
+  payload: 0000016e9300ff6c0000000600000194000000130000006701
+  time_stamp_local: '1574424346502'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424346572:
+  payload: bbfe00936e01000006000001
+  time_stamp_local: '1574424346572'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424352505:
+  payload: 0000016e930116e30000000600000194000000130000006700
+  time_stamp_local: '1574424352505'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424352554:
+  payload: 251601936e01000006000001
+  time_stamp_local: '1574424352554'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424364010:
+  payload: 0000016e930143d50000000600000194000000130000006701
+  time_stamp_local: '1574424364010'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424364059:
+  payload: 164301936e01000006000001
+  time_stamp_local: '1574424364059'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424370033:
+  payload: 0000016e93015b5c0000000600000194000000130000006700
+  time_stamp_local: '1574424370033'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424370082:
+  payload: 9d5a01936e01000006000001
+  time_stamp_local: '1574424370082'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424381544:
+  payload: 0000016e930188530000000600000194000000130000006701
+  time_stamp_local: '1574424381544'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424381593:
+  payload: 948701936e01000006000001
+  time_stamp_local: '1574424381593'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424387558:
+  payload: 0000016e93019fd10000000600000194000000130000006700
+  time_stamp_local: '1574424387558'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424387608:
+  payload: 129f01936e01000006000001
+  time_stamp_local: '1574424387608'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424399072:
+  payload: 0000016e9301ccc60000000600000194000000130000006701
+  time_stamp_local: '1574424399072'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424399123:
+  payload: 0dcc01936e01000006000001
+  time_stamp_local: '1574424399123'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424405086:
+  payload: 0000016e9301e4460000000600000194000000130000006700
+  time_stamp_local: '1574424405086'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424405136:
+  payload: 8ae301936e01000006000001
+  time_stamp_local: '1574424405136'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424416598:
+  payload: 0000016e9302113f0000000600000194000000130000006701
+  time_stamp_local: '1574424416598'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424416646:
+  payload: 811002936e01000006000001
+  time_stamp_local: '1574424416646'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424422606:
+  payload: 0000016e930228b90000000600000194000000130000006700
+  time_stamp_local: '1574424422606'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424422654:
+  payload: f92702936e01000006000001
+  time_stamp_local: '1574424422654'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424434128:
+  payload: 0000016e930255b90000000600000194000000130000006701
+  time_stamp_local: '1574424434128'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424434187:
+  payload: fb5402936e01000006000001
+  time_stamp_local: '1574424434187'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424440139:
+  payload: 0000016e93026d360000000600000194000000130000006700
+  time_stamp_local: '1574424440139'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424440188:
+  payload: 766c02936e01000006000001
+  time_stamp_local: '1574424440188'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424451656:
+  payload: 0000016e93029a320000000600000194000000130000006701
+  time_stamp_local: '1574424451656'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424451704:
+  payload: 739902936e01000006000001
+  time_stamp_local: '1574424451704'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424457669:
+  payload: 0000016e9302b1af0000000600000194000000130000006700
+  time_stamp_local: '1574424457669'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424457716:
+  payload: efb002936e01000006000001
+  time_stamp_local: '1574424457716'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424469178:
+  payload: 0000016e9302dea50000000600000194000000130000006701
+  time_stamp_local: '1574424469178'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424469227:
+  payload: e5dd02936e01000006000001
+  time_stamp_local: '1574424469227'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424475199:
+  payload: 0000016e9302f6290000000600000194000000130000006700
+  time_stamp_local: '1574424475199'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424475246:
+  payload: 69f502936e01000006000001
+  time_stamp_local: '1574424475246'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424486718:
+  payload: 0000016e9303231f0000000600000194000000130000006701
+  time_stamp_local: '1574424486718'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424486772:
+  payload: 682203936e01000006000001
+  time_stamp_local: '1574424486772'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424492723:
+  payload: 0000016e93033a9e0000000600000194000000130000006700
+  time_stamp_local: '1574424492723'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424492772:
+  payload: de3903936e01000006000001
+  time_stamp_local: '1574424492772'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424504234:
+  payload: 0000016e930367950000000600000194000000130000006701
+  time_stamp_local: '1574424504234'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424504282:
+  payload: d56603936e01000006000001
+  time_stamp_local: '1574424504282'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424510254:
+  payload: 0000016e93037f190000000600000194000000130000006700
+  time_stamp_local: '1574424510254'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424510365:
+  payload: 977e03936e01000006000001
+  time_stamp_local: '1574424510365'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424521770:
+  payload: 0000016e9303ac130000000600000194000000130000006701
+  time_stamp_local: '1574424521770'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424521819:
+  payload: 55ab03936e01000006000001
+  time_stamp_local: '1574424521819'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424527788:
+  payload: 0000016e9303c3970000000600000194000000130000006700
+  time_stamp_local: '1574424527788'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424527836:
+  payload: d7c203936e01000006000001
+  time_stamp_local: '1574424527836'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424539300:
+  payload: 0000016e9303f08f0000000600000194000000130000006701
+  time_stamp_local: '1574424539300'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424539348:
+  payload: cdef03936e01000006000001
+  time_stamp_local: '1574424539348'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424545328:
+  payload: 0000016e930408190000000600000194000000130000006700
+  time_stamp_local: '1574424545328'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424545376:
+  payload: 5a0704936e01000006000001
+  time_stamp_local: '1574424545376'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424556838:
+  payload: 0000016e930435100000000600000194000000130000006701
+  time_stamp_local: '1574424556838'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424556886:
+  payload: 4f3404936e01000006000001
+  time_stamp_local: '1574424556886'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424562857:
+  payload: 0000016e93044c930000000600000194000000130000006700
+  time_stamp_local: '1574424562857'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424562907:
+  payload: d24b04936e01000006000001
+  time_stamp_local: '1574424562907'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424574369:
+  payload: 0000016e9304798b0000000600000194000000130000006701
+  time_stamp_local: '1574424574369'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424574417:
+  payload: ca7804936e01000006000001
+  time_stamp_local: '1574424574417'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424580382:
+  payload: 0000016e930491090000000600000194000000130000006700
+  time_stamp_local: '1574424580382'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424580431:
+  payload: 489004936e01000006000001
+  time_stamp_local: '1574424580431'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424591897:
+  payload: 0000016e9304be040000000600000194000000130000006701
+  time_stamp_local: '1574424591897'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424591945:
+  payload: 43bd04936e01000006000001
+  time_stamp_local: '1574424591945'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424597900:
+  payload: 0000016e9304d5760000000600000194000000130000006700
+  time_stamp_local: '1574424597900'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424597948:
+  payload: b5d404936e01000006000001
+  time_stamp_local: '1574424597948'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424609410:
+  payload: 0000016e9305026c0000000600000194000000130000006701
+  time_stamp_local: '1574424609410'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424609458:
+  payload: ab0105936e01000006000001
+  time_stamp_local: '1574424609458'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424615421:
+  payload: 0000016e930519e80000000600000194000000130000006700
+  time_stamp_local: '1574424615421'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424615469:
+  payload: 271905936e01000006000001
+  time_stamp_local: '1574424615469'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424626933:
+  payload: 0000016e930546e00000000600000194000000130000006701
+  time_stamp_local: '1574424626933'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424626981:
+  payload: 1e4605936e01000006000001
+  time_stamp_local: '1574424626981'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424632937:
+  payload: 0000016e93055e530000000600000194000000130000006700
+  time_stamp_local: '1574424632937'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424632985:
+  payload: 925d05936e01000006000001
+  time_stamp_local: '1574424632985'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424644459:
+  payload: 0000016e93058b550000000600000194000000130000006701
+  time_stamp_local: '1574424644459'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424644507:
+  payload: 948a05936e01000006000001
+  time_stamp_local: '1574424644507'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424650470:
+  payload: 0000016e9305a2d00000000600000194000000130000006700
+  time_stamp_local: '1574424650470'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424650519:
+  payload: 0ea205936e01000006000001
+  time_stamp_local: '1574424650519'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424661986:
+  payload: 0000016e9305cfcc0000000600000194000000130000006701
+  time_stamp_local: '1574424661986'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424662034:
+  payload: 0bcf05936e01000006000001
+  time_stamp_local: '1574424662034'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424667999:
+  payload: 0000016e9305e74a0000000600000194000000130000006700
+  time_stamp_local: '1574424667999'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424668048:
+  payload: 88e605936e01000006000001
+  time_stamp_local: '1574424668048'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424679508:
+  payload: 0000016e9306143e0000000600000194000000130000006701
+  time_stamp_local: '1574424679508'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424679557:
+  payload: 7d1306936e01000006000001
+  time_stamp_local: '1574424679557'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424685522:
+  payload: 0000016e93062bbd0000000600000194000000130000006700
+  time_stamp_local: '1574424685522'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424685569:
+  payload: fb2a06936e01000006000001
+  time_stamp_local: '1574424685569'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424697048:
+  payload: 0000016e930658c20000000600000194000000130000006701
+  time_stamp_local: '1574424697048'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424697096:
+  payload: 015806936e01000006000001
+  time_stamp_local: '1574424697096'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424703060:
+  payload: 0000016e930670400000000600000194000000130000006700
+  time_stamp_local: '1574424703060'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424703108:
+  payload: 7e6f06936e01000006000001
+  time_stamp_local: '1574424703108'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424714578:
+  payload: 0000016e93069d3c0000000600000194000000130000006701
+  time_stamp_local: '1574424714578'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424714626:
+  payload: 7b9c06936e01000006000001
+  time_stamp_local: '1574424714626'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424720594:
+  payload: 0000016e9306b4bd0000000600000194000000130000006700
+  time_stamp_local: '1574424720594'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424720643:
+  payload: fbb306936e01000006000001
+  time_stamp_local: '1574424720643'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424732111:
+  payload: 0000016e9306e1b90000000600000194000000130000006701
+  time_stamp_local: '1574424732111'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424732160:
+  payload: f8e006936e01000006000001
+  time_stamp_local: '1574424732160'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424738127:
+  payload: 0000016e9306f9390000000600000194000000130000006700
+  time_stamp_local: '1574424738127'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424738176:
+  payload: 78f806936e01000006000001
+  time_stamp_local: '1574424738176'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424749637:
+  payload: 0000016e9307262f0000000600000194000000130000006701
+  time_stamp_local: '1574424749637'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424749686:
+  payload: 6e2507936e01000006000001
+  time_stamp_local: '1574424749686'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424755651:
+  payload: 0000016e93073dae0000000600000194000000130000006700
+  time_stamp_local: '1574424755651'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424755700:
+  payload: ec3c07936e01000006000001
+  time_stamp_local: '1574424755700'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424767161:
+  payload: 0000016e93076aa30000000600000194000000130000006701
+  time_stamp_local: '1574424767161'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424767210:
+  payload: e26907936e01000006000001
+  time_stamp_local: '1574424767210'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424773176:
+  payload: 0000016e9307821f0000000600000194000000130000006700
+  time_stamp_local: '1574424773176'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424773226:
+  payload: 628107936e01000006000001
+  time_stamp_local: '1574424773226'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424784690:
+  payload: 0000016e9307af1c0000000600000194000000130000006701
+  time_stamp_local: '1574424784690'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424784739:
+  payload: 5bae07936e01000006000001
+  time_stamp_local: '1574424784739'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424790701:
+  payload: 0000016e9307c6970000000600000194000000130000006700
+  time_stamp_local: '1574424790701'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424790750:
+  payload: d6c507936e01000006000001
+  time_stamp_local: '1574424790750'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424802212:
+  payload: 0000016e9307f38c0000000600000194000000130000006701
+  time_stamp_local: '1574424802212'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424802261:
+  payload: ccf207936e01000006000001
+  time_stamp_local: '1574424802261'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424808218:
+  payload: 0000016e93080b060000000600000194000000130000006700
+  time_stamp_local: '1574424808218'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424808267:
+  payload: 430a08936e01000006000001
+  time_stamp_local: '1574424808267'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424819735:
+  payload: 0000016e930838000000000600000194000000130000006701
+  time_stamp_local: '1574424819735'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424819787:
+  payload: 403708936e01000006000001
+  time_stamp_local: '1574424819787'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424825740:
+  payload: 0000016e93084f760000000600000194000000130000006700
+  time_stamp_local: '1574424825740'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424825789:
+  payload: b44e08936e01000006000001
+  time_stamp_local: '1574424825789'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424837250:
+  payload: 0000016e93087c6c0000000600000194000000130000006701
+  time_stamp_local: '1574424837250'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424837299:
+  payload: ab7b08936e01000006000001
+  time_stamp_local: '1574424837299'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424843270:
+  payload: 0000016e930893ef0000000600000194000000130000006700
+  time_stamp_local: '1574424843270'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424843373:
+  payload: 649308936e01000006000001
+  time_stamp_local: '1574424843373'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424854785:
+  payload: 0000016e9308c0ec0000000600000194000000130000006701
+  time_stamp_local: '1574424854785'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424854835:
+  payload: 2ac008936e01000006000001
+  time_stamp_local: '1574424854835'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424860799:
+  payload: 0000016e9308d8690000000600000194000000130000006700
+  time_stamp_local: '1574424860799'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424860848:
+  payload: a8d708936e01000006000001
+  time_stamp_local: '1574424860848'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424872310:
+  payload: 0000016e930905610000000600000194000000130000006701
+  time_stamp_local: '1574424872310'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424872360:
+  payload: 9f0409936e01000006000001
+  time_stamp_local: '1574424872360'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424878329:
+  payload: 0000016e93091ce30000000600000194000000130000006700
+  time_stamp_local: '1574424878329'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424878378:
+  payload: 211c09936e01000006000001
+  time_stamp_local: '1574424878378'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424889833:
+  payload: 0000016e930949d40000000600000194000000130000006701
+  time_stamp_local: '1574424889833'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424889882:
+  payload: 114909936e01000006000001
+  time_stamp_local: '1574424889882'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424895847:
+  payload: 0000016e930961520000000600000194000000130000006700
+  time_stamp_local: '1574424895847'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424895897:
+  payload: 906009936e01000006000001
+  time_stamp_local: '1574424895897'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424907357:
+  payload: 0000016e93098e480000000600000194000000130000006701
+  time_stamp_local: '1574424907357'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424907406:
+  payload: 858d09936e01000006000001
+  time_stamp_local: '1574424907406'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424913374:
+  payload: 0000016e9309a5c90000000600000194000000130000006700
+  time_stamp_local: '1574424913374'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424913423:
+  payload: 06a509936e01000006000001
+  time_stamp_local: '1574424913423'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424924888:
+  payload: 0000016e9309d2c40000000600000194000000130000006701
+  time_stamp_local: '1574424924888'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424924938:
+  payload: 01d209936e01000006000001
+  time_stamp_local: '1574424924938'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424930901:
+  payload: 0000016e9309ea400000000600000194000000130000006700
+  time_stamp_local: '1574424930901'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424930950:
+  payload: 7de909936e01000006000001
+  time_stamp_local: '1574424930950'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424942414:
+  payload: 0000016e930a17390000000600000194000000130000006701
+  time_stamp_local: '1574424942414'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424942463:
+  payload: 77160a936e01000006000001
+  time_stamp_local: '1574424942463'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424948432:
+  payload: 0000016e930a2eba0000000600000194000000130000006700
+  time_stamp_local: '1574424948432'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424948481:
+  payload: f82d0a936e01000006000001
+  time_stamp_local: '1574424948481'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424959942:
+  payload: 0000016e930a5bb00000000600000194000000130000006701
+  time_stamp_local: '1574424959942'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424960058:
+  payload: 315b0a936e01000006000001
+  time_stamp_local: '1574424960058'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424965964:
+  payload: 0000016e930a73370000000600000194000000130000006700
+  time_stamp_local: '1574424965964'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424966013:
+  payload: 74720a936e01000006000001
+  time_stamp_local: '1574424966013'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424977487:
+  payload: 0000016e930aa03a0000000600000194000000130000006701
+  time_stamp_local: '1574424977487'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424977536:
+  payload: 779f0a936e01000006000001
+  time_stamp_local: '1574424977536'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424983501:
+  payload: 0000016e930ab7b80000000600000194000000130000006700
+  time_stamp_local: '1574424983501'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424983551:
+  payload: f5b60a936e01000006000001
+  time_stamp_local: '1574424983551'
+  topic: SafeStrip/ParkingOutput
+MSG_1574424995019:
+  payload: 0000016e930ae4b50000000600000194000000130000006701
+  time_stamp_local: '1574424995019'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574424995068:
+  payload: f2e30a936e01000006000001
+  time_stamp_local: '1574424995068'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425001038:
+  payload: 0000016e930afc390000000600000194000000130000006700
+  time_stamp_local: '1574425001038'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425001087:
+  payload: 77fb0a936e01000006000001
+  time_stamp_local: '1574425001087'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425012572:
+  payload: 0000016e930b29300000000600000194000000130000006701
+  time_stamp_local: '1574425012572'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425012623:
+  payload: 84280b936e01000006000001
+  time_stamp_local: '1574425012623'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425018562:
+  payload: 0000016e930b40ac0000000600000194000000130000006700
+  time_stamp_local: '1574425018562'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425018611:
+  payload: e93f0b936e01000006000001
+  time_stamp_local: '1574425018611'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425030077:
+  payload: 0000016e930b6da80000000600000194000000130000006701
+  time_stamp_local: '1574425030077'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425030129:
+  payload: e36c0b936e01000006000001
+  time_stamp_local: '1574425030129'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425036092:
+  payload: 0000016e930b85260000000600000194000000130000006700
+  time_stamp_local: '1574425036092'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425036141:
+  payload: 63840b936e01000006000001
+  time_stamp_local: '1574425036141'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425047598:
+  payload: 0000016e930bb2190000000600000194000000130000006701
+  time_stamp_local: '1574425047598'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425047646:
+  payload: 55b10b936e01000006000001
+  time_stamp_local: '1574425047646'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425053606:
+  payload: 0000016e930bc9900000000600000194000000130000006700
+  time_stamp_local: '1574425053606'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425053653:
+  payload: cbc80b936e01000006000001
+  time_stamp_local: '1574425053653'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425065121:
+  payload: 0000016e930bf68c0000000600000194000000130000006701
+  time_stamp_local: '1574425065121'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425065169:
+  payload: c8f50b936e01000006000001
+  time_stamp_local: '1574425065169'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425071133:
+  payload: 0000016e930c0e070000000600000194000000130000006700
+  time_stamp_local: '1574425071133'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425071180:
+  payload: 420d0c936e01000006000001
+  time_stamp_local: '1574425071180'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425082649:
+  payload: 0000016e930c3b050000000600000194000000130000006701
+  time_stamp_local: '1574425082649'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425082699:
+  payload: 403a0c936e01000006000001
+  time_stamp_local: '1574425082699'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425088662:
+  payload: 0000016e930c52810000000600000194000000130000006700
+  time_stamp_local: '1574425088662'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425088712:
+  payload: bd510c936e01000006000001
+  time_stamp_local: '1574425088712'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425100171:
+  payload: 0000016e930c7f750000000600000194000000130000006701
+  time_stamp_local: '1574425100171'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425100219:
+  payload: b17e0c936e01000006000001
+  time_stamp_local: '1574425100219'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425106202:
+  payload: 0000016e930c96fd0000000600000194000000130000006700
+  time_stamp_local: '1574425106202'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425106254:
+  payload: 40960c936e01000006000001
+  time_stamp_local: '1574425106254'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425117698:
+  payload: 0000016e930cc3ec0000000600000194000000130000006701
+  time_stamp_local: '1574425117698'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425117746:
+  payload: 28c30c936e01000006000001
+  time_stamp_local: '1574425117746'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425123707:
+  payload: 0000016e930cdb660000000600000194000000130000006700
+  time_stamp_local: '1574425123707'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425123755:
+  payload: a1da0c936e01000006000001
+  time_stamp_local: '1574425123755'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425135222:
+  payload: 0000016e930d08610000000600000194000000130000006701
+  time_stamp_local: '1574425135222'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425135269:
+  payload: 9c070d936e01000006000001
+  time_stamp_local: '1574425135269'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425141230:
+  payload: 0000016e930d1fd90000000600000194000000130000006700
+  time_stamp_local: '1574425141230'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425141279:
+  payload: 141f0d936e01000006000001
+  time_stamp_local: '1574425141279'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425152745:
+  payload: 0000016e930d4cd40000000600000194000000130000006701
+  time_stamp_local: '1574425152745'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425152794:
+  payload: 0f4c0d936e01000006000001
+  time_stamp_local: '1574425152794'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425158754:
+  payload: 0000016e930d644c0000000600000194000000130000006700
+  time_stamp_local: '1574425158754'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425158802:
+  payload: 88630d936e01000006000001
+  time_stamp_local: '1574425158802'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425170266:
+  payload: 0000016e930d91440000000600000194000000130000006701
+  time_stamp_local: '1574425170266'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425170314:
+  payload: 80900d936e01000006000001
+  time_stamp_local: '1574425170314'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425176279:
+  payload: 0000016e930da8c20000000600000194000000130000006700
+  time_stamp_local: '1574425176279'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425176329:
+  payload: fea70d936e01000006000001
+  time_stamp_local: '1574425176329'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425187796:
+  payload: 0000016e930dd5be0000000600000194000000130000006701
+  time_stamp_local: '1574425187796'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425187843:
+  payload: f9d40d936e01000006000001
+  time_stamp_local: '1574425187843'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425193805:
+  payload: 0000016e930ded380000000600000194000000130000006700
+  time_stamp_local: '1574425193805'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425193853:
+  payload: 73ec0d936e01000006000001
+  time_stamp_local: '1574425193853'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425205319:
+  payload: 0000016e930e1a320000000600000194000000130000006701
+  time_stamp_local: '1574425205319'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425205367:
+  payload: 6d190e936e01000006000001
+  time_stamp_local: '1574425205367'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425211334:
+  payload: 0000016e930e31b10000000600000194000000130000006700
+  time_stamp_local: '1574425211334'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425211382:
+  payload: ec300e936e01000006000001
+  time_stamp_local: '1574425211382'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425222845:
+  payload: 0000016e930e5ea70000000600000194000000130000006701
+  time_stamp_local: '1574425222845'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425222892:
+  payload: e25d0e936e01000006000001
+  time_stamp_local: '1574425222892'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425228856:
+  payload: 0000016e930e76220000000600000194000000130000006700
+  time_stamp_local: '1574425228856'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425228903:
+  payload: 5c750e936e01000006000001
+  time_stamp_local: '1574425228903'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425240370:
+  payload: 0000016e930ea31c0000000600000194000000130000006701
+  time_stamp_local: '1574425240370'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425240419:
+  payload: 57a20e936e01000006000001
+  time_stamp_local: '1574425240419'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425246387:
+  payload: 0000016e930eba9d0000000600000194000000130000006700
+  time_stamp_local: '1574425246387'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425246438:
+  payload: d7b90e936e01000006000001
+  time_stamp_local: '1574425246438'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425257899:
+  payload: 0000016e930ee7950000000600000194000000130000006701
+  time_stamp_local: '1574425257899'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425257956:
+  payload: d0e60e936e01000006000001
+  time_stamp_local: '1574425257956'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425263915:
+  payload: 0000016e930eff160000000600000194000000130000006700
+  time_stamp_local: '1574425263915'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425263964:
+  payload: 50fe0e936e01000006000001
+  time_stamp_local: '1574425263964'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425275436:
+  payload: 0000016e930f2c160000000600000194000000130000006701
+  time_stamp_local: '1574425275436'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425275484:
+  payload: 502b0f936e01000006000001
+  time_stamp_local: '1574425275484'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425281453:
+  payload: 0000016e930f43970000000600000194000000130000006700
+  time_stamp_local: '1574425281453'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425281502:
+  payload: d1420f936e01000006000001
+  time_stamp_local: '1574425281502'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425292970:
+  payload: 0000016e930f70940000000600000194000000130000006701
+  time_stamp_local: '1574425292970'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425293018:
+  payload: ce6f0f936e01000006000001
+  time_stamp_local: '1574425293018'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425298979:
+  payload: 0000016e930f880d0000000600000194000000130000006700
+  time_stamp_local: '1574425298979'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425299027:
+  payload: 47870f936e01000006000001
+  time_stamp_local: '1574425299027'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425310493:
+  payload: 0000016e930fb5070000000600000194000000130000006701
+  time_stamp_local: '1574425310493'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425310541:
+  payload: 41b40f936e01000006000001
+  time_stamp_local: '1574425310541'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425316506:
+  payload: 0000016e930fcc840000000600000194000000130000006700
+  time_stamp_local: '1574425316506'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425316553:
+  payload: bdcb0f936e01000006000001
+  time_stamp_local: '1574425316553'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425328017:
+  payload: 0000016e930ff97c0000000600000194000000130000006701
+  time_stamp_local: '1574425328017'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425328066:
+  payload: b6f80f936e01000006000001
+  time_stamp_local: '1574425328066'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425334036:
+  payload: 0000016e931010fe0000000600000194000000130000006700
+  time_stamp_local: '1574425334036'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425334086:
+  payload: 391010936e01000006000001
+  time_stamp_local: '1574425334086'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425345553:
+  payload: 0000016e93103dfb0000000600000194000000130000006701
+  time_stamp_local: '1574425345553'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425345602:
+  payload: 363d10936e01000006000001
+  time_stamp_local: '1574425345602'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425351570:
+  payload: 0000016e9310557c0000000600000194000000130000006700
+  time_stamp_local: '1574425351570'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425351619:
+  payload: b75410936e01000006000001
+  time_stamp_local: '1574425351619'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425363090:
+  payload: 0000016e9310827c0000000600000194000000130000006701
+  time_stamp_local: '1574425363090'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425363140:
+  payload: b88110936e01000006000001
+  time_stamp_local: '1574425363140'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425369102:
+  payload: 0000016e931099f80000000600000194000000130000006700
+  time_stamp_local: '1574425369102'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425369151:
+  payload: 339910936e01000006000001
+  time_stamp_local: '1574425369151'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425380621:
+  payload: 0000016e9310c6f70000000600000194000000130000006701
+  time_stamp_local: '1574425380621'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425380670:
+  payload: 31c610936e01000006000001
+  time_stamp_local: '1574425380670'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425386628:
+  payload: 0000016e9310de6e0000000600000194000000130000006700
+  time_stamp_local: '1574425386628'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425386677:
+  payload: a9dd10936e01000006000001
+  time_stamp_local: '1574425386677'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425398142:
+  payload: 0000016e93110b680000000600000194000000130000006701
+  time_stamp_local: '1574425398142'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425398191:
+  payload: a30a11936e01000006000001
+  time_stamp_local: '1574425398191'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425404152:
+  payload: 0000016e931122e30000000600000194000000130000006700
+  time_stamp_local: '1574425404152'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425404201:
+  payload: 1d2211936e01000006000001
+  time_stamp_local: '1574425404201'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425415671:
+  payload: 0000016e93114fe10000000600000194000000130000006701
+  time_stamp_local: '1574425415671'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425415723:
+  payload: 1b4f11936e01000006000001
+  time_stamp_local: '1574425415723'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425421690:
+  payload: 0000016e931167650000000600000194000000130000006700
+  time_stamp_local: '1574425421690'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425421739:
+  payload: 9f6611936e01000006000001
+  time_stamp_local: '1574425421739'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425433193:
+  payload: 0000016e931194540000000600000194000000130000006701
+  time_stamp_local: '1574425433193'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425433243:
+  payload: 8e9311936e01000006000001
+  time_stamp_local: '1574425433243'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425439208:
+  payload: 0000016e9311abd20000000600000194000000130000006700
+  time_stamp_local: '1574425439208'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425439257:
+  payload: 0dab11936e01000006000001
+  time_stamp_local: '1574425439257'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425450721:
+  payload: 0000016e9311d8cc0000000600000194000000130000006701
+  time_stamp_local: '1574425450721'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425450778:
+  payload: 05d811936e01000006000001
+  time_stamp_local: '1574425450778'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425456737:
+  payload: 0000016e9311f04c0000000600000194000000130000006700
+  time_stamp_local: '1574425456737'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425456786:
+  payload: 86ef11936e01000006000001
+  time_stamp_local: '1574425456786'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425468250:
+  payload: 0000016e93121d440000000600000194000000130000006701
+  time_stamp_local: '1574425468250'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425468298:
+  payload: 7e1c12936e01000006000001
+  time_stamp_local: '1574425468298'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425474268:
+  payload: 0000016e931234c70000000600000194000000130000006700
+  time_stamp_local: '1574425474268'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425474318:
+  payload: 003412936e01000006000001
+  time_stamp_local: '1574425474318'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425485787:
+  payload: 0000016e931261c50000000600000194000000130000006701
+  time_stamp_local: '1574425485787'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425485836:
+  payload: fe6012936e01000006000001
+  time_stamp_local: '1574425485836'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425491798:
+  payload: 0000016e931279410000000600000194000000130000006700
+  time_stamp_local: '1574425491798'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425491848:
+  payload: 7a7812936e01000006000001
+  time_stamp_local: '1574425491848'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425503310:
+  payload: 0000016e9312a6390000000600000194000000130000006701
+  time_stamp_local: '1574425503310'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425503359:
+  payload: 72a512936e01000006000001
+  time_stamp_local: '1574425503359'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425509332:
+  payload: 0000016e9312bdbe0000000600000194000000130000006700
+  time_stamp_local: '1574425509332'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425509380:
+  payload: f7bc12936e01000006000001
+  time_stamp_local: '1574425509380'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425520844:
+  payload: 0000016e9312eab70000000600000194000000130000006701
+  time_stamp_local: '1574425520844'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425520893:
+  payload: f0e912936e01000006000001
+  time_stamp_local: '1574425520893'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425526857:
+  payload: 0000016e931302330000000600000194000000130000006700
+  time_stamp_local: '1574425526857'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425526906:
+  payload: 6d0113936e01000006000001
+  time_stamp_local: '1574425526906'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425538375:
+  payload: 0000016e93132f310000000600000194000000130000006701
+  time_stamp_local: '1574425538375'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425538425:
+  payload: 6a2e13936e01000006000001
+  time_stamp_local: '1574425538425'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425544395:
+  payload: 0000016e931346b30000000600000194000000130000006700
+  time_stamp_local: '1574425544395'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425544446:
+  payload: ef4513936e01000006000001
+  time_stamp_local: '1574425544446'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425555909:
+  payload: 0000016e931373af0000000600000194000000130000006701
+  time_stamp_local: '1574425555909'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425555958:
+  payload: e87213936e01000006000001
+  time_stamp_local: '1574425555958'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425561920:
+  payload: 0000016e93138b2b0000000600000194000000130000006700
+  time_stamp_local: '1574425561920'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425561970:
+  payload: 648a13936e01000006000001
+  time_stamp_local: '1574425561970'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425573427:
+  payload: 0000016e9313b81e0000000600000194000000130000006701
+  time_stamp_local: '1574425573427'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425573582:
+  payload: c0b713936e01000006000001
+  time_stamp_local: '1574425573582'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425579448:
+  payload: 0000016e9313cfa20000000600000194000000130000006700
+  time_stamp_local: '1574425579448'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425579498:
+  payload: dcce13936e01000006000001
+  time_stamp_local: '1574425579498'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425590957:
+  payload: 0000016e9313fc980000000600000194000000130000006701
+  time_stamp_local: '1574425590957'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425591006:
+  payload: d1fb13936e01000006000001
+  time_stamp_local: '1574425591006'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425596978:
+  payload: 0000016e9314141b0000000600000194000000130000006700
+  time_stamp_local: '1574425596978'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425597028:
+  payload: 551314936e01000006000001
+  time_stamp_local: '1574425597028'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425608493:
+  payload: 0000016e931441170000000600000194000000130000006701
+  time_stamp_local: '1574425608493'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425608543:
+  payload: 524014936e01000006000001
+  time_stamp_local: '1574425608543'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425614501:
+  payload: 0000016e9314588f0000000600000194000000130000006700
+  time_stamp_local: '1574425614501'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425614550:
+  payload: c85714936e01000006000001
+  time_stamp_local: '1574425614550'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425626005:
+  payload: 0000016e931485800000000600000194000000130000006701
+  time_stamp_local: '1574425626005'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425626060:
+  payload: b88414936e01000006000001
+  time_stamp_local: '1574425626060'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425632013:
+  payload: 0000016e93149cf80000000600000194000000130000006700
+  time_stamp_local: '1574425632013'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425632061:
+  payload: 309c14936e01000006000001
+  time_stamp_local: '1574425632061'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425643532:
+  payload: 0000016e9314c9f60000000600000194000000130000006701
+  time_stamp_local: '1574425643532'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425643580:
+  payload: 2dc914936e01000006000001
+  time_stamp_local: '1574425643580'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425649550:
+  payload: 0000016e9314e1790000000600000194000000130000006700
+  time_stamp_local: '1574425649550'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425649598:
+  payload: b0e014936e01000006000001
+  time_stamp_local: '1574425649598'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425661064:
+  payload: 0000016e93150e720000000600000194000000130000006701
+  time_stamp_local: '1574425661064'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425661113:
+  payload: aa0d15936e01000006000001
+  time_stamp_local: '1574425661113'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425667076:
+  payload: 0000016e931525ef0000000600000194000000130000006700
+  time_stamp_local: '1574425667076'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425667123:
+  payload: 262515936e01000006000001
+  time_stamp_local: '1574425667123'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425678592:
+  payload: 0000016e931552e70000000600000194000000130000006701
+  time_stamp_local: '1574425678592'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425678640:
+  payload: 215215936e01000006000001
+  time_stamp_local: '1574425678640'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425684606:
+  payload: 0000016e93156a680000000600000194000000130000006700
+  time_stamp_local: '1574425684606'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425684654:
+  payload: 9f6915936e01000006000001
+  time_stamp_local: '1574425684654'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425696121:
+  payload: 0000016e931597630000000600000194000000130000006701
+  time_stamp_local: '1574425696121'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425696174:
+  payload: 9b9615936e01000006000001
+  time_stamp_local: '1574425696174'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425702138:
+  payload: 0000016e9315aede0000000600000194000000130000006700
+  time_stamp_local: '1574425702138'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425702191:
+  payload: 1bae15936e01000006000001
+  time_stamp_local: '1574425702191'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425713649:
+  payload: 0000016e9315dbdb0000000600000194000000130000006701
+  time_stamp_local: '1574425713649'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425713697:
+  payload: 12db15936e01000006000001
+  time_stamp_local: '1574425713697'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425719664:
+  payload: 0000016e9315f35a0000000600000194000000130000006700
+  time_stamp_local: '1574425719664'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425719712:
+  payload: 91f215936e01000006000001
+  time_stamp_local: '1574425719712'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425731171:
+  payload: 0000016e9316204d0000000600000194000000130000006701
+  time_stamp_local: '1574425731171'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425731220:
+  payload: 841f16936e01000006000001
+  time_stamp_local: '1574425731220'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425737195:
+  payload: 0000016e931637d60000000600000194000000130000006700
+  time_stamp_local: '1574425737195'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425737243:
+  payload: 0c3716936e01000006000001
+  time_stamp_local: '1574425737243'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425748703:
+  payload: 0000016e931664c90000000600000194000000130000006701
+  time_stamp_local: '1574425748703'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425748752:
+  payload: ff6316936e01000006000001
+  time_stamp_local: '1574425748752'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425754716:
+  payload: 0000016e93167c460000000600000194000000130000006700
+  time_stamp_local: '1574425754716'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425754764:
+  payload: 7d7b16936e01000006000001
+  time_stamp_local: '1574425754764'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425766231:
+  payload: 0000016e9316a9420000000600000194000000130000006701
+  time_stamp_local: '1574425766231'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425766279:
+  payload: 78a816936e01000006000001
+  time_stamp_local: '1574425766279'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425772238:
+  payload: 0000016e9316c0b80000000600000194000000130000006700
+  time_stamp_local: '1574425772238'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425772286:
+  payload: efbf16936e01000006000001
+  time_stamp_local: '1574425772286'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425783752:
+  payload: 0000016e9316edb20000000600000194000000130000006701
+  time_stamp_local: '1574425783752'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425783800:
+  payload: e9ec16936e01000006000001
+  time_stamp_local: '1574425783800'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425789764:
+  payload: 0000016e9317052e0000000600000194000000130000006700
+  time_stamp_local: '1574425789764'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425789812:
+  payload: 650417936e01000006000001
+  time_stamp_local: '1574425789812'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425801266:
+  payload: 0000016e9317321c0000000600000194000000130000006701
+  time_stamp_local: '1574425801266'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425801314:
+  payload: 533117936e01000006000001
+  time_stamp_local: '1574425801314'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425807284:
+  payload: 0000016e9317499a0000000600000194000000130000006700
+  time_stamp_local: '1574425807284'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425807337:
+  payload: d44817936e01000006000001
+  time_stamp_local: '1574425807337'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425818797:
+  payload: 0000016e931776970000000600000194000000130000006701
+  time_stamp_local: '1574425818797'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425818845:
+  payload: ce7517936e01000006000001
+  time_stamp_local: '1574425818845'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425824801:
+  payload: 0000016e93178e0c0000000600000194000000130000006700
+  time_stamp_local: '1574425824801'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425824850:
+  payload: 428d17936e01000006000001
+  time_stamp_local: '1574425824850'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425836322:
+  payload: 0000016e9317bb0c0000000600000194000000130000006701
+  time_stamp_local: '1574425836322'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425836370:
+  payload: 42ba17936e01000006000001
+  time_stamp_local: '1574425836370'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425842335:
+  payload: 0000016e9317d28a0000000600000194000000130000006700
+  time_stamp_local: '1574425842335'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425842383:
+  payload: c0d117936e01000006000001
+  time_stamp_local: '1574425842383'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425853847:
+  payload: 0000016e9317ff820000000600000194000000130000006701
+  time_stamp_local: '1574425853847'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425853895:
+  payload: b7fe17936e01000006000001
+  time_stamp_local: '1574425853895'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425859856:
+  payload: 0000016e931816fa0000000600000194000000130000006700
+  time_stamp_local: '1574425859856'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425859904:
+  payload: 301618936e01000006000001
+  time_stamp_local: '1574425859904'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425871373:
+  payload: 0000016e931843f80000000600000194000000130000006701
+  time_stamp_local: '1574425871373'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425871422:
+  payload: 2d4318936e01000006000001
+  time_stamp_local: '1574425871422'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425877394:
+  payload: 0000016e93185b7b0000000600000194000000130000006700
+  time_stamp_local: '1574425877394'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425877441:
+  payload: b25a18936e01000006000001
+  time_stamp_local: '1574425877441'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425888911:
+  payload: 0000016e931888780000000600000194000000130000006701
+  time_stamp_local: '1574425888911'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425888959:
+  payload: af8718936e01000006000001
+  time_stamp_local: '1574425888959'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425894928:
+  payload: 0000016e93189ff90000000600000194000000130000006700
+  time_stamp_local: '1574425894928'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425894977:
+  payload: 309f18936e01000006000001
+  time_stamp_local: '1574425894977'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425906435:
+  payload: 0000016e9318ccee0000000600000194000000130000006701
+  time_stamp_local: '1574425906435'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425906483:
+  payload: 23cc18936e01000006000001
+  time_stamp_local: '1574425906483'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425912443:
+  payload: 0000016e9318e4650000000600000194000000130000006700
+  time_stamp_local: '1574425912443'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425912490:
+  payload: 9ae318936e01000006000001
+  time_stamp_local: '1574425912490'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425923952:
+  payload: 0000016e9319115b0000000600000194000000130000006701
+  time_stamp_local: '1574425923952'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425924002:
+  payload: 911019936e01000006000001
+  time_stamp_local: '1574425924002'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425929957:
+  payload: 0000016e931928cf0000000600000194000000130000006700
+  time_stamp_local: '1574425929957'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425930006:
+  payload: 052819936e01000006000001
+  time_stamp_local: '1574425930006'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425941459:
+  payload: 0000016e931955be0000000600000194000000130000006701
+  time_stamp_local: '1574425941459'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425941508:
+  payload: f45419936e01000006000001
+  time_stamp_local: '1574425941508'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425947472:
+  payload: 0000016e93196d3a0000000600000194000000130000006700
+  time_stamp_local: '1574425947472'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425947520:
+  payload: 706c19936e01000006000001
+  time_stamp_local: '1574425947520'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425958986:
+  payload: 0000016e93199a350000000600000194000000130000006701
+  time_stamp_local: '1574425958986'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425959044:
+  payload: 6a9919936e01000006000001
+  time_stamp_local: '1574425959044'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425965002:
+  payload: 0000016e9319b1b40000000600000194000000130000006700
+  time_stamp_local: '1574425965002'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425965051:
+  payload: ebb019936e01000006000001
+  time_stamp_local: '1574425965051'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425976516:
+  payload: 0000016e9319deaf0000000600000194000000130000006701
+  time_stamp_local: '1574425976516'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425976565:
+  payload: e5dd19936e01000006000001
+  time_stamp_local: '1574425976565'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425982531:
+  payload: 0000016e9319f62e0000000600000194000000130000006700
+  time_stamp_local: '1574425982531'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425982580:
+  payload: 64f519936e01000006000001
+  time_stamp_local: '1574425982580'
+  topic: SafeStrip/ParkingOutput
+MSG_1574425994036:
+  payload: 0000016e931a231f0000000600000194000000130000006701
+  time_stamp_local: '1574425994036'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574425994088:
+  payload: 54221a936e01000006000001
+  time_stamp_local: '1574425994088'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426000049:
+  payload: 0000016e931a3a9b0000000600000194000000130000006700
+  time_stamp_local: '1574426000049'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426000098:
+  payload: d1391a936e01000006000001
+  time_stamp_local: '1574426000098'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426011563:
+  payload: 0000016e931a67950000000600000194000000130000006701
+  time_stamp_local: '1574426011563'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426011612:
+  payload: cb661a936e01000006000001
+  time_stamp_local: '1574426011612'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426017575:
+  payload: 0000016e931a7f120000000600000194000000130000006700
+  time_stamp_local: '1574426017575'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426017624:
+  payload: 477e1a936e01000006000001
+  time_stamp_local: '1574426017624'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426029092:
+  payload: 0000016e931aac0e0000000600000194000000130000006701
+  time_stamp_local: '1574426029092'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426029140:
+  payload: 43ab1a936e01000006000001
+  time_stamp_local: '1574426029140'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426035100:
+  payload: 0000016e931ac3860000000600000194000000130000006700
+  time_stamp_local: '1574426035100'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426035149:
+  payload: bbc21a936e01000006000001
+  time_stamp_local: '1574426035149'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426046610:
+  payload: 0000016e931af07d0000000600000194000000130000006701
+  time_stamp_local: '1574426046610'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426046660:
+  payload: b1ef1a936e01000006000001
+  time_stamp_local: '1574426046660'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426052627:
+  payload: 0000016e931b07fd0000000600000194000000130000006700
+  time_stamp_local: '1574426052627'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426052675:
+  payload: 33071b936e01000006000001
+  time_stamp_local: '1574426052675'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426064136:
+  payload: 0000016e931b34f30000000600000194000000130000006701
+  time_stamp_local: '1574426064136'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426064185:
+  payload: 29341b936e01000006000001
+  time_stamp_local: '1574426064185'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426070154:
+  payload: 0000016e931b4c750000000600000194000000130000006700
+  time_stamp_local: '1574426070154'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426070204:
+  payload: aa4b1b936e01000006000001
+  time_stamp_local: '1574426070204'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426081672:
+  payload: 0000016e931b79720000000600000194000000130000006701
+  time_stamp_local: '1574426081672'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426081721:
+  payload: a8781b936e01000006000001
+  time_stamp_local: '1574426081721'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426087681:
+  payload: 0000016e931b90eb0000000600000194000000130000006700
+  time_stamp_local: '1574426087681'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426087730:
+  payload: 21901b936e01000006000001
+  time_stamp_local: '1574426087730'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426099190:
+  payload: 0000016e931bbde10000000600000194000000130000006701
+  time_stamp_local: '1574426099190'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426099239:
+  payload: 16bd1b936e01000006000001
+  time_stamp_local: '1574426099239'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426105207:
+  payload: 0000016e931bd5600000000600000194000000130000006700
+  time_stamp_local: '1574426105207'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426105256:
+  payload: 96d41b936e01000006000001
+  time_stamp_local: '1574426105256'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426116722:
+  payload: 0000016e931c025c0000000600000194000000130000006701
+  time_stamp_local: '1574426116722'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426116771:
+  payload: 91011c936e01000006000001
+  time_stamp_local: '1574426116771'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426122732:
+  payload: 0000016e931c19d60000000600000194000000130000006700
+  time_stamp_local: '1574426122732'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426122780:
+  payload: 0b191c936e01000006000001
+  time_stamp_local: '1574426122780'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426134247:
+  payload: 0000016e931c46d20000000600000194000000130000006701
+  time_stamp_local: '1574426134247'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426134297:
+  payload: 07461c936e01000006000001
+  time_stamp_local: '1574426134297'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426140266:
+  payload: 0000016e931c5e540000000600000194000000130000006700
+  time_stamp_local: '1574426140266'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426140315:
+  payload: 8a5d1c936e01000006000001
+  time_stamp_local: '1574426140315'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426151780:
+  payload: 0000016e931c8b4e0000000600000194000000130000006701
+  time_stamp_local: '1574426151780'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426151829:
+  payload: 848a1c936e01000006000001
+  time_stamp_local: '1574426151829'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426157793:
+  payload: 0000016e931ca2cb0000000600000194000000130000006700
+  time_stamp_local: '1574426157793'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426157842:
+  payload: 01a21c936e01000006000001
+  time_stamp_local: '1574426157842'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426169315:
+  payload: 0000016e931ccfcd0000000600000194000000130000006701
+  time_stamp_local: '1574426169315'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426169363:
+  payload: 02cf1c936e01000006000001
+  time_stamp_local: '1574426169363'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426175324:
+  payload: 0000016e931ce7470000000600000194000000130000006700
+  time_stamp_local: '1574426175324'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426175373:
+  payload: 7ce61c936e01000006000001
+  time_stamp_local: '1574426175373'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426186842:
+  payload: 0000016e931d14440000000600000194000000130000006701
+  time_stamp_local: '1574426186842'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426186891:
+  payload: 79131d936e01000006000001
+  time_stamp_local: '1574426186891'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426192861:
+  payload: 0000016e931d2bc80000000600000194000000130000006700
+  time_stamp_local: '1574426192861'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426192910:
+  payload: fd2a1d936e01000006000001
+  time_stamp_local: '1574426192910'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426204378:
+  payload: 0000016e931d58c50000000600000194000000130000006701
+  time_stamp_local: '1574426204378'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426204427:
+  payload: fa571d936e01000006000001
+  time_stamp_local: '1574426204427'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426210396:
+  payload: 0000016e931d70470000000600000194000000130000006700
+  time_stamp_local: '1574426210396'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426210445:
+  payload: 7c6f1d936e01000006000001
+  time_stamp_local: '1574426210445'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426221906:
+  payload: 0000016e931d9d3d0000000600000194000000130000006701
+  time_stamp_local: '1574426221906'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426221955:
+  payload: 719c1d936e01000006000001
+  time_stamp_local: '1574426221955'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426227922:
+  payload: 0000016e931db4b60000000600000194000000130000006700
+  time_stamp_local: '1574426227922'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426227972:
+  payload: f1b31d936e01000006000001
+  time_stamp_local: '1574426227972'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426239431:
+  payload: 0000016e931de1b00000000600000194000000130000006701
+  time_stamp_local: '1574426239431'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426239477:
+  payload: e4e01d936e01000006000001
+  time_stamp_local: '1574426239477'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426245446:
+  payload: 0000016e931df9300000000600000194000000130000006700
+  time_stamp_local: '1574426245446'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426245493:
+  payload: 64f81d936e01000006000001
+  time_stamp_local: '1574426245493'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426256961:
+  payload: 0000016e931e262c0000000600000194000000130000006701
+  time_stamp_local: '1574426256961'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426257009:
+  payload: 60251e936e01000006000001
+  time_stamp_local: '1574426257009'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426262970:
+  payload: 0000016e931e3da40000000600000194000000130000006700
+  time_stamp_local: '1574426262970'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426263017:
+  payload: d83c1e936e01000006000001
+  time_stamp_local: '1574426263017'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426274490:
+  payload: 0000016e931e6aa50000000600000194000000130000006701
+  time_stamp_local: '1574426274490'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426274538:
+  payload: d9691e936e01000006000001
+  time_stamp_local: '1574426274538'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426280505:
+  payload: 0000016e931e82240000000600000194000000130000006700
+  time_stamp_local: '1574426280505'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426280553:
+  payload: 58811e936e01000006000001
+  time_stamp_local: '1574426280553'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426292018:
+  payload: 0000016e931eaf1c0000000600000194000000130000006701
+  time_stamp_local: '1574426292018'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426292066:
+  payload: 50ae1e936e01000006000001
+  time_stamp_local: '1574426292066'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426298028:
+  payload: 0000016e931ec6970000000600000194000000130000006700
+  time_stamp_local: '1574426298028'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426298077:
+  payload: cac51e936e01000006000001
+  time_stamp_local: '1574426298077'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426309545:
+  payload: 0000016e931ef3930000000600000194000000130000006701
+  time_stamp_local: '1574426309545'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426309593:
+  payload: c7f21e936e01000006000001
+  time_stamp_local: '1574426309593'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426315554:
+  payload: 0000016e931f0b0d0000000600000194000000130000006700
+  time_stamp_local: '1574426315554'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426315602:
+  payload: 400a1f936e01000006000001
+  time_stamp_local: '1574426315602'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426327066:
+  payload: 0000016e931f38040000000600000194000000130000006701
+  time_stamp_local: '1574426327066'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426327113:
+  payload: 38371f936e01000006000001
+  time_stamp_local: '1574426327113'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426333085:
+  payload: 0000016e931f4f870000000600000194000000130000006700
+  time_stamp_local: '1574426333085'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426333133:
+  payload: ba4e1f936e01000006000001
+  time_stamp_local: '1574426333133'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426344601:
+  payload: 0000016e931f7c830000000600000194000000130000006701
+  time_stamp_local: '1574426344601'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426344649:
+  payload: b77b1f936e01000006000001
+  time_stamp_local: '1574426344649'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426350616:
+  payload: 0000016e931f94020000000600000194000000130000006700
+  time_stamp_local: '1574426350616'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426350664:
+  payload: 36931f936e01000006000001
+  time_stamp_local: '1574426350664'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426362129:
+  payload: 0000016e931fc0fc0000000600000194000000130000006701
+  time_stamp_local: '1574426362129'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426362178:
+  payload: 2fc01f936e01000006000001
+  time_stamp_local: '1574426362178'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426368151:
+  payload: 0000016e931fd8810000000600000194000000130000006700
+  time_stamp_local: '1574426368151'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426368199:
+  payload: b4d71f936e01000006000001
+  time_stamp_local: '1574426368199'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426379667:
+  payload: 0000016e9320057e0000000600000194000000130000006701
+  time_stamp_local: '1574426379667'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426379716:
+  payload: b20420936e01000006000001
+  time_stamp_local: '1574426379716'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426385676:
+  payload: 0000016e93201cf60000000600000194000000130000006700
+  time_stamp_local: '1574426385676'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426385725:
+  payload: 2a1c20936e01000006000001
+  time_stamp_local: '1574426385725'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426397192:
+  payload: 0000016e932049f20000000600000194000000130000006701
+  time_stamp_local: '1574426397192'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426397240:
+  payload: 254920936e01000006000001
+  time_stamp_local: '1574426397240'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426403211:
+  payload: 0000016e932061740000000600000194000000130000006700
+  time_stamp_local: '1574426403211'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426403259:
+  payload: a86020936e01000006000001
+  time_stamp_local: '1574426403259'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426414725:
+  payload: 0000016e93208e6f0000000600000194000000130000006701
+  time_stamp_local: '1574426414725'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426414774:
+  payload: a28d20936e01000006000001
+  time_stamp_local: '1574426414774'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426420745:
+  payload: 0000016e9320a5f40000000600000194000000130000006700
+  time_stamp_local: '1574426420745'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426420793:
+  payload: 26a520936e01000006000001
+  time_stamp_local: '1574426420793'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426432262:
+  payload: 0000016e9320d2f10000000600000194000000130000006701
+  time_stamp_local: '1574426432262'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426432310:
+  payload: 24d220936e01000006000001
+  time_stamp_local: '1574426432310'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426438274:
+  payload: 0000016e9320ea6d0000000600000194000000130000006700
+  time_stamp_local: '1574426438274'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426438321:
+  payload: 9fe920936e01000006000001
+  time_stamp_local: '1574426438321'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426449794:
+  payload: 0000016e9321176c0000000600000194000000130000006701
+  time_stamp_local: '1574426449794'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426449844:
+  payload: 9f1621936e01000006000001
+  time_stamp_local: '1574426449844'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426455803:
+  payload: 0000016e93212ee40000000600000194000000130000006700
+  time_stamp_local: '1574426455803'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426455854:
+  payload: 182e21936e01000006000001
+  time_stamp_local: '1574426455854'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426467311:
+  payload: 0000016e93215bd90000000600000194000000130000006701
+  time_stamp_local: '1574426467311'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426467363:
+  payload: 0c5b21936e01000006000001
+  time_stamp_local: '1574426467363'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426473327:
+  payload: 0000016e932173560000000600000194000000130000006700
+  time_stamp_local: '1574426473327'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426473378:
+  payload: 8c7221936e01000006000001
+  time_stamp_local: '1574426473378'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426484834:
+  payload: 0000016e9321a04b0000000600000194000000130000006701
+  time_stamp_local: '1574426484834'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426484882:
+  payload: 7e9f21936e01000006000001
+  time_stamp_local: '1574426484882'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426490850:
+  payload: 0000016e9321b7cd0000000600000194000000130000006700
+  time_stamp_local: '1574426490850'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426490900:
+  payload: ffb621936e01000006000001
+  time_stamp_local: '1574426490900'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426502362:
+  payload: 0000016e9321e4c50000000600000194000000130000006701
+  time_stamp_local: '1574426502362'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426502411:
+  payload: f7e321936e01000006000001
+  time_stamp_local: '1574426502411'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426508381:
+  payload: 0000016e9321fc400000000600000194000000130000006700
+  time_stamp_local: '1574426508381'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426508443:
+  payload: 7afb21936e01000006000001
+  time_stamp_local: '1574426508443'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426519890:
+  payload: 0000016e9322293c0000000600000194000000130000006701
+  time_stamp_local: '1574426519890'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426519937:
+  payload: 6e2822936e01000006000001
+  time_stamp_local: '1574426519937'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426525906:
+  payload: 0000016e932240bd0000000600000194000000130000006700
+  time_stamp_local: '1574426525906'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426525954:
+  payload: ef3f22936e01000006000001
+  time_stamp_local: '1574426525954'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426537419:
+  payload: 0000016e93226db60000000600000194000000130000006701
+  time_stamp_local: '1574426537419'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426537467:
+  payload: e86c22936e01000006000001
+  time_stamp_local: '1574426537467'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426543426:
+  payload: 0000016e9322852d0000000600000194000000130000006700
+  time_stamp_local: '1574426543426'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426543474:
+  payload: 5f8422936e01000006000001
+  time_stamp_local: '1574426543474'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426554943:
+  payload: 0000016e9322b22a0000000600000194000000130000006701
+  time_stamp_local: '1574426554943'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426554991:
+  payload: 5cb122936e01000006000001
+  time_stamp_local: '1574426554991'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426560956:
+  payload: 0000016e9322c9a50000000600000194000000130000006700
+  time_stamp_local: '1574426560956'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426561003:
+  payload: d8c822936e01000006000001
+  time_stamp_local: '1574426561003'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426572473:
+  payload: 0000016e9322f6a30000000600000194000000130000006701
+  time_stamp_local: '1574426572473'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426572520:
+  payload: d4f522936e01000006000001
+  time_stamp_local: '1574426572520'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426578488:
+  payload: 0000016e93230e210000000600000194000000130000006700
+  time_stamp_local: '1574426578488'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426578535:
+  payload: 540d23936e01000006000001
+  time_stamp_local: '1574426578535'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426590000:
+  payload: 0000016e93233b1a0000000600000194000000130000006701
+  time_stamp_local: '1574426590000'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426590047:
+  payload: 4b3a23936e01000006000001
+  time_stamp_local: '1574426590047'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426596009:
+  payload: 0000016e932352930000000600000194000000130000006700
+  time_stamp_local: '1574426596009'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426596057:
+  payload: c55123936e01000006000001
+  time_stamp_local: '1574426596057'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426607521:
+  payload: 0000016e93237f8c0000000600000194000000130000006701
+  time_stamp_local: '1574426607521'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426607571:
+  payload: bd7e23936e01000006000001
+  time_stamp_local: '1574426607571'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426613534:
+  payload: 0000016e932397080000000600000194000000130000006700
+  time_stamp_local: '1574426613534'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426613582:
+  payload: 3a9623936e01000006000001
+  time_stamp_local: '1574426613582'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426625050:
+  payload: 0000016e9323c4050000000600000194000000130000006701
+  time_stamp_local: '1574426625050'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426625098:
+  payload: 37c323936e01000006000001
+  time_stamp_local: '1574426625098'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426631062:
+  payload: 0000016e9323db810000000600000194000000130000006700
+  time_stamp_local: '1574426631062'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426631110:
+  payload: b2da23936e01000006000001
+  time_stamp_local: '1574426631110'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426642577:
+  payload: 0000016e9324087c0000000600000194000000130000006701
+  time_stamp_local: '1574426642577'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426642626:
+  payload: ad0724936e01000006000001
+  time_stamp_local: '1574426642626'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426648599:
+  payload: 0000016e932420010000000600000194000000130000006700
+  time_stamp_local: '1574426648599'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426648646:
+  payload: 321f24936e01000006000001
+  time_stamp_local: '1574426648646'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426660105:
+  payload: 0000016e93244cf30000000600000194000000130000006701
+  time_stamp_local: '1574426660105'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426660154:
+  payload: 254c24936e01000006000001
+  time_stamp_local: '1574426660154'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426666122:
+  payload: 0000016e932464730000000600000194000000130000006700
+  time_stamp_local: '1574426666122'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426666170:
+  payload: a66324936e01000006000001
+  time_stamp_local: '1574426666170'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426677634:
+  payload: 0000016e9324916c0000000600000194000000130000006701
+  time_stamp_local: '1574426677634'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426677682:
+  payload: 9d9024936e01000006000001
+  time_stamp_local: '1574426677682'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426683649:
+  payload: 0000016e9324a8e80000000600000194000000130000006700
+  time_stamp_local: '1574426683649'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426683697:
+  payload: 1da824936e01000006000001
+  time_stamp_local: '1574426683697'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426695158:
+  payload: 0000016e9324d5e00000000600000194000000130000006701
+  time_stamp_local: '1574426695158'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426695207:
+  payload: 11d524936e01000006000001
+  time_stamp_local: '1574426695207'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426701173:
+  payload: 0000016e9324ed600000000600000194000000130000006700
+  time_stamp_local: '1574426701173'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426701221:
+  payload: 91ec24936e01000006000001
+  time_stamp_local: '1574426701221'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426712684:
+  payload: 0000016e93251a560000000600000194000000130000006701
+  time_stamp_local: '1574426712684'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426712732:
+  payload: 871925936e01000006000001
+  time_stamp_local: '1574426712732'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426718698:
+  payload: 0000016e932531d50000000600000194000000130000006700
+  time_stamp_local: '1574426718698'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426718748:
+  payload: 063125936e01000006000001
+  time_stamp_local: '1574426718748'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426730220:
+  payload: 0000016e93255ed50000000600000194000000130000006701
+  time_stamp_local: '1574426730220'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426730267:
+  payload: 075e25936e01000006000001
+  time_stamp_local: '1574426730267'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426736230:
+  payload: 0000016e932576510000000600000194000000130000006700
+  time_stamp_local: '1574426736230'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426736278:
+  payload: 827525936e01000006000001
+  time_stamp_local: '1574426736278'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426747747:
+  payload: 0000016e9325a34e0000000600000194000000130000006701
+  time_stamp_local: '1574426747747'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426747795:
+  payload: 7ea225936e01000006000001
+  time_stamp_local: '1574426747795'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426753762:
+  payload: 0000016e9325bacc0000000600000194000000130000006700
+  time_stamp_local: '1574426753762'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426753810:
+  payload: feb925936e01000006000001
+  time_stamp_local: '1574426753810'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426765271:
+  payload: 0000016e9325e7c30000000600000194000000130000006701
+  time_stamp_local: '1574426765271'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426765319:
+  payload: f3e625936e01000006000001
+  time_stamp_local: '1574426765319'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426771282:
+  payload: 0000016e9325ff3d0000000600000194000000130000006700
+  time_stamp_local: '1574426771282'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426771332:
+  payload: 6dfe25936e01000006000001
+  time_stamp_local: '1574426771332'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426782800:
+  payload: 0000016e93262c3b0000000600000194000000130000006701
+  time_stamp_local: '1574426782800'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426782848:
+  payload: 6b2b26936e01000006000001
+  time_stamp_local: '1574426782848'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426788812:
+  payload: 0000016e932643b60000000600000194000000130000006700
+  time_stamp_local: '1574426788812'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426788859:
+  payload: e74226936e01000006000001
+  time_stamp_local: '1574426788859'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426800327:
+  payload: 0000016e932670b10000000600000194000000130000006701
+  time_stamp_local: '1574426800327'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426800376:
+  payload: e26f26936e01000006000001
+  time_stamp_local: '1574426800376'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426806330:
+  payload: 0000016e932688250000000600000194000000130000006700
+  time_stamp_local: '1574426806330'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426806378:
+  payload: 558726936e01000006000001
+  time_stamp_local: '1574426806378'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426817840:
+  payload: 0000016e9326b51a0000000600000194000000130000006701
+  time_stamp_local: '1574426817840'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426817888:
+  payload: 4bb426936e01000006000001
+  time_stamp_local: '1574426817888'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426823858:
+  payload: 0000016e9326cc9d0000000600000194000000130000006700
+  time_stamp_local: '1574426823858'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426823906:
+  payload: cdcb26936e01000006000001
+  time_stamp_local: '1574426823906'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426835376:
+  payload: 0000016e9326f99b0000000600000194000000130000006701
+  time_stamp_local: '1574426835376'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426835424:
+  payload: cbf826936e01000006000001
+  time_stamp_local: '1574426835424'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426841389:
+  payload: 0000016e932711140000000600000194000000130000006700
+  time_stamp_local: '1574426841389'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426841437:
+  payload: 471027936e01000006000001
+  time_stamp_local: '1574426841437'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426852904:
+  payload: 0000016e93273e120000000600000194000000130000006701
+  time_stamp_local: '1574426852904'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426852951:
+  payload: 423d27936e01000006000001
+  time_stamp_local: '1574426852951'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426858918:
+  payload: 0000016e932755900000000600000194000000130000006700
+  time_stamp_local: '1574426858918'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426858967:
+  payload: c15427936e01000006000001
+  time_stamp_local: '1574426858967'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426870433:
+  payload: 0000016e9327828c0000000600000194000000130000006701
+  time_stamp_local: '1574426870433'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426870481:
+  payload: bb8127936e01000006000001
+  time_stamp_local: '1574426870481'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426876436:
+  payload: 0000016e932799ff0000000600000194000000130000006700
+  time_stamp_local: '1574426876436'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426876484:
+  payload: 2f9927936e01000006000001
+  time_stamp_local: '1574426876484'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426887959:
+  payload: 0000016e9327c7020000000600000194000000130000006701
+  time_stamp_local: '1574426887959'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426888008:
+  payload: 32c627936e01000006000001
+  time_stamp_local: '1574426888008'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426893977:
+  payload: 0000016e9327de830000000600000194000000130000006700
+  time_stamp_local: '1574426893977'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426894026:
+  payload: b3dd27936e01000006000001
+  time_stamp_local: '1574426894026'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426905483:
+  payload: 0000016e93280b760000000600000194000000130000006701
+  time_stamp_local: '1574426905483'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426905532:
+  payload: a50a28936e01000006000001
+  time_stamp_local: '1574426905532'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426911506:
+  payload: 0000016e932822fd0000000600000194000000130000006700
+  time_stamp_local: '1574426911506'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426911554:
+  payload: 2c2228936e01000006000001
+  time_stamp_local: '1574426911554'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426923017:
+  payload: 0000016e93284ff30000000600000194000000130000006701
+  time_stamp_local: '1574426923017'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426923067:
+  payload: 234f28936e01000006000001
+  time_stamp_local: '1574426923067'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426929029:
+  payload: 0000016e932867700000000600000194000000130000006700
+  time_stamp_local: '1574426929029'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426929077:
+  payload: 9f6628936e01000006000001
+  time_stamp_local: '1574426929077'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426940535:
+  payload: 0000016e932894620000000600000194000000130000006701
+  time_stamp_local: '1574426940535'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426940583:
+  payload: 929328936e01000006000001
+  time_stamp_local: '1574426940583'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426946550:
+  payload: 0000016e9328abe00000000600000194000000130000006700
+  time_stamp_local: '1574426946550'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426946598:
+  payload: 0fab28936e01000006000001
+  time_stamp_local: '1574426946598'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426958061:
+  payload: 0000016e9328d8d80000000600000194000000130000006701
+  time_stamp_local: '1574426958061'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426958111:
+  payload: 06d828936e01000006000001
+  time_stamp_local: '1574426958111'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426964065:
+  payload: 0000016e9328f04c0000000600000194000000130000006700
+  time_stamp_local: '1574426964065'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426964113:
+  payload: 7bef28936e01000006000001
+  time_stamp_local: '1574426964113'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426975580:
+  payload: 0000016e93291d470000000600000194000000130000006701
+  time_stamp_local: '1574426975580'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426975628:
+  payload: 761c29936e01000006000001
+  time_stamp_local: '1574426975628'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426981590:
+  payload: 0000016e932934c00000000600000194000000130000006700
+  time_stamp_local: '1574426981590'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426981637:
+  payload: ef3329936e01000006000001
+  time_stamp_local: '1574426981637'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426993099:
+  payload: 0000016e932961b50000000600000194000000130000006701
+  time_stamp_local: '1574426993099'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426993147:
+  payload: e46029936e01000006000001
+  time_stamp_local: '1574426993147'
+  topic: SafeStrip/ParkingOutput
+MSG_1574426999116:
+  payload: 0000016e932979360000000600000194000000130000006700
+  time_stamp_local: '1574426999116'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574426999164:
+  payload: 667829936e01000006000001
+  time_stamp_local: '1574426999164'
+  topic: SafeStrip/ParkingOutput
+MSG_1574427010631:
+  payload: 0000016e9329a6310000000600000194000000130000006701
+  time_stamp_local: '1574427010631'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574427010678:
+  payload: 60a529936e01000006000001
+  time_stamp_local: '1574427010678'
+  topic: SafeStrip/ParkingOutput
+MSG_1574427016640:
+  payload: 0000016e9329bdaa0000000600000194000000130000006700
+  time_stamp_local: '1574427016640'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574427016687:
+  payload: d9bc29936e01000006000001
+  time_stamp_local: '1574427016687'
+  topic: SafeStrip/ParkingOutput
+MSG_1574427028154:
+  payload: 0000016e9329eaa30000000600000194000000130000006701
+  time_stamp_local: '1574427028154'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574427028209:
+  payload: d3e929936e01000006000001
+  time_stamp_local: '1574427028209'
+  topic: SafeStrip/ParkingOutput
+MSG_1574427034165:
+  payload: 0000016e932a021e0000000600000194000000130000006700
+  time_stamp_local: '1574427034165'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574427034213:
+  payload: 4e012a936e01000006000001
+  time_stamp_local: '1574427034213'
+  topic: SafeStrip/ParkingOutput
+MSG_1574427045678:
+  payload: 0000016e932a2f190000000600000194000000130000006701
+  time_stamp_local: '1574427045678'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574427045726:
+  payload: 472e2a936e01000006000001
+  time_stamp_local: '1574427045726'
+  topic: SafeStrip/ParkingOutput
+MSG_1574427051684:
+  payload: 0000016e932a468e0000000600000194000000130000006700
+  time_stamp_local: '1574427051684'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574427051732:
+  payload: bd452a936e01000006000001
+  time_stamp_local: '1574427051732'
+  topic: SafeStrip/ParkingOutput
+MSG_1574427063191:
+  payload: 0000016e932a73810000000600000194000000130000006701
+  time_stamp_local: '1574427063191'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574427063241:
+  payload: b0722a936e01000006000001
+  time_stamp_local: '1574427063241'
+  topic: SafeStrip/ParkingOutput
+MSG_1574427069210:
+  payload: 0000016e932a8b030000000600000194000000130000006700
+  time_stamp_local: '1574427069210'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574427069257:
+  payload: 328a2a936e01000006000001
+  time_stamp_local: '1574427069257'
+  topic: SafeStrip/ParkingOutput
+MSG_1574427080732:
+  payload: 0000016e932ab8010000000600000194000000130000006701
+  time_stamp_local: '1574427080732'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574427080780:
+  payload: 35b72a936e01000006000001
+  time_stamp_local: '1574427080780'
+  topic: SafeStrip/ParkingOutput
+MSG_1574427086733:
+  payload: 0000016e932acf780000000600000194000000130000006700
+  time_stamp_local: '1574427086733'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574427086782:
+  payload: a6ce2a936e01000006000001
+  time_stamp_local: '1574427086782'
+  topic: SafeStrip/ParkingOutput
+MSG_1574427098252:
+  payload: 0000016e932afc760000000600000194000000130000006701
+  time_stamp_local: '1574427098252'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574427098300:
+  payload: a4fb2a936e01000006000001
+  time_stamp_local: '1574427098300'
+  topic: SafeStrip/ParkingOutput
+MSG_1574427104263:
+  payload: 0000016e932b13f20000000600000194000000130000006700
+  time_stamp_local: '1574427104263'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574427104311:
+  payload: 20132b936e01000006000001
+  time_stamp_local: '1574427104311'
+  topic: SafeStrip/ParkingOutput
+MSG_1574427115766:
+  payload: 0000016e932b40e10000000600000194000000130000006701
+  time_stamp_local: '1574427115766'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574427115815:
+  payload: 0f402b936e01000006000001
+  time_stamp_local: '1574427115815'
+  topic: SafeStrip/ParkingOutput
+MSG_1574427121773:
+  payload: 0000016e932b58570000000600000194000000130000006700
+  time_stamp_local: '1574427121773'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574427121821:
+  payload: 86572b936e01000006000001
+  time_stamp_local: '1574427121821'
+  topic: SafeStrip/ParkingOutput
+MSG_1574427133281:
+  payload: 0000016e932b854b0000000600000194000000130000006701
+  time_stamp_local: '1574427133281'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574427133335:
+  payload: 7a842b936e01000006000001
+  time_stamp_local: '1574427133335'
+  topic: SafeStrip/ParkingOutput
+MSG_1574427139300:
+  payload: 0000016e932b9cce0000000600000194000000130000006700
+  time_stamp_local: '1574427139300'
+  topic: SafeStrip/ParkingEvent/103
+MSG_1574427139385:
+  payload: 219c2b936e01000006000001
+  time_stamp_local: '1574427139385'
+  topic: SafeStrip/ParkingOutput

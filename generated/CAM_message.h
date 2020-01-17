@@ -10,6 +10,8 @@
   extern "C" {
 #endif
 
+#include<stdio.h> /* Necessary to recognize FILE type */
+
 /* C structure for CAM_message */
 typedef struct {
   uint64_t UTC_time;                                            /* MISSING */
@@ -55,6 +57,11 @@ CAM_message_to_buffer( CAM_message const * S, uint8_t buffer[] );
 extern
 void
 CAM_message_print( CAM_message const * S );
+
+/* get buffer and un-serialize to CAM_message struct */
+extern
+void
+CAM_message_fileprint( CAM_message const * S , FILE * file_stream );
 
 /* build topic for CAM_message struct */
 extern

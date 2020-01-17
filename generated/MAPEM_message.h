@@ -10,6 +10,8 @@
   extern "C" {
 #endif
 
+#include<stdio.h> /* Necessary to recognize FILE type */
+
 /* C structure for MAPEM_message */
 typedef struct {
   uint64_t UTC_time;                                                        /* MISSING */
@@ -54,6 +56,11 @@ MAPEM_message_to_buffer( MAPEM_message const * S, uint8_t buffer[] );
 extern
 void
 MAPEM_message_print( MAPEM_message const * S );
+
+/* get buffer and un-serialize to MAPEM_message struct */
+extern
+void
+MAPEM_message_fileprint( MAPEM_message const * S , FILE * file_stream );
 
 /* build topic for MAPEM_message struct */
 extern

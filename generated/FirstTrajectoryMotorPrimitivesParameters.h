@@ -10,6 +10,8 @@
   extern "C" {
 #endif
 
+#include<stdio.h> /* Necessary to recognize FILE type */
+
 /* C structure for FirstTrajectoryMotorPrimitivesParameters */
 typedef struct {
   uint64_t UTC_time;       /* MISSING */
@@ -57,6 +59,11 @@ FirstTrajectoryMotorPrimitivesParameters_to_buffer( FirstTrajectoryMotorPrimitiv
 extern
 void
 FirstTrajectoryMotorPrimitivesParameters_print( FirstTrajectoryMotorPrimitivesParameters const * S );
+
+/* get buffer and un-serialize to FirstTrajectoryMotorPrimitivesParameters struct */
+extern
+void
+FirstTrajectoryMotorPrimitivesParameters_fileprint( FirstTrajectoryMotorPrimitivesParameters const * S , FILE * file_stream );
 
 /* build topic for FirstTrajectoryMotorPrimitivesParameters struct */
 extern

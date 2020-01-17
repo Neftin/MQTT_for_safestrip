@@ -913,6 +913,54 @@ MQTT_SafeStrip_publisher::publish(
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
+bool
+MQTT_SafeStrip_publisher::publish(
+  SetCodriverParameters const & S, int * mid
+) {
+  char    topic[1000];
+  uint8_t buffer[SetCodriverParameters_size];
+  SetCodriverParameters_MQTT_topic( &S, topic, 1000 );
+  SetCodriverParameters_to_buffer( &S, buffer );
+  int ret = this->mosqpp::mosquittopp::publish(
+    mid,
+    topic,
+    SetCodriverParameters_size,
+    buffer,
+    this->qos,
+    false
+  );
+  switch ( ret ) {
+  case MOSQ_ERR_SUCCESS:
+    break;
+  case MOSQ_ERR_INVAL:
+    std::cout << "publish SafeStrip: the input parameters were invalid.\n";
+    break;
+  case MOSQ_ERR_NOMEM:
+    std::cout << "publish SafeStrip: an out of memory condition occurred.";
+    break;
+  case MOSQ_ERR_NO_CONN:
+    std::cout << "publish SafeStrip: the client isn’t connected to a broker.";
+    break;
+  case MOSQ_ERR_PROTOCOL:
+    std::cout << "publish SafeStrip: there is a protocol error communicating with the broker.";
+    break;
+  case MOSQ_ERR_PAYLOAD_SIZE:
+    std::cout << "publish SafeStrip: payloadlen is too large.";
+    break;
+  /*
+  case MOSQ_ERR_MALFORMED_UTF8:      
+    std::cout << "publish SafeStrip: malformed utf8\n";
+    break; 
+  */
+  default:
+    std::cout << "publish SafeStrip: return = " << ret << "\n";
+  }
+  return ret == MOSQ_ERR_SUCCESS;
+}
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
 void
 MQTT_SafeStrip_subscriber::on_connect( int result ) {
   if (!result) {
@@ -952,6 +1000,8 @@ MQTT_SafeStrip_subscriber::on_connect( int result ) {
     VirtualToll_output_MQTT_alltopics( topic, 1000 );
     this->subscribe( nullptr, topic );
     EnvironmentData_MQTT_alltopics( topic, 1000 );
+    this->subscribe( nullptr, topic );
+    SetCodriverParameters_MQTT_alltopics( topic, 1000 );
     this->subscribe( nullptr, topic );
   } else {
     std::cerr << "Connect failed\n";
@@ -1110,6 +1160,14 @@ MQTT_SafeStrip_subscriber::on_message(
     /* Add mutex for sync */
     #ifdef DEBUG
     EnvironmentData_print( &EnvironmentData_data );
+    #endif
+  } else if ( SetCodriverParameters_MQTT_compare( message->topic ) == 0 ) {
+    MQTT_MESSAGE_DEBUG("MQTT_SafeStrip_subscriber::on_message TOPIC: " << message->topic );
+    /* Add mutex for sync */
+    buffer_to_SetCodriverParameters( ptr, &this->SetCodriverParameters_data );
+    /* Add mutex for sync */
+    #ifdef DEBUG
+    SetCodriverParameters_print( &SetCodriverParameters_data );
     #endif
   } else {
     std::cerr << "unmanaged topic " << message->topic << '\n';
@@ -1311,6 +1369,17 @@ MQTT_SafeStrip_subscriber::get_last_EnvironmentData( EnvironmentData & S ) const
 {
   /* Add mutex for sync */
   std::memcpy( &S, &this->EnvironmentData_data, sizeof( EnvironmentData ) );
+  /* Add mutex for sync */
+}
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+void
+MQTT_SafeStrip_subscriber::get_last_SetCodriverParameters( SetCodriverParameters & S ) const
+{
+  /* Add mutex for sync */
+  std::memcpy( &S, &this->SetCodriverParameters_data, sizeof( SetCodriverParameters ) );
   /* Add mutex for sync */
 }
 

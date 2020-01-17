@@ -26,6 +26,20 @@ VirtualToll_input_print( VirtualToll_input const * S ) {
 }
 
 
+/* print VirtualToll_input struct on file_stream */
+void
+VirtualToll_input_fileprint( VirtualToll_input const * S , FILE * file_stream ) {
+  fprintf( file_stream , "UTC_time              = %llu\n", S->UTC_time);
+  fprintf( file_stream , "StationType           = %hhu\n", S->StationType);
+  fprintf( file_stream , "position_latitude     = %d\n", S->position_latitude);
+  fprintf( file_stream , "position_longitude    = %d\n", S->position_longitude);
+  fprintf( file_stream , "virtual_gate_distance = %d\n", S->virtual_gate_distance);
+  fprintf( file_stream , "StripID               = %u\n", S->StripID);
+  fprintf( file_stream , "RSB_ID                = %u\n", S->RSB_ID);
+  fprintf( file_stream , "RFID_ID               = %u\n", S->RFID_ID);
+}
+
+
 /* serialize VirtualToll_input struct to buffer */
 void
 VirtualToll_input_to_buffer(

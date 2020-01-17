@@ -10,6 +10,8 @@
   extern "C" {
 #endif
 
+#include<stdio.h> /* Necessary to recognize FILE type */
+
 /* C structure for ManouevreTypes */
 typedef struct {
   uint64_t UTC_time;                     /* MISSING */
@@ -39,6 +41,11 @@ ManouevreTypes_to_buffer( ManouevreTypes const * S, uint8_t buffer[] );
 extern
 void
 ManouevreTypes_print( ManouevreTypes const * S );
+
+/* get buffer and un-serialize to ManouevreTypes struct */
+extern
+void
+ManouevreTypes_fileprint( ManouevreTypes const * S , FILE * file_stream );
 
 /* build topic for ManouevreTypes struct */
 extern

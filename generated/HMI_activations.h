@@ -10,6 +10,8 @@
   extern "C" {
 #endif
 
+#include<stdio.h> /* Necessary to recognize FILE type */
+
 /* C structure for HMI_activations */
 typedef struct {
   uint32_t UTC_time;         /* MISSING */
@@ -35,6 +37,11 @@ HMI_activations_to_buffer( HMI_activations const * S, uint8_t buffer[] );
 extern
 void
 HMI_activations_print( HMI_activations const * S );
+
+/* get buffer and un-serialize to HMI_activations struct */
+extern
+void
+HMI_activations_fileprint( HMI_activations const * S , FILE * file_stream );
 
 /* build topic for HMI_activations struct */
 extern

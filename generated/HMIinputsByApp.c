@@ -27,6 +27,21 @@ HMIinputsByApp_print( HMIinputsByApp const * S ) {
 }
 
 
+/* print HMIinputsByApp struct on file_stream */
+void
+HMIinputsByApp_fileprint( HMIinputsByApp const * S , FILE * file_stream ) {
+  fprintf( file_stream , "UTC_time              = %llu\n", S->UTC_time);
+  fprintf( file_stream , "OutputID              = %u\n", S->OutputID);
+  fprintf( file_stream , "StationID             = %u\n", S->StationID);
+  fprintf( file_stream , "WarningLevel          = %hhu\n", S->WarningLevel);
+  fprintf( file_stream , "J0f                   = %lg\n", S->J0f);
+  fprintf( file_stream , "TargetDistancef       = %lg\n", S->TargetDistancef);
+  fprintf( file_stream , "TargetSpeedf          = %lg\n", S->TargetSpeedf);
+  fprintf( file_stream , "TargetClassf          = %d\n", S->TargetClassf);
+  fprintf( file_stream , "TargetComingDirection = %hhu\n", S->TargetComingDirection);
+}
+
+
 /* serialize HMIinputsByApp struct to buffer */
 void
 HMIinputsByApp_to_buffer(

@@ -10,6 +10,8 @@
   extern "C" {
 #endif
 
+#include<stdio.h> /* Necessary to recognize FILE type */
+
 /* C structure for EnvironmentData */
 typedef struct {
   uint32_t RSB_ID;                      /* MISSING */
@@ -46,6 +48,11 @@ EnvironmentData_to_buffer( EnvironmentData const * S, uint8_t buffer[] );
 extern
 void
 EnvironmentData_print( EnvironmentData const * S );
+
+/* get buffer and un-serialize to EnvironmentData struct */
+extern
+void
+EnvironmentData_fileprint( EnvironmentData const * S , FILE * file_stream );
 
 /* build topic for EnvironmentData struct */
 extern

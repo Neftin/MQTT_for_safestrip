@@ -36,6 +36,7 @@
 #include "VirtualToll_input.h"
 #include "VirtualToll_output.h"
 #include "EnvironmentData.h"
+#include "SetCodriverParameters.h"
 
 class MQTT_SafeStrip_publisher : public mosqpp::mosquittopp {
 private:
@@ -72,6 +73,7 @@ public:
   bool publish( VirtualToll_input const & S, int * mid = nullptr );
   bool publish( VirtualToll_output const & S, int * mid = nullptr );
   bool publish( EnvironmentData const & S, int * mid = nullptr );
+  bool publish( SetCodriverParameters const & S, int * mid = nullptr );
 };
 
 
@@ -94,6 +96,7 @@ class MQTT_SafeStrip_subscriber : public mosqpp::mosquittopp {
   VirtualToll_input VirtualToll_input_data;
   VirtualToll_output VirtualToll_output_data;
   EnvironmentData EnvironmentData_data;
+  SetCodriverParameters SetCodriverParameters_data;
 public:
   MQTT_SafeStrip_subscriber( char const id[], bool clean_session = true)
   : mosqpp::mosquittopp( id, clean_session )
@@ -220,6 +223,12 @@ public:
 
   void
   get_last_EnvironmentData( EnvironmentData & S ) const;
+
+
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+  void
+  get_last_SetCodriverParameters( SetCodriverParameters & S ) const;
 
 
   /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */

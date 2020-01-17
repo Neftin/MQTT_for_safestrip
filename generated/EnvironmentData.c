@@ -31,6 +31,25 @@ EnvironmentData_print( EnvironmentData const * S ) {
 }
 
 
+/* print EnvironmentData struct on file_stream */
+void
+EnvironmentData_fileprint( EnvironmentData const * S , FILE * file_stream ) {
+  fprintf( file_stream , "RSB_ID                 = %u\n", S->RSB_ID);
+  fprintf( file_stream , "StripID                = %u\n", S->StripID);
+  fprintf( file_stream , "Fog                    = %u\n", S->Fog);
+  fprintf( file_stream , "Road_type              = %hhu\n", S->Road_type);
+  fprintf( file_stream , "ice                    = %hhu\n", S->ice);
+  fprintf( file_stream , "temperature            = %d\n", S->temperature);
+  fprintf( file_stream , "gas_type               = %hhu\n", S->gas_type);
+  fprintf( file_stream , "gas_presence           = %u\n", S->gas_presence);
+  fprintf( file_stream , "humidity               = %u\n", S->humidity);
+  fprintf( file_stream , "Reported_surface_state = %hhu\n", S->Reported_surface_state);
+  fprintf( file_stream , "water_layer            = %hhu\n", S->water_layer);
+  fprintf( file_stream , "show_layer             = %hhu\n", S->show_layer);
+  fprintf( file_stream , "ice_layer              = %hhu\n", S->ice_layer);
+}
+
+
 /* serialize EnvironmentData struct to buffer */
 void
 EnvironmentData_to_buffer(

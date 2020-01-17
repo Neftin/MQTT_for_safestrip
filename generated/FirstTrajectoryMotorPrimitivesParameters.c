@@ -42,6 +42,36 @@ FirstTrajectoryMotorPrimitivesParameters_print( FirstTrajectoryMotorPrimitivesPa
 }
 
 
+/* print FirstTrajectoryMotorPrimitivesParameters struct on file_stream */
+void
+FirstTrajectoryMotorPrimitivesParameters_fileprint( FirstTrajectoryMotorPrimitivesParameters const * S , FILE * file_stream ) {
+  fprintf( file_stream , "UTC_time  = %llu\n", S->UTC_time);
+  fprintf( file_stream , "OutputID  = %d\n", S->OutputID);
+  fprintf( file_stream , "T0        = %lg\n", S->T0);
+  fprintf( file_stream , "V0        = %lg\n", S->V0);
+  fprintf( file_stream , "A0        = %lg\n", S->A0);
+  fprintf( file_stream , "T1f       = %lg\n", S->T1f);
+  fprintf( file_stream , "J0f       = %lg\n", S->J0f);
+  fprintf( file_stream , "S0f       = %lg\n", S->S0f);
+  fprintf( file_stream , "Cr0f      = %lg\n", S->Cr0f);
+  fprintf( file_stream , "T2f       = %lg\n", S->T2f);
+  fprintf( file_stream , "J1f       = %lg\n", S->J1f);
+  fprintf( file_stream , "S1f       = %lg\n", S->S1f);
+  fprintf( file_stream , "Cr1f      = %lg\n", S->Cr1f);
+  fprintf( file_stream , "Sn0       = %lg\n", S->Sn0);
+  fprintf( file_stream , "Alpha0    = %lg\n", S->Alpha0);
+  fprintf( file_stream , "Delta0    = %lg\n", S->Delta0);
+  fprintf( file_stream , "T1nf      = %lg\n", S->T1nf);
+  fprintf( file_stream , "Jdelta0f  = %lg\n", S->Jdelta0f);
+  fprintf( file_stream , "Sdelta0f  = %lg\n", S->Sdelta0f);
+  fprintf( file_stream , "Crdelta0f = %lg\n", S->Crdelta0f);
+  fprintf( file_stream , "T2nf      = %lg\n", S->T2nf);
+  fprintf( file_stream , "Jdelta1f  = %lg\n", S->Jdelta1f);
+  fprintf( file_stream , "Sdelta1f  = %lg\n", S->Sdelta1f);
+  fprintf( file_stream , "Crdelta1f = %lg\n", S->Crdelta1f);
+}
+
+
 /* serialize FirstTrajectoryMotorPrimitivesParameters struct to buffer */
 void
 FirstTrajectoryMotorPrimitivesParameters_to_buffer(

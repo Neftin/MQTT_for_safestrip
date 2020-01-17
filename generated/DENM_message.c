@@ -39,6 +39,33 @@ DENM_message_print( DENM_message const * S ) {
 }
 
 
+/* print DENM_message struct on file_stream */
+void
+DENM_message_fileprint( DENM_message const * S , FILE * file_stream ) {
+  fprintf( file_stream , "UTC_time                                                                   = %llu\n", S->UTC_time);
+  fprintf( file_stream , "v2x_header_StationID                                                       = %u\n", S->v2x_header_StationID);
+  fprintf( file_stream , "v2x_header_originationStationID                                            = %u\n", S->v2x_header_originationStationID);
+  fprintf( file_stream , "v2x_denm_sequenceNumber                                                    = %hu\n", S->v2x_denm_sequenceNumber);
+  fprintf( file_stream , "v2x_denm_detectionTime                                                     = %llu\n", S->v2x_denm_detectionTime);
+  fprintf( file_stream , "v2x_denm_eventPosition_latitude                                            = %d\n", S->v2x_denm_eventPosition_latitude);
+  fprintf( file_stream , "v2x_denm_eventPosition_longitude                                           = %d\n", S->v2x_denm_eventPosition_longitude);
+  fprintf( file_stream , "v2x_denm_ConfidenceEllipse_semiMajor                                       = %d\n", S->v2x_denm_ConfidenceEllipse_semiMajor);
+  fprintf( file_stream , "v2x_denm_ConfidenceEllipse_semiMinor                                       = %d\n", S->v2x_denm_ConfidenceEllipse_semiMinor);
+  fprintf( file_stream , "v2x_denm_ConfidenceEllipse_semiMajorOrientation                            = %d\n", S->v2x_denm_ConfidenceEllipse_semiMajorOrientation);
+  fprintf( file_stream , "v2x_denm_eventPosition_altitude                                            = %d\n", S->v2x_denm_eventPosition_altitude);
+  fprintf( file_stream , "v2x_denm_relevanceDistance                                                 = %hhu\n", S->v2x_denm_relevanceDistance);
+  fprintf( file_stream , "v2x_denm_relevanceTrafficDirection                                         = %hhu\n", S->v2x_denm_relevanceTrafficDirection);
+  fprintf( file_stream , "v2x_denm_validityDuration                                                  = %d\n", S->v2x_denm_validityDuration);
+  fprintf( file_stream , "v2x_denm_stationType                                                       = %hhu\n", S->v2x_denm_stationType);
+  fprintf( file_stream , "v2x_denm_eventType_CauseCode                                               = %d\n", S->v2x_denm_eventType_CauseCode);
+  fprintf( file_stream , "v2x_denm_eventType_SubCauseCode                                            = %d\n", S->v2x_denm_eventType_SubCauseCode);
+  fprintf( file_stream , "v2x_denm_frictionCoefficient_value                                         = %hu\n", S->v2x_denm_frictionCoefficient_value);
+  fprintf( file_stream , "v2x_denm_frictionCoefficient_confidence                                    = %hu\n", S->v2x_denm_frictionCoefficient_confidence);
+  fprintf( file_stream , "v2x_denm_alacarte_LanePosition                                             = %d\n", S->v2x_denm_alacarte_LanePosition);
+  fprintf( file_stream , "v2x_denm_alacarte_RoadWorksContainerExtended_closedLanes_DrivingLaneStatus = %u\n", S->v2x_denm_alacarte_RoadWorksContainerExtended_closedLanes_DrivingLaneStatus);
+}
+
+
 /* serialize DENM_message struct to buffer */
 void
 DENM_message_to_buffer(

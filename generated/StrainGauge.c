@@ -24,6 +24,18 @@ StrainGauge_print( StrainGauge const * S ) {
 }
 
 
+/* print StrainGauge struct on file_stream */
+void
+StrainGauge_fileprint( StrainGauge const * S , FILE * file_stream ) {
+  fprintf( file_stream , "UTC_time                = %llu\n", S->UTC_time);
+  fprintf( file_stream , "StripID                 = %u\n", S->StripID);
+  fprintf( file_stream , "Strain_gauge_Sensor_ID  = %d\n", S->Strain_gauge_Sensor_ID);
+  fprintf( file_stream , "Strain_gauge_Amplitude  = %lg\n", S->Strain_gauge_Amplitude);
+  fprintf( file_stream , "Strain_gauge_event_time = %lg\n", S->Strain_gauge_event_time);
+  fprintf( file_stream , "Exponential_decay       = %lg\n", S->Exponential_decay);
+}
+
+
 /* serialize StrainGauge struct to buffer */
 void
 StrainGauge_to_buffer(

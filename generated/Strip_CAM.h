@@ -10,6 +10,8 @@
   extern "C" {
 #endif
 
+#include<stdio.h> /* Necessary to recognize FILE type */
+
 /* C structure for Strip_CAM */
 typedef struct {
   uint64_t UTC_time;                                    /* MISSING */
@@ -50,6 +52,11 @@ Strip_CAM_to_buffer( Strip_CAM const * S, uint8_t buffer[] );
 extern
 void
 Strip_CAM_print( Strip_CAM const * S );
+
+/* get buffer and un-serialize to Strip_CAM struct */
+extern
+void
+Strip_CAM_fileprint( Strip_CAM const * S , FILE * file_stream );
 
 /* build topic for Strip_CAM struct */
 extern

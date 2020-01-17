@@ -23,6 +23,17 @@ ParkingOutput_print( ParkingOutput const * S ) {
 }
 
 
+/* print ParkingOutput struct on file_stream */
+void
+ParkingOutput_fileprint( ParkingOutput const * S , FILE * file_stream ) {
+  fprintf( file_stream , "UTC_time                   = %llu\n", S->UTC_time);
+  fprintf( file_stream , "OutputID                   = %d\n", S->OutputID);
+  fprintf( file_stream , "RFID_ID                    = %u\n", S->RFID_ID);
+  fprintf( file_stream , "Payment_Amount             = %u\n", S->Payment_Amount);
+  fprintf( file_stream , "Payment_and_parking_status = %u\n", S->Payment_and_parking_status);
+}
+
+
 /* serialize ParkingOutput struct to buffer */
 void
 ParkingOutput_to_buffer(

@@ -30,6 +30,24 @@ HostVehicle_print( HostVehicle const * S ) {
 }
 
 
+/* print HostVehicle struct on file_stream */
+void
+HostVehicle_fileprint( HostVehicle const * S , FILE * file_stream ) {
+  fprintf( file_stream , "UTC_time                         = %llu\n", S->UTC_time);
+  fprintf( file_stream , "Speed_vehicle_network            = %lg\n", S->Speed_vehicle_network);
+  fprintf( file_stream , "LongAcc_vehicle_network          = %lg\n", S->LongAcc_vehicle_network);
+  fprintf( file_stream , "LatAcc_vehicle_network           = %lg\n", S->LatAcc_vehicle_network);
+  fprintf( file_stream , "YawRate_vehicle_network          = %lg\n", S->YawRate_vehicle_network);
+  fprintf( file_stream , "SteerWheel_vehicle_network       = %lg\n", S->SteerWheel_vehicle_network);
+  fprintf( file_stream , "SteerWheelSpeed_vehicle_network  = %lg\n", S->SteerWheelSpeed_vehicle_network);
+  fprintf( file_stream , "BrakePressure_vehicle_network    = %lg\n", S->BrakePressure_vehicle_network);
+  fprintf( file_stream , "GasPedPos_vehicle_network        = %lg\n", S->GasPedPos_vehicle_network);
+  fprintf( file_stream , "BrakePedalSwitch_vehicle_network = %hhu\n", S->BrakePedalSwitch_vehicle_network);
+  fprintf( file_stream , "VehicleType                      = %d\n", S->VehicleType);
+  fprintf( file_stream , "VehicleBarLongPos                = %lg\n", S->VehicleBarLongPos);
+}
+
+
 /* serialize HostVehicle struct to buffer */
 void
 HostVehicle_to_buffer(

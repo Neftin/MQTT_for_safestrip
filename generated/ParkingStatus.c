@@ -24,6 +24,18 @@ ParkingStatus_print( ParkingStatus const * S ) {
 }
 
 
+/* print ParkingStatus struct on file_stream */
+void
+ParkingStatus_fileprint( ParkingStatus const * S , FILE * file_stream ) {
+  int i_count;
+  fprintf( file_stream , "UTC_time                = %llu\n", S->UTC_time);
+  fprintf( file_stream , "OutputID                = %d\n", S->OutputID);
+  for ( i_count=0; i_count<10; ++i_count )
+    fprintf( file_stream , "IDs_free_patkings[%d]   = %u\n", i_count, S->IDs_free_patkings[i_count]);
+  fprintf( file_stream , "Number_of_free_parkings = %u\n", S->Number_of_free_parkings);
+}
+
+
 /* serialize ParkingStatus struct to buffer */
 void
 ParkingStatus_to_buffer(

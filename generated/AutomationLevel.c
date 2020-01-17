@@ -20,6 +20,14 @@ AutomationLevel_print( AutomationLevel const * S ) {
 }
 
 
+/* print AutomationLevel struct on file_stream */
+void
+AutomationLevel_fileprint( AutomationLevel const * S , FILE * file_stream ) {
+  fprintf( file_stream , "UTC_time         = %llu\n", S->UTC_time);
+  fprintf( file_stream , "Automation_Level = %hhu\n", S->Automation_Level);
+}
+
+
 /* serialize AutomationLevel struct to buffer */
 void
 AutomationLevel_to_buffer(

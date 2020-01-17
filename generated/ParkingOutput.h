@@ -10,6 +10,8 @@
   extern "C" {
 #endif
 
+#include<stdio.h> /* Necessary to recognize FILE type */
+
 /* C structure for ParkingOutput */
 typedef struct {
   uint64_t UTC_time;                        /* MISSING */
@@ -38,6 +40,11 @@ ParkingOutput_to_buffer( ParkingOutput const * S, uint8_t buffer[] );
 extern
 void
 ParkingOutput_print( ParkingOutput const * S );
+
+/* get buffer and un-serialize to ParkingOutput struct */
+extern
+void
+ParkingOutput_fileprint( ParkingOutput const * S , FILE * file_stream );
 
 /* build topic for ParkingOutput struct */
 extern

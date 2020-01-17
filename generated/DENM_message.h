@@ -10,6 +10,8 @@
   extern "C" {
 #endif
 
+#include<stdio.h> /* Necessary to recognize FILE type */
+
 /* C structure for DENM_message */
 typedef struct {
   uint64_t UTC_time;                                                                        /* MISSING */
@@ -54,6 +56,11 @@ DENM_message_to_buffer( DENM_message const * S, uint8_t buffer[] );
 extern
 void
 DENM_message_print( DENM_message const * S );
+
+/* get buffer and un-serialize to DENM_message struct */
+extern
+void
+DENM_message_fileprint( DENM_message const * S , FILE * file_stream );
 
 /* build topic for DENM_message struct */
 extern

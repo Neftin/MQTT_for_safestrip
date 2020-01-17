@@ -10,6 +10,8 @@
   extern "C" {
 #endif
 
+#include<stdio.h> /* Necessary to recognize FILE type */
+
 /* C structure for HostVehicle */
 typedef struct {
   uint64_t UTC_time;                              /* MISSING */
@@ -45,6 +47,11 @@ HostVehicle_to_buffer( HostVehicle const * S, uint8_t buffer[] );
 extern
 void
 HostVehicle_print( HostVehicle const * S );
+
+/* get buffer and un-serialize to HostVehicle struct */
+extern
+void
+HostVehicle_fileprint( HostVehicle const * S , FILE * file_stream );
 
 /* build topic for HostVehicle struct */
 extern

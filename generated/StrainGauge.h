@@ -10,6 +10,8 @@
   extern "C" {
 #endif
 
+#include<stdio.h> /* Necessary to recognize FILE type */
+
 /* C structure for StrainGauge */
 typedef struct {
   uint64_t UTC_time;                     /* MISSING */
@@ -39,6 +41,11 @@ StrainGauge_to_buffer( StrainGauge const * S, uint8_t buffer[] );
 extern
 void
 StrainGauge_print( StrainGauge const * S );
+
+/* get buffer and un-serialize to StrainGauge struct */
+extern
+void
+StrainGauge_fileprint( StrainGauge const * S , FILE * file_stream );
 
 /* build topic for StrainGauge struct */
 extern

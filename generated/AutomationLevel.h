@@ -10,6 +10,8 @@
   extern "C" {
 #endif
 
+#include<stdio.h> /* Necessary to recognize FILE type */
+
 /* C structure for AutomationLevel */
 typedef struct {
   uint64_t UTC_time;              /* MISSING */
@@ -35,6 +37,11 @@ AutomationLevel_to_buffer( AutomationLevel const * S, uint8_t buffer[] );
 extern
 void
 AutomationLevel_print( AutomationLevel const * S );
+
+/* get buffer and un-serialize to AutomationLevel struct */
+extern
+void
+AutomationLevel_fileprint( AutomationLevel const * S , FILE * file_stream );
 
 /* build topic for AutomationLevel struct */
 extern

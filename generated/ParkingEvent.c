@@ -24,6 +24,18 @@ ParkingEvent_print( ParkingEvent const * S ) {
 }
 
 
+/* print ParkingEvent struct on file_stream */
+void
+ParkingEvent_fileprint( ParkingEvent const * S , FILE * file_stream ) {
+  fprintf( file_stream , "UTC_time = %llu\n", S->UTC_time);
+  fprintf( file_stream , "OutputID = %d\n", S->OutputID);
+  fprintf( file_stream , "RSB_ID   = %u\n", S->RSB_ID);
+  fprintf( file_stream , "RFID_ID  = %u\n", S->RFID_ID);
+  fprintf( file_stream , "StripID  = %u\n", S->StripID);
+  fprintf( file_stream , "Event    = %hhu\n", S->Event);
+}
+
+
 /* serialize ParkingEvent struct to buffer */
 void
 ParkingEvent_to_buffer(

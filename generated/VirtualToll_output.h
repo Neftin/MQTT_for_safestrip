@@ -10,6 +10,8 @@
   extern "C" {
 #endif
 
+#include<stdio.h> /* Necessary to recognize FILE type */
+
 /* C structure for VirtualToll_output */
 typedef struct {
   uint64_t UTC_time;                   /* MISSING */
@@ -38,6 +40,11 @@ VirtualToll_output_to_buffer( VirtualToll_output const * S, uint8_t buffer[] );
 extern
 void
 VirtualToll_output_print( VirtualToll_output const * S );
+
+/* get buffer and un-serialize to VirtualToll_output struct */
+extern
+void
+VirtualToll_output_fileprint( VirtualToll_output const * S , FILE * file_stream );
 
 /* build topic for VirtualToll_output struct */
 extern

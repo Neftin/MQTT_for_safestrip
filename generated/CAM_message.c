@@ -40,6 +40,34 @@ CAM_message_print( CAM_message const * S ) {
 }
 
 
+/* print CAM_message struct on file_stream */
+void
+CAM_message_fileprint( CAM_message const * S , FILE * file_stream ) {
+  fprintf( file_stream , "UTC_time                                       = %llu\n", S->UTC_time);
+  fprintf( file_stream , "v2x_cam_header_msgID                           = %u\n", S->v2x_cam_header_msgID);
+  fprintf( file_stream , "v2x_cam_header_originationStationID            = %u\n", S->v2x_cam_header_originationStationID);
+  fprintf( file_stream , "v2x_cam_GenerationDeltaTime                    = %hu\n", S->v2x_cam_GenerationDeltaTime);
+  fprintf( file_stream , "v2x_cam_StationType                            = %hhu\n", S->v2x_cam_StationType);
+  fprintf( file_stream , "v2x_cam_Latitude                               = %d\n", S->v2x_cam_Latitude);
+  fprintf( file_stream , "v2x_cam_Longitude                              = %d\n", S->v2x_cam_Longitude);
+  fprintf( file_stream , "v2x_cam_ConfidenceEllipse_semiMajor            = %d\n", S->v2x_cam_ConfidenceEllipse_semiMajor);
+  fprintf( file_stream , "v2x_cam_ConfidenceEllipse_semiMinor            = %d\n", S->v2x_cam_ConfidenceEllipse_semiMinor);
+  fprintf( file_stream , "v2x_cam_ConfidenceEllipse_semiMajorOrientation = %d\n", S->v2x_cam_ConfidenceEllipse_semiMajorOrientation);
+  fprintf( file_stream , "v2x_cam_Altitude                               = %d\n", S->v2x_cam_Altitude);
+  fprintf( file_stream , "v2x_cam_Heading                                = %hu\n", S->v2x_cam_Heading);
+  fprintf( file_stream , "v2x_cam_Speed                                  = %hu\n", S->v2x_cam_Speed);
+  fprintf( file_stream , "v2x_cam_VehicleLength                          = %hu\n", S->v2x_cam_VehicleLength);
+  fprintf( file_stream , "v2x_cam_VehicleWidth                           = %hhu\n", S->v2x_cam_VehicleWidth);
+  fprintf( file_stream , "v2x_cam_LongitudinalAcceleration               = %hd\n", S->v2x_cam_LongitudinalAcceleration);
+  fprintf( file_stream , "v2x_cam_YawRate                                = %hd\n", S->v2x_cam_YawRate);
+  fprintf( file_stream , "v2x_cam_AccelerationControl                    = %hhu\n", S->v2x_cam_AccelerationControl);
+  fprintf( file_stream , "v2x_cam_SteeringWheelAngle                     = %hd\n", S->v2x_cam_SteeringWheelAngle);
+  fprintf( file_stream , "v2x_cam_LateralAcceleration                    = %hd\n", S->v2x_cam_LateralAcceleration);
+  fprintf( file_stream , "v2x_cam_VehicleRole                            = %hu\n", S->v2x_cam_VehicleRole);
+  fprintf( file_stream , "v2x_cam_ExteriorLights_status                  = %hhu\n", S->v2x_cam_ExteriorLights_status);
+}
+
+
 /* serialize CAM_message struct to buffer */
 void
 CAM_message_to_buffer(

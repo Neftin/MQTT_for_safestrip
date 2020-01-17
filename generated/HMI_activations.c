@@ -20,6 +20,14 @@ HMI_activations_print( HMI_activations const * S ) {
 }
 
 
+/* print HMI_activations struct on file_stream */
+void
+HMI_activations_fileprint( HMI_activations const * S , FILE * file_stream ) {
+  fprintf( file_stream , "UTC_time    = %u\n", S->UTC_time);
+  fprintf( file_stream , "apps_active = %u\n", S->apps_active);
+}
+
+
 /* serialize HMI_activations struct to buffer */
 void
 HMI_activations_to_buffer(

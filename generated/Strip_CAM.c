@@ -35,6 +35,29 @@ Strip_CAM_print( Strip_CAM const * S ) {
 }
 
 
+/* print Strip_CAM struct on file_stream */
+void
+Strip_CAM_fileprint( Strip_CAM const * S , FILE * file_stream ) {
+  fprintf( file_stream , "UTC_time                               = %llu\n", S->UTC_time);
+  fprintf( file_stream , "originationStationID                   = %u\n", S->originationStationID);
+  fprintf( file_stream , "StripID                                = %u\n", S->StripID);
+  fprintf( file_stream , "RFID_ID                                = %u\n", S->RFID_ID);
+  fprintf( file_stream , "StationType                            = %hhu\n", S->StationType);
+  fprintf( file_stream , "Latitude                               = %d\n", S->Latitude);
+  fprintf( file_stream , "Longitude                              = %d\n", S->Longitude);
+  fprintf( file_stream , "ConfidenceEllipse_semiMajor            = %d\n", S->ConfidenceEllipse_semiMajor);
+  fprintf( file_stream , "ConfidenceEllipse_semiMinor            = %d\n", S->ConfidenceEllipse_semiMinor);
+  fprintf( file_stream , "ConfidenceEllipse_semiMajorOrientation = %d\n", S->ConfidenceEllipse_semiMajorOrientation);
+  fprintf( file_stream , "Altitude                               = %d\n", S->Altitude);
+  fprintf( file_stream , "Heading                                = %hu\n", S->Heading);
+  fprintf( file_stream , "Speed                                  = %hu\n", S->Speed);
+  fprintf( file_stream , "VehicleLength                          = %hu\n", S->VehicleLength);
+  fprintf( file_stream , "VehicleWidth                           = %hhu\n", S->VehicleWidth);
+  fprintf( file_stream , "LongitudinalAcceleration               = %d\n", S->LongitudinalAcceleration);
+  fprintf( file_stream , "Lane_ID                                = %hhu\n", S->Lane_ID);
+}
+
+
 /* serialize Strip_CAM struct to buffer */
 void
 Strip_CAM_to_buffer(

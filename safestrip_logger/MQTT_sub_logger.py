@@ -8,12 +8,19 @@ import os
 import yaml
 import binascii
 
+if socket.gethostname() == 'GiamMAC.local':
+    print('working on GiamMac: manual folder inclusion needed...') 
+    sys.path.append('/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages')
+    print(sys.path)
+
 # Credential and connection parameters:
 ip    = '93.62.253.212'
 port  = 8883
 user  = 'safestrip'
 pwd   = 'S@f3str1p'
 topic = 'SafeStrip/#'
+
+ID_experiment = 0;
 
 # The callback for when the client receives a CONNACK response from the server.
 def on_connect(client, userdata, flags, rc):
@@ -45,9 +52,11 @@ def on_connect(client, userdata, flags, rc):
 
 # The callback for when a PUBLISH message is received from the broker.
 def on_message_yy(client, userdata, msg):
-    print("message logged")
+    if msg.topic == "SafeStrip/set_ID_log":
+        ID_experiment = str(msg.payload) # update ID
+        print("ID changed: new file created for ID:" + str(ID_experiment) )
     today_day = str(datetime.date.today()) # get today date
-    file_name = "log_yaml/" + str(today_day) + "/" + str(today_day) + "_log" ".yaml" # filename
+    file_name = "log_yaml/" + str(today_day) + "/" + str(today_day) + "_log_ID_" + str(ID_experiment) + ".yaml" # filename
     f = open(file_name,"a")     # append mode
     a = bytearray(msg.payload)  # use bytearray object for payload
     b = binascii.hexlify(a)     # convert to hexadecimal
@@ -58,6 +67,7 @@ def on_message_yy(client, userdata, msg):
     Obj_to_log = { 'MSG_' + str(utcobj) : {'payload' : str(b)[2:-1], 'topic' : str(msg.topic) , 'time_stamp_local' : str(utcobj) } }
     yaml.dump( Obj_to_log , f , default_flow_style=False ) # write yalm file
     f.close()# close file
+    print("message logged")
 
 
 client = mqtt.Client()

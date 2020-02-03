@@ -9,13 +9,8 @@ import yaml
 import binascii
 
 # Credential and connection parameters:
-ip    = '93.62.253.212'
-port  = 8883
-user  = 'safestrip'
-pwd   = 'S@f3str1p'
-topic = 'SafeStrip/#'
-
-ID_experiment = 0;
+ip    = '127.0.0.1'
+port  = 1883
 
 # The callback for when the client receives a CONNACK response from the server.
 def on_connect(client, userdata, flags, rc):
@@ -47,10 +42,9 @@ def on_connect(client, userdata, flags, rc):
 
 # The callback for when a PUBLISH message is received from the broker.
 def on_message_yy(client, userdata, msg):
-    if msg.topic == "SafeStrip/set_ID_log":
-        eID_xperiment = int(msg.payload) # update ID
+    print("message logged")
     today_day = str(datetime.date.today()) # get today date
-    file_name = "log_yaml/" + str(today_day) + "/" + str(today_day) + "_log_ID_" + str(ID_experiment) + ".yaml" # filename
+    file_name = "log_yaml/" + str(today_day) + "/" + str(today_day) + "_log" ".yaml" # filename
     f = open(file_name,"a")     # append mode
     a = bytearray(msg.payload)  # use bytearray object for payload
     b = binascii.hexlify(a)     # convert to hexadecimal
@@ -61,7 +55,6 @@ def on_message_yy(client, userdata, msg):
     Obj_to_log = { 'MSG_' + str(utcobj) : {'payload' : str(b)[2:-1], 'topic' : str(msg.topic) , 'time_stamp_local' : str(utcobj) } }
     yaml.dump( Obj_to_log , f , default_flow_style=False ) # write yalm file
     f.close()# close file
-    print("message logged")
 
 
 client = mqtt.Client()
@@ -69,9 +62,6 @@ client = mqtt.Client()
 client.on_connect = on_connect
 client.on_message = on_message_yy
 
-client.tls_set("ca.crt", tls_version=ssl.PROTOCOL_TLSv1_2)
-client.tls_insecure_set(True)
-client.username_pw_set(user, pwd)
 client.connect(ip, port, 60)
 try:
     print(" [*] Start waiting loop.")

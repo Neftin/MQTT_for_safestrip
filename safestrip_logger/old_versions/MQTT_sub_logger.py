@@ -9,14 +9,15 @@ import yaml
 import binascii
 
 # Credential and connection parameters:
-ip    = '127.0.0.1'
-port  = 1883
-
-ID_experiment = 0;
+ip    = '93.62.253.212'
+port  = 8883
+user  = 'safestrip'
+pwd   = 'S@f3str1p'
+topic = 'SafeStrip/#'
 
 # The callback for when the client receives a CONNACK response from the server.
 def on_connect(client, userdata, flags, rc):
-    print(" [*] Try to connect... ")
+    print(" [*] Try to connect...")
     if rc == 0:
         print(" [*] Connected accepted.\n")
     elif rc== 1:
@@ -44,12 +45,9 @@ def on_connect(client, userdata, flags, rc):
 
 # The callback for when a PUBLISH message is received from the broker.
 def on_message_yy(client, userdata, msg):
-    if msg.topic == "SafeStrip/set_ID_log":
-        ID_experiment = int(msg.payload) # update ID
-        print("ID changed: new file created for ID:" + str(ID_experiment))
     print("message logged")
     today_day = str(datetime.date.today()) # get today date
-    file_name = "log_yaml/" + str(today_day) + "/" + str(today_day) + "_log_ID_" + str(ID_experiment) + ".yaml" # filename
+    file_name = "log_yaml/" + str(today_day) + "/" + str(today_day) + "_log" ".yaml" # filename
     f = open(file_name,"a")     # append mode
     a = bytearray(msg.payload)  # use bytearray object for payload
     b = binascii.hexlify(a)     # convert to hexadecimal
@@ -62,12 +60,14 @@ def on_message_yy(client, userdata, msg):
     f.close()# close file
 
 
-
 client = mqtt.Client()
 
 client.on_connect = on_connect
 client.on_message = on_message_yy
 
+client.tls_set("ca.crt", tls_version=ssl.PROTOCOL_TLSv1_2)
+client.tls_insecure_set(True)
+client.username_pw_set(user, pwd)
 client.connect(ip, port, 60)
 try:
     print(" [*] Start waiting loop.")

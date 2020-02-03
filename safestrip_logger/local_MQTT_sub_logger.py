@@ -1,20 +1,38 @@
 #!/usr/bin/env python3
 
-import paho.mqtt.client as mqtt
 import time
 import ssl
 import datetime
 import os
-import yaml
 import binascii
+import sys
+import socket
+
+
+if socket.gethostname() == 'GiamMAC.local':
+    print('working on GiamMac: manual folder inclusion needed...') 
+    sys.path.append('/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages')
+    print(sys.path)
+
+import paho.mqtt.client as mqtt
+import yaml
 
 # Credential and connection parameters:
-ip    = '127.0.0.1'
+if len(sys.argv) == 1:
+    ip    = '127.0.0.1'
+elif len(sys.argv) == 2:
+    ip    = str(sys.argv[1])
+else:
+    print('too many program arguments')
 port  = 1883
+
+ID_experiment = "0";
+
+print('Local logger setup: \n ip:   ' + ip + '\n port: ' + str(port) )
 
 # The callback for when the client receives a CONNACK response from the server.
 def on_connect(client, userdata, flags, rc):
-    print(" [*] Try to connect...")
+    print(" [*] Try to connect... ")
     if rc == 0:
         print(" [*] Connected accepted.\n")
     elif rc== 1:
@@ -42,9 +60,12 @@ def on_connect(client, userdata, flags, rc):
 
 # The callback for when a PUBLISH message is received from the broker.
 def on_message_yy(client, userdata, msg):
+    if msg.topic == "SafeStrip/set_ID_log":
+        ID_experiment = str(msg.payload) # update ID
+        print("ID changed: new file created for ID:" + str(ID_experiment) )
     print("message logged")
     today_day = str(datetime.date.today()) # get today date
-    file_name = "log_yaml/" + str(today_day) + "/" + str(today_day) + "_log" ".yaml" # filename
+    file_name = "log_yaml/" + str(today_day) + "/" + str(today_day) + "_log_ID_" + str(ID_experiment) + ".yaml" # filename
     f = open(file_name,"a")     # append mode
     a = bytearray(msg.payload)  # use bytearray object for payload
     b = binascii.hexlify(a)     # convert to hexadecimal
@@ -55,7 +76,6 @@ def on_message_yy(client, userdata, msg):
     Obj_to_log = { 'MSG_' + str(utcobj) : {'payload' : str(b)[2:-1], 'topic' : str(msg.topic) , 'time_stamp_local' : str(utcobj) } }
     yaml.dump( Obj_to_log , f , default_flow_style=False ) # write yalm file
     f.close()# close file
-
 
 client = mqtt.Client()
 

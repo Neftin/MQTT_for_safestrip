@@ -7,24 +7,15 @@ import os
 import binascii
 import sys
 import socket
-
-
-if socket.gethostname() == 'GiamMAC.local':
-    print('working on GiamMac: manual folder inclusion needed...') 
-    sys.path.append('/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages')
-    print(sys.path)
-
 import paho.mqtt.client as mqtt
 import yaml
 
 # Credential and connection parameters:
-if len(sys.argv) == 1:
-    ip    = '127.0.0.1'
-elif len(sys.argv) == 2:
-    ip    = str(sys.argv[1])
-else:
-    print('too many program arguments')
-port  = 1883
+ip    = '93.62.253.212'
+port  = 8883
+user  = 'safestrip'
+pwd   = 'S@f3str1p'
+topic = 'SafeStrip/#'
 
 exp_id = '0';
 
@@ -83,6 +74,9 @@ client = mqtt.Client()
 client.on_connect = on_connect
 client.on_message = on_message_yy
 
+client.tls_set("ca.crt", tls_version=ssl.PROTOCOL_TLSv1_2)
+client.tls_insecure_set(True)
+client.username_pw_set(user, pwd)
 client.connect(ip, port, 60)
 try:
     print(" [*] Start waiting loop.")

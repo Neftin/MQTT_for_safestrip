@@ -17,8 +17,6 @@ user  = 'safestrip'
 pwd   = 'S@f3str1p'
 topic = 'SafeStrip/#'
 
-exp_id = '0';
-
 print('Connection setup: \n ip:   ' + ip + '\n port: ' + str(port) )
 
 # The callback for when the client receives a CONNACK response from the server.
@@ -51,7 +49,7 @@ try:
     print(" [*] Start sending loop.")
     while True:
         pl = input("New experiment ID:")
-        client.publish("SafeStrip/set_ID_log", pl) 
+        client.publish("SafeStrip/set_ID_log", pl)
 except KeyboardInterrupt:
     client.disconnect()
     print(" [*] Disconnected.\n")

@@ -63,7 +63,9 @@ def on_message_yy(client, userdata, msg):
     global exp_id
     if msg.topic == "SafeStrip/set_ID_log":
         exp_id = msg.payload
-        print('new file with ID' + exp_id)
+        # exp_id = exp_id.replace("b'","")
+        # exp_id = exp_id.replace("'","")
+        
     today_day = str(datetime.date.today()) # get today date
     file_name = "log_yaml/" + str(today_day) + "/" + str(today_day) + "_log_ID_" + str(exp_id) + ".yaml" # filename
     f = open(file_name,"a")     # append mode
@@ -76,6 +78,10 @@ def on_message_yy(client, userdata, msg):
     Obj_to_log = { 'MSG_' + str(utcobj) : {'payload' : str(b)[2:-1], 'topic' : str(msg.topic) , 'time_stamp_local' : str(utcobj) } }
     yaml.dump( Obj_to_log , f , default_flow_style=False ) # write yalm file
     f.close()# close file
+    
+    if msg.topic == "SafeStrip/set_ID_log":
+        print('new file with ID' + exp_id)
+
     print("message logged on topic: " + msg.topic)
 
 client = mqtt.Client()

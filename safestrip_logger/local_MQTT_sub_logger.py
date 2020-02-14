@@ -7,13 +7,7 @@ import os
 import binascii
 import sys
 import socket
-
-
-if socket.gethostname() == 'GiamMAC.local':
-    print('working on GiamMac: manual folder inclusion needed...') 
-    sys.path.append('/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages')
-    print(sys.path)
-
+import platform
 import paho.mqtt.client as mqtt
 import yaml
 
@@ -75,12 +69,17 @@ def on_message_yy(client, userdata, msg):
     dt      = datetime.datetime.utcnow()            # utc now
     utcobj  = int(round((dt - epoch).total_seconds() * 1000.0)) # milliseconds precision (UTC)
     # Assemble object to log for the yaml file
-    Obj_to_log = { 'MSG_' + str(utcobj) : {'payload' : str(b)[2:-1], 'topic' : str(msg.topic) , 'time_stamp_local' : str(utcobj) } }
+    if platform.system() == 'Darwin': # check if on mac
+        Obj_to_log = { 'MSG_' + str(utcobj) : {'payload' : str(b)[2:-1], 'topic' : str(msg.topic) , 'time_stamp_local' : str(utcobj) } }
+    else:
+        Obj_to_log = { 'MSG_' + str(utcobj) : {'payload' : str(b), 'topic' : str(msg.topic) , 'time_stamp_local' : str(utcobj) } }
+
     yaml.dump( Obj_to_log , f , default_flow_style=False ) # write yalm file
+
     f.close()# close file
     
     if msg.topic == "SafeStrip/set_ID_log":
-        print('new file with ID' + exp_id)
+        print('new file with ID' + str(exp_id))
 
     print("message logged on topic: " + msg.topic)
 

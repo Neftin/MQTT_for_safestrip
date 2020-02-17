@@ -14,13 +14,18 @@ import yaml
 # Credential and connection parameters:
 if len(sys.argv) == 1:
     ip    = '127.0.0.1'
+    exp_id = '0'
 elif len(sys.argv) == 2:
     ip    = str(sys.argv[1])
+    exp_id = '0'
+elif len(sys.argv) == 3:
+    ip     = str(sys.argv[1])
+    exp_id = str(sys.argv[2])    
 else:
     print('too many program arguments')
 port  = 1883
 
-exp_id = '0';
+
 
 print('Local logger setup: \n ip:   ' + ip + '\n port: ' + str(port) )
 

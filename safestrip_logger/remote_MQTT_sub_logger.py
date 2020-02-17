@@ -12,13 +12,21 @@ import yaml
 import platform
 
 # Credential and connection parameters:
+if len(sys.argv) == 1:
+    exp_id = '0';
+elif len(sys.argv) == 2:
+    exp_id    = str(sys.argv[1])
+else:
+    print('too many program arguments')
+
+# Credential and connection parameters:
 ip    = '93.62.253.212'
 port  = 8883
 user  = 'safestrip'
 pwd   = 'S@f3str1p'
 topic = 'SafeStrip/#'
 
-exp_id = '0';
+
 
 print('Local logger setup: \n ip:   ' + ip + '\n port: ' + str(port) )
 

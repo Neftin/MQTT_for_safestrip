@@ -11,11 +11,13 @@ import paho.mqtt.client as mqtt
 import yaml
 import platform
 
+nownow = datetime.datetime.now()
+
 # Credential and connection parameters:
 if len(sys.argv) == 1:
-    exp_id = '0';
+    exp_id = "0" +  nownow.strftime("_%He%M");
 elif len(sys.argv) == 2:
-    exp_id    = str(sys.argv[1])
+    exp_id    = str(sys.argv[1]) + nownow.strftime("_%He%M")
 else:
     print('too many program arguments')
 

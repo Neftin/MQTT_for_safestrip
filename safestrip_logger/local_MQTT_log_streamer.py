@@ -53,7 +53,7 @@ client.on_publish = on_publish
 client.connect(ip, port, 60) 
 
 
-path = 'log_test_stream.yaml' # here the log file to stream
+path = 'log_yaml_debug/provardw2dr3.yaml' # here the log file to stream
 
 delta_t = 1
 t       = 0
@@ -65,7 +65,6 @@ with open(path) as file:
     logs = yaml.full_load(file)
 
     for item, msg in logs.items():
-        print(item, " topic: " , msg['topic'])
         t2 = int(msg['time_stamp_local'])
         if t != 0: # not for the first ( or any 0 wait for one millisecond)
             delta_t = t2-t# calculate time to wait for next message
@@ -73,4 +72,6 @@ with open(path) as file:
         print( str(delta_t) + " milliseconds elapsed")
         t = t2
         bitmsg = binascii.unhexlify(msg['payload']) # convert from hexadecimal to binary
-        client.publish( msg['topic'] , bitmsg )
+        if not ('HMI' in msg['topic'] ):
+            client.publish( msg['topic'] , bitmsg )
+            print(item, " topic: " , msg['topic'])

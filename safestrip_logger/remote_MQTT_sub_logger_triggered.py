@@ -60,6 +60,7 @@ def on_message_yy(client, userdata, msg):
             pay = str(msg.payload)[2:-1]
         else:
             pay = str(msg.payload)
+        pay = pay.replace('.','-') # remove dots from the attributes
         list_attr = pay.split(",") # list of attributes of the experiments
         command   = int(list_attr[0])
         if is_logging == 1:

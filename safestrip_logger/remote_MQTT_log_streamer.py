@@ -20,6 +20,10 @@ user  = 'safestrip'
 pwd   = 'S@f3str1p'
 topic = 'SafeStrip/#'
 
+################ the file to stream 
+path = 'loggyM1.yaml' # here the log file to stream
+###############
+
 print('Local logger setup: \n ip:   ' + ip + '\n port: ' + str(port) )
 
 # The callback for when the client receives a CONNACK response from the server.
@@ -56,7 +60,7 @@ client.tls_insecure_set(True)
 client.connect(ip, port, 60) 
 
 
-path = 'log_test_stream.yaml' # here the log file to stream
+
 
 delta_t = 1
 t       = 0
@@ -72,7 +76,7 @@ with open(path) as file:
         t2 = int(msg['time_stamp_local'])
         if t != 0: # not for the first ( or any 0 wait for one millisecond)
             delta_t = t2-t# calculate time to wait for next message
-        time.sleep(delta_t/1000) # pause in millisecond
+        time.sleep(delta_t/5000) # pause in millisecond
         print( str(delta_t) + " milliseconds elapsed")
         t = t2
         bitmsg = binascii.unhexlify(msg['payload']) # convert from hexadecimal to binary

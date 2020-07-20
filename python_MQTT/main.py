@@ -7,6 +7,7 @@ import matplotlib.pyplot    as plt
 import matplotlib.animation as manim
 from matplotlib.collections import PatchCollection
 import SafeStrip_Python_mqtt as spm
+from matplotlib import animation
 
 # others
 import time
@@ -24,26 +25,31 @@ import math
 
 # parameters
 number_of_maximum_patches = 3000
-max_east = 300
-min_east = -300
+
+max_east  = 300
+min_east  = -300
 min_north = -300
 max_north = 300
-veh_w   = 2
-veh_h   = 4
-lat_ref   = 0
-lon_ref   = 0
-first_ref = True
-expire_coeff   = 0.1
+
+veh_w        = 2
+veh_h        = 4
+lat_ref      = 0
+lon_ref      = 0
+UTC_ref      = 0
+UTC_real_ref = 0
+
+first_ref       = True
+expire_coeff    = 0.1
 magnify_stipcam = 5
-new_message = 0
+new_message     = 0
 
-# decoding keys
-dk_HMI  = '!QIIBdddiB'
-dk_CAM  = '!QIIHBiiiiiiHHHBhhBhhHB'
-dk_SCAM = '!QIIIBiiiiiiHHHBiB'
-dk_DENM = '!QIIHQiiiiiiBBiBiiHHiI' # last two values, related to augmented positioning and the lane are not present in the logs...
+# # decoding keys
+# dk_HMI  = '!QIIBdddiB'
+# dk_CAM  = '!QIIHBiiiiiiHHHBhhBhhHB'
+# dk_SCAM = '!QIIIBiiiiiiHHHBiB'
+# dk_DENM = '!QIIHQiiiiiiBBiBiiHHiI' # last two values, related to augmented positioning and the lane are not present in the logs...
 
-ParkingStatus_DK = '!QiIIIIIIIIIII'
+# ParkingStatus_DK = '!QiIIIIIIIIIII'
 
 # Credential and connection parameters:
 ip    = '93.62.253.212'
@@ -143,8 +149,10 @@ for i in range(0,number_of_maximum_patches-1):
     patches_list.append( rect )
 
 
-
+# CALLBACK ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # The callback for when a PUBLISH message is received from the broker.
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def on_message_yy(client, userdata, msg):
     global new_message
     global property_list
@@ -152,7 +160,7 @@ def on_message_yy(client, userdata, msg):
 
     new_message = 1
 
-    # reset for new logs
+    # reset for new logs ( only in experiments it does happen , not in streamed logs )
     if ( msg.topic == "SafeStrip/LOG/" ) or ( msg.topic == "SafeStrip/LOG" ):
         if platform.system() == 'Darwin': # check if on mac
             pay = str(msg.payload)[2:-1]
@@ -171,24 +179,42 @@ def on_message_yy(client, userdata, msg):
                 obj.set_facecolor( [ 0.0 ,0.0 ,0.0 ,0.0 ] )
             print('reset')
 
+    # collect info
     payload = bytearray(msg.payload)
     topic   = msg.topic
 
-    # the all MQTT decoding
+    # decode info ( using the library )
     content = spm.all_MQTT_decoding( topic , payload )
 
     if '_message_type_' in content.keys():
         property_list.append(content)
-    else:
-        print('message is not saved')
-    if not 'CAM_' in content['_message_type_']: # exclude cam from the phoine for now
-            if 'HMI' in content['_message_type_']:
-                if int(content['StationID']) == 401 and content['OutputID'] == 2:
-                    print(content)
-            else:
-                if not 'Parking' in content['_message_type_']:
-                    print(content)
+        update_patch_list( property_list )
+        # Visualization on terminal of events
 
+        if 'Strip_CAM' in content['_message_type_']: # Strip CAM case
+            print('[s] Vehicle detected by strip, speed = ',content['Speed']/100.0,' m/s.')
+        elif 'HMIinputsByApp_active' in content['_message_type_']: # DSS case
+            if content['WarningLevel'] == 10:
+                print('[d] DSS stop the warnings')
+            else:
+                print('[d] DSS forwarded the warning, warning level = ',content['WarningLevel'])
+        elif 'HMIinputsByApp' in content['_message_type_']: # Co-Driver case
+            if not content['WarningLevel'] == 10:
+                print('[c] Co-Driver sent warning, warning level = ',content['WarningLevel'])
+        elif 'DENM' in content['_message_type_']: # Co-Driver case
+            print('[r] DENM received, event:')
+            if content['v2x_denm_eventType_CauseCode'] == 12:
+                print('[r] /!\\ Pedestrian on the road')
+            elif content['v2x_denm_eventType_CauseCode'] == 14:
+                print('[r] /!\\ Wrong way driving vehicle')
+            elif content['v2x_denm_eventType_CauseCode'] == 6:
+                print('[r] /!\\ Adverse adesion condition')
+            elif content['v2x_denm_eventType_CauseCode'] == 3:
+                print('[r] /!\\ Roadworks on the road')   
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 client = mqtt.Client()
 
@@ -205,42 +231,74 @@ def update_patch_list( property_list ):
     global patches_list
     global lat_ref
     global lon_ref
+    global UTC_ref
+    global UTC_real_ref
     global first_ref
     k = 0
     for p in reversed(property_list): # use reversed for FIFO input
-        if k<number_of_maximum_patches:
+        if k < number_of_maximum_patches:
             if 'Strip_' in p['_message_type_']: # StripCAM case
                 xEast , yNorth , zUp = geodetic_to_enu(p['Latitude']/10000000,p['Longitude']/10000000,0.0,lat_ref,lon_ref,0.0)
-                h = max(veh_w*magnify_stipcam*(p['Speed']/(10*100)),2)  # scale with velocity to see
-                w = max(veh_h*magnify_stipcam*(p['Speed']/(10*100)),2) # reversed because the rectangle is 0 angle when horizontal
+                magnify = 2
+                h = veh_w*magnify#max(veh_w*magnify_stipcam*(p['Speed']/(10*100)),2)  # scale with velocity to see
+                w = veh_h*magnify#max(veh_h*magnify_stipcam*(p['Speed']/(10*100)),2) # reversed because the rectangle is 0 angle when horizontal
                 patches_list[k].set_height( h )
                 patches_list[k].set_width( w ) 
-                patches_list[k].set_xy([ xEast , yNorth ]) # it's the lower left corner
-                patches_list[k].set_edgecolor( [ 0.6 ,0.1 ,0.2 ,1.0 ] )
+                patches_list[k].set_xy([ xEast + (h/2) , yNorth + (w/2) ]) # it's the lower left corner
+                patches_list[k].set_edgecolor( [ 1.0 ,0.0 ,0.0 ,1.0 ] )
                 patches_list[k].set_facecolor( [ 0.0 ,0.0 ,0.0 ,0.0 ] )
                 patches_list[k].angle = p['Heading']/10 + 90
                 # ax.text( xEast, yNorth, 'boxed italics text in data coords', style='italic',
                 #     bbox={'facecolor': 'black', 'alpha': 0.5, 'pad': 10})
             elif 'CAM_' in p['_message_type_']:
                 if first_ref: # first CAM the reference is given
-                    lat_ref   = 41.4231056 # TODO put that they can be set or that they are dinamic
-                    lon_ref   = -4.6932778 
+                    lat_ref   = p['v2x_cam_Latitude']/10000000
+                    lon_ref   = p['v2x_cam_Longitude']/10000000
+                    UTC_ref   = p['UTC_time'] 
+                    epoch     = datetime.datetime.utcfromtimestamp(0) # 1970-1-1
+                    dt        = datetime.datetime.utcnow()            # utc now
+                    UTC_real_ref   = int(round((dt - epoch).total_seconds() * 1000.0)) # milliseconds precision (UTC)
                     first_ref = False
+
+                epoch         = datetime.datetime.utcfromtimestamp(0) # 1970-1-1
+                dt            = datetime.datetime.utcnow()            # utc now
+
+                time_present          = int(round((dt - epoch).total_seconds() * 1000.0)) # milliseconds precision (UTC)
+                time_present_cam      = UTC_real_ref + ( p['UTC_time'] - UTC_ref )
+                oldness               = max( time_present - time_present_cam , 0 )
+
                 xEast , yNorth , zUp = geodetic_to_enu(p['v2x_cam_Latitude']/10000000,p['v2x_cam_Longitude']/10000000,0.0,lat_ref,lon_ref,0.0)
-                h = max(veh_w*magnify_stipcam*(p['v2x_cam_Speed']/(10*100)),2) # scale with velocity to see
-                w = max(veh_h*magnify_stipcam*(p['v2x_cam_Speed']/(10*100)),2) # reversed because the 
-                patches_list[k].set_xy([ xEast , yNorth ])
+                h = 3 #max(veh_w*magnify_stipcam*(p['v2x_cam_Speed']/(10*100)),2) * oldness # scale with velocity to see
+                w = 3 #max(veh_h*magnify_stipcam*(p['v2x_cam_Speed']/(10*100)),2) * oldness # reversed because the 
+
+                if oldness > 2000:
+                    alphone = 0.4
+                else:
+                    alphone = 1
+
+                patches_list[k].set_xy([ xEast  - (h/2) , yNorth - (w/2) ])
                 patches_list[k].set_height( h )
                 patches_list[k].set_width( h ) # reversed because the rectangle is 0 angle when horizontal
-                patches_list[k].set_edgecolor( [ 0.0 ,0.0 ,0.0 ,1.0 ] )
-                patches_list[k].set_facecolor( [ 0.0 ,0.0 ,0.0 ,0.0 ] )
-                patches_list[k].angle = p['v2x_cam_Heading']/10 + 90
+                patches_list[k].set_edgecolor( [ 0.0 ,1.0 ,0.0 , alphone ] )
+                # !!! VERY NON MODULAR !!! REMOVE AFTER DEMO
+                if p['v2x_cam_header_originationStationID'] == 301:
+                    patches_list[k].set_edgecolor( [ 0.5 ,0.0 ,0.75 , alphone ] )
+                patches_list[k].set_facecolor( [ 0.0 ,1.0 ,0.0 ,0.0 ] )
+                patches_list[k].angle = 45
+                #patches_list[k].angle = p['v2x_cam_Heading']/10 + 90
+
+
             elif 'DENM_' in p['_message_type_']:
                 xEast , yNorth , zUp = geodetic_to_enu(p['v2x_denm_eventPosition_latitude']/10000000,p['v2x_denm_eventPosition_longitude']/10000000,0.0,lat_ref,lon_ref,0.0)
-                patches_list[k].set_xy([ xEast , yNorth ])
-                patches_list[k].set_height( veh_h*2 )
-                patches_list[k].set_width( veh_h*2 ) 
-                patches_list[k].set_facecolor( [ 0.0 ,0.0 ,0.0 ,0.0 ] )
+                magnify = 2
+                h = veh_h*magnify
+                w = veh_h*magnify
+                patches_list[k].set_height( h )
+                patches_list[k].set_width( w ) 
+                patches_list[k].set_xy([ xEast  , yNorth ])
+                patches_list[k].set_height( veh_h*magnify )
+                patches_list[k].set_width( veh_h*magnify ) 
+                patches_list[k].set_facecolor( [ 1.0 ,0.0 ,0.0 ,0.0 ] )
                 patches_list[k].set_edgecolor( [ 0.0 ,0.6 ,1.0 ,1.0 ] )
                 patches_list[k].angle = 45
             k=k+1
@@ -258,12 +316,13 @@ def update_patch_list( property_list ):
 # FIGURE
 fig = plt.figure()
 plt.axis('equal')
-plt.grid()
+# plt.grid()
 ax = fig.add_subplot(111)
 ax.autoscale()
 ax.axis('equal')
 ax.set_xlim(min_east,max_east)
 ax.set_ylim(min_north,max_north)
+ax.set_facecolor((0.0, 0.0, 0.0))
 
 
 try:
@@ -288,27 +347,47 @@ angle         = np.zeros( [ number_of_maximum_patches , 1 ] )
 width         = np.zeros( [ number_of_maximum_patches , 1 ] )
 height        = np.zeros( [ number_of_maximum_patches , 1 ] )
 
-plt.ion()
+# plt.ion()
 
 i = 0
 continua = 1
 
-while continua:    
-    time.sleep(0.010)
-    if new_message:
-        try:         
-            update_patch_list( property_list )
-            plt.draw()
-            plt.pause(0.1)
-        except KeyboardInterrupt:
-            print('forced stop')
-            continua = 0
-        new_message = 0
+# OLD version
+# while continua:    
+#     time.sleep(0.010)
+#     if new_message:
+#         try:         
+#             update_patch_list( property_list )
+#             plt.draw()
+#             plt.pause(0.1)
+#         except KeyboardInterrupt:
+#             print('forced stop')
+#             continua = 0
+#         new_message = 0
 
-# TODO
-# ORA ogni patch deveessere aggiornata in base al messaggio, con il giusto colore e posizione.
-# Gestisci anche l'overflow riempiendo le matrici delle proprietà in modo FIFO
+def init():
+    global lat_ref
+    global lon_ref
+    global first_ref
+    global property_list
+    global UTC_ref
+    update_patch_list( property_list )
+    return patches_list
 
+def animate( frame_number ):
+    # global lat_ref
+    # global lon_ref
+    # global first_ref
+    # global property_list
+    global patches_list
+    # global UTC_ref
+    # update_patch_list( property_list )
+    return patches_list
 
+anim = animation.FuncAnimation(fig, animate, 
+                               init_func=init, 
+                               frames=100000, 
+                               interval=10,
+                               blit=True)
 
-
+plt.show()

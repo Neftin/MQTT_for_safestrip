@@ -14,20 +14,17 @@ import yaml
 nownow = datetime.datetime.now();
 
 # Credential and connection parameters:
-if len(sys.argv) == 1:
-    ip    = '127.0.0.1'
-    exp_id = "0" +  nownow.strftime("_%He%M_")
-elif len(sys.argv) == 2:
-    ip    = str(sys.argv[1])
-    exp_id = "0" +  nownow.strftime("_%He%M_")
-elif len(sys.argv) == 3:
+if len(sys.argv) == 0:
+    ip     = "127.0.0.1"
+elif len(sys.argv) == 1:
     ip     = str(sys.argv[1])
-    exp_id = str(sys.argv[2]) + nownow.strftime("_%He%M_")
 else:
     print('too many program arguments')
 port  = 1883
 
-
+exp_id = '' # additional string for the file
+is_logging = 0
+file_name = ''
 
 print('Local logger setup: \n ip:   ' + ip + '\n port: ' + str(port) )
 

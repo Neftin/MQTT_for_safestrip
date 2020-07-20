@@ -21,7 +21,7 @@ pwd   = 'S@f3str1p'
 topic = 'SafeStrip/#'
 
 ################ the file to stream 
-path = 'loggyM1.yaml' # here the log file to stream
+path = 'RDW_demo_01.yaml' # here the log file to stream
 ###############
 
 print('Local logger setup: \n ip:   ' + ip + '\n port: ' + str(port) )
@@ -44,7 +44,7 @@ def on_connect(client, userdata, flags, rc):
 
 
 def on_publish(client, userdata, result):
-        print("Published")
+        print("[p] Published")
             
 
 client = mqtt.Client()
@@ -72,12 +72,12 @@ with open(path) as file:
     logs = yaml.full_load(file)
 
     for item, msg in logs.items():
-        print(item, " topic: " , msg['topic'])
+        print("[t] topic: " , msg['topic'])
         t2 = int(msg['time_stamp_local'])
         if t != 0: # not for the first ( or any 0 wait for one millisecond)
             delta_t = t2-t# calculate time to wait for next message
-        time.sleep(delta_t/5000) # pause in millisecond
-        print( str(delta_t) + " milliseconds elapsed")
+        time.sleep(delta_t/1000) # pause in millisecond
+        #print( str(delta_t) + " milliseconds elapsed")
         t = t2
         bitmsg = binascii.unhexlify(msg['payload']) # convert from hexadecimal to binary
         client.publish( msg['topic'] , bitmsg )

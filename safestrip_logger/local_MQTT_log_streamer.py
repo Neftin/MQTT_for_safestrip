@@ -24,6 +24,10 @@ port  = 1883
 
 print('Local logger setup: \n ip:   ' + ip + '\n port: ' + str(port) )
 
+################ the file to stream 
+path = 'loggy_rdw_test_id_eq.yaml' # here the log file to stream
+###############
+
 # The callback for when the client receives a CONNACK response from the server.
 def on_connect(client, userdata, flags, rc):
     print(" [*] Try to connect... ")
@@ -51,9 +55,6 @@ client.on_connect = on_connect
 client.on_publish = on_publish
 
 client.connect(ip, port, 60) 
-
-
-path = 'log_yaml_debug/provardw2dr3.yaml' # here the log file to stream
 
 delta_t = 1
 t       = 0

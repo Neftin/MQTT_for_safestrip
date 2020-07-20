@@ -7,23 +7,24 @@ import os
 import binascii
 import sys
 import socket
+import platform
 import paho.mqtt.client as mqtt
 import yaml
-import platform
+
+nownow = datetime.datetime.now();
 
 # Credential and connection parameters:
-ip    = '93.62.253.212'
-port  = 8883
-user  = 'safestrip'
-pwd   = 'S@f3str1p'
-topic = 'SafeStrip/#'
+if len(sys.argv) == 1:
+    ip    = '127.0.0.1'
+elif len(sys.argv) == 2:
+    ip    = str(sys.argv[1])
+else:
+    print('too many program arguments')
 
-exp_id = '' # additional string for the file
-is_logging = 0
-file_name = ''
+# general parameters
+port  = 1883
 
-print('Setup: \n ip:   ' + ip + '\n port: ' + str(port) )
-
+print('Local logger setup: \n ip:   ' + ip + '\n port: ' + str(port) )
 # The callback for when the client receives a CONNACK response from the server.
 def on_connect(client, userdata, flags, rc):
     print(" [*] Try to connect... ")
@@ -41,8 +42,8 @@ def on_connect(client, userdata, flags, rc):
         print(" [*] Connection refused, not authorized.\n")        
     client.subscribe("SafeStrip/#")
     today_day    = str(datetime.date.today())
-    today_folder = "log/" + today_day
-    today_folder_y = "log_yaml/" + today_day
+    today_folder = "log_local/" + today_day
+    today_folder_y = "log_local_yaml/" + today_day
 
     # create folder
     if not os.path.exists(today_folder_y):
@@ -57,7 +58,7 @@ def on_message_yy(client, userdata, msg):
     global file_name
     # Create folder if needed
     today_day    = str(datetime.date.today())
-    today_folder_y = "log_yaml/" + today_day
+    today_folder_y = "log_local_yaml/" + today_day
     # create folder
     if not os.path.exists(today_folder_y):
         os.makedirs(today_folder_y)
@@ -115,10 +116,6 @@ client = mqtt.Client()
 
 client.on_connect = on_connect
 client.on_message = on_message_yy
-
-client.tls_set("ca.crt", tls_version=ssl.PROTOCOL_TLSv1_2)
-client.tls_insecure_set(True)
-client.username_pw_set(user, pwd)
 client.connect(ip, port, 60)
 try:
     print(" [*] Start waiting loop.")

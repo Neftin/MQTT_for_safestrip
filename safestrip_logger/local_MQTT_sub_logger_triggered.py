@@ -64,10 +64,7 @@ def on_message_yy(client, userdata, msg):
         os.makedirs(today_folder_y)
         print('folder YAML for ' + today_day + ' created')
     if ( msg.topic == "SafeStrip/LOG/" ) or ( msg.topic == "SafeStrip/LOG" ):
-        if platform.system() == 'Darwin': # check if on mac
-            pay = str(msg.payload)[2:-1]
-        else:
-            pay = str(msg.payload)
+        pay = msg.payload.decode("utf-8") # properly decode
         pay = pay.replace('.','-') # remove dots from the attributes
         list_attr = pay.split(",") # list of attributes of the experiments
         command   = int(list_attr[0])
@@ -94,14 +91,12 @@ def on_message_yy(client, userdata, msg):
             f = open(file_name,"a")     # append mode (or create file)
             a = bytearray(msg.payload)  # use bytearray object for payload
             b = binascii.hexlify(a)     # convert to hexadecimal
+            b_utf   = b.decode("utf-8")
             epoch   = datetime.datetime.utcfromtimestamp(0) # 1970-1-1
             dt      = datetime.datetime.utcnow()            # utc now
             utcobj  = int(round((dt - epoch).total_seconds() * 1000.0)) # milliseconds precision (UTC)
             # Assemble object to log for the yaml file
-            if platform.system() == 'Darwin': # check if on mac
-                Obj_to_log = { 'MSG_' + str(utcobj) : {'payload' : str(b)[2:-1], 'topic' : str(msg.topic) , 'time_stamp_local' : str(utcobj) } }
-            else:
-                Obj_to_log = { 'MSG_' + str(utcobj) : {'payload' : str(b), 'topic' : str(msg.topic) , 'time_stamp_local' : str(utcobj) } }
+            Obj_to_log = { 'MSG_' + str(utcobj) : {'payload' : str(b_utf), 'topic' : str(msg.topic) , 'time_stamp_local' : str(utcobj) } }
 
             yaml.dump( Obj_to_log , f , default_flow_style=False ) # write yalm file
 

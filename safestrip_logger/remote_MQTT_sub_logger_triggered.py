@@ -22,11 +22,16 @@ exp_id = '' # additional string for the file
 is_logging = 0
 file_name = ''
 
+today_day = ""
+today_folder_y = ""
+
 print('Setup: \n ip:   ' + ip + '\n port: ' + str(port) )
 
 # The callback for when the client receives a CONNACK response from the server.
 def on_connect(client, userdata, flags, rc):
     print(" [*] Try to connect... ")
+    global today_day
+    global today_folder_y
     if rc == 0:
         print(" [*] Connected accepted.\n")
     elif rc== 1:
@@ -38,7 +43,7 @@ def on_connect(client, userdata, flags, rc):
     elif rc== 4:
         print(" [*] Connection refused, wrong username or password.\n")
     elif rc== 5:
-        print(" [*] Connection refused, not authorized.\n")        
+        print(" [*] Connection refused, not authorized.\n")
     client.subscribe("SafeStrip/#")
     today_day    = str(datetime.date.today())
     today_folder = "log/" + today_day
@@ -55,6 +60,8 @@ def on_message_yy(client, userdata, msg):
     global exp_id
     global is_logging
     global file_name
+    global today_day
+    global today_folder_y
     # Create folder if needed
     today_day    = str(datetime.date.today())
     today_folder_y = "log_yaml/" + today_day
@@ -100,7 +107,7 @@ def on_message_yy(client, userdata, msg):
             yaml.dump( Obj_to_log , f , default_flow_style=False ) # write yalm file
 
             f.close()# close file
-            
+
             print("message logged on topic: " + msg.topic)
         else:
             print("message NOT logged on topic: " + msg.topic)
@@ -118,11 +125,6 @@ client.connect(ip, port, 60)
 try:
     print(" [*] Start waiting loop.")
     client.loop_forever()
-    
-     
-
-
-
 
 except KeyboardInterrupt:
     client.disconnect()

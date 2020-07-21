@@ -46,7 +46,6 @@ def on_connect(client, userdata, flags, rc):
         print(" [*] Connection refused, not authorized.\n")
     client.subscribe("SafeStrip/#")
     today_day    = str(datetime.date.today())
-    today_folder = "log/" + today_day
     today_folder_y = "log_yaml/" + today_day
 
     # create folder

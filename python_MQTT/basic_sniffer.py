@@ -93,8 +93,14 @@ def on_message_yy(client, userdata, msg):
     content = spm.all_MQTT_decoding( topic , payload )
 
     if '_message_type_' in content.keys():
-        print('[o]')
-        print(content)
+        print('[>] ',content['_message_type_'], ' : ')
+        for key in content:
+            print('   [>] ',key, ' : ', content[key])
+    else:
+        print('[o] non-compliant message, payload:')
+        print('    [>] ','topic : ', msg.topic )
+        print('    [>] ','payload : ', msg.payload )
+
 
 
 client = mqtt.Client()

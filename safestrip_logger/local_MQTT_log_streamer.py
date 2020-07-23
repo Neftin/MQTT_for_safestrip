@@ -25,7 +25,7 @@ port  = 1883
 print('Local logger setup: \n ip:   ' + ip + '\n port: ' + str(port) )
 
 ################ the file to stream 
-path = 'loggy_rdw_test_id_eq.yaml' # here the log file to stream
+path = 'log_test_stream.yaml' # here the log file to stream
 ###############
 
 # The callback for when the client receives a CONNACK response from the server.
@@ -60,9 +60,13 @@ delta_t = 1
 t       = 0
 t2      = 0
 
-
+# start log
+client.publish( 'SafeStrip/LOG/' , '1,00,ES00,00' )
 
 with open(path) as file:
+
+    
+
     logs = yaml.full_load(file)
 
     for item, msg in logs.items():
@@ -76,3 +80,11 @@ with open(path) as file:
         if not ('HMI' in msg['topic'] ):
             client.publish( msg['topic'] , bitmsg )
             print(item, " topic: " , msg['topic'])
+
+#stop log
+client.publish( 'SafeStrip/LOG/' , '0,00,ES00,00' )
+
+
+
+
+client.publish( 'SafeStrip/LOG/' , '0,00,ES00,00' )

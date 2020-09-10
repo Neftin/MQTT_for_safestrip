@@ -3,7 +3,7 @@
 #
 # Automatically generated
 # This code was generated:
-# 05/06/2020 15:03
+# 26/08/2020 18:26
 #
 
 import struct
@@ -333,6 +333,237 @@ def SetCodriverParameters_decode( payload ):
 
     msg = struct.unpack( SetCodriverParameters_DK , payload )
     return { '_message_type_' : 'SetCodriverParameters' , 'UTC_time' : msg[0] , 'jerk_lower' : msg[1] , 'jerk_higher' : msg[2] , 'reaction_time' : msg[3] , 'p1' : msg[4] , 'p2' : msg[5] , 'p3' : msg[6] }  
+
+
+ 
+
+# DECODING (true values)
+
+def HostVehicle_decode_true_values( payload ):
+    # decode HostVehicle from packed binary data to python dictonary, returning true values (no gain/offset)
+    HostVehicle_DK = '!QddddddddBid'
+    # size of the serialized version of struct HostVehicle
+    # HostVehicle size  85
+    # HostVehicle n fields 12
+
+    msg = struct.unpack( HostVehicle_DK , payload )
+    return { '_message_type_' : 'HostVehicle' , 'UTC_time' : msg[0] / 1 , 'Speed_vehicle_network' : msg[1] / 1 , 'LongAcc_vehicle_network' : msg[2] / 1 , 'LatAcc_vehicle_network' : msg[3] / 1 , 'YawRate_vehicle_network' : msg[4] / 1 , 'SteerWheel_vehicle_network' : msg[5] / 1 , 'SteerWheelSpeed_vehicle_network' : msg[6] / 1 , 'BrakePressure_vehicle_network' : msg[7] / 1 , 'GasPedPos_vehicle_network' : msg[8] / 1 , 'BrakePedalSwitch_vehicle_network' : msg[9] / 1 , 'VehicleType' : msg[10] / 1 , 'VehicleBarLongPos' : msg[11] / 1 }  
+
+
+ 
+def CAM_message_decode_true_values( payload ):
+    # decode CAM_message from packed binary data to python dictonary, returning true values (no gain/offset)
+    CAM_message_DK = '!QIIHBiiiiiiHHHBhhBhhHB'
+    # size of the serialized version of struct CAM_message
+    # CAM_message size  62
+    # CAM_message n fields 22
+
+    msg = struct.unpack( CAM_message_DK , payload )
+    return { '_message_type_' : 'CAM_message' , 'UTC_time' : msg[0] / 1 , 'v2x_cam_header_msgID' : msg[1] / 1 , 'v2x_cam_header_originationStationID' : msg[2] / 1 , 'v2x_cam_GenerationDeltaTime' : msg[3] / 1000 , 'v2x_cam_StationType' : msg[4] / 1 , 'v2x_cam_Latitude' : msg[5] / 10000000 , 'v2x_cam_Longitude' : msg[6] / 10000000 , 'v2x_cam_ConfidenceEllipse_semiMajor' : msg[7] / 100 , 'v2x_cam_ConfidenceEllipse_semiMinor' : msg[8] / 100 , 'v2x_cam_ConfidenceEllipse_semiMajorOrientation' : msg[9] / 10 , 'v2x_cam_Altitude' : msg[10] / 100 , 'v2x_cam_Heading' : msg[11] / 10 , 'v2x_cam_Speed' : msg[12] / 100 , 'v2x_cam_VehicleLength' : msg[13] / 10 , 'v2x_cam_VehicleWidth' : msg[14] / 10 , 'v2x_cam_LongitudinalAcceleration' : msg[15] / 10 , 'v2x_cam_YawRate' : msg[16] / 100 , 'v2x_cam_AccelerationControl' : msg[17] / 1 , 'v2x_cam_SteeringWheelAngle' : msg[18] / 0.66666667 , 'v2x_cam_LateralAcceleration' : msg[19] / 10 , 'v2x_cam_VehicleRole' : msg[20] / 1 , 'v2x_cam_ExteriorLights_status' : msg[21] / 1 }  
+
+
+ 
+def DENM_message_decode_true_values( payload ):
+    # decode DENM_message from packed binary data to python dictonary, returning true values (no gain/offset)
+    DENM_message_DK = '!QIIHQiiiiiiBBiBiiHHiI'
+    # size of the serialized version of struct DENM_message
+    # DENM_message size  77
+    # DENM_message n fields 21
+
+    msg = struct.unpack( DENM_message_DK , payload )
+    return { '_message_type_' : 'DENM_message' , 'UTC_time' : msg[0] / 1 , 'v2x_header_StationID' : msg[1] / 1 , 'v2x_header_originationStationID' : msg[2] / 1 , 'v2x_denm_sequenceNumber' : msg[3] / 1 , 'v2x_denm_detectionTime' : msg[4] / 1 , 'v2x_denm_eventPosition_latitude' : msg[5] / 10000000 , 'v2x_denm_eventPosition_longitude' : msg[6] / 10000000 , 'v2x_denm_ConfidenceEllipse_semiMajor' : msg[7] / 100 , 'v2x_denm_ConfidenceEllipse_semiMinor' : msg[8] / 100 , 'v2x_denm_ConfidenceEllipse_semiMajorOrientation' : msg[9] / 10 , 'v2x_denm_eventPosition_altitude' : msg[10] / 100 , 'v2x_denm_relevanceDistance' : msg[11] / 1 , 'v2x_denm_relevanceTrafficDirection' : msg[12] / 1 , 'v2x_denm_validityDuration' : msg[13] / 1 , 'v2x_denm_stationType' : msg[14] / 1 , 'v2x_denm_eventType_CauseCode' : msg[15] / 1 , 'v2x_denm_eventType_SubCauseCode' : msg[16] / 1 , 'v2x_denm_frictionCoefficient_value' : msg[17] / 1000 , 'v2x_denm_frictionCoefficient_confidence' : msg[18] / 1000 , 'v2x_denm_alacarte_LanePosition' : msg[19] / 100 , 'v2x_denm_alacarte_RoadWorksContainerExtended_closedLanes_DrivingLaneStatus' : msg[20] / 1 }  
+
+
+ 
+def Strip_CAM_decode_true_values( payload ):
+    # decode Strip_CAM from packed binary data to python dictonary, returning true values (no gain/offset)
+    Strip_CAM_DK = '!QIIIBiiiiiiHHHBiB'
+    # size of the serialized version of struct Strip_CAM
+    # Strip_CAM size  57
+    # Strip_CAM n fields 17
+
+    msg = struct.unpack( Strip_CAM_DK , payload )
+    return { '_message_type_' : 'Strip_CAM' , 'UTC_time' : msg[0] / 1 , 'originationStationID' : msg[1] / 1 , 'StripID' : msg[2] / 1 , 'RFID_ID' : msg[3] / 1 , 'StationType' : msg[4] / 1 , 'Latitude' : msg[5] / 10000000 , 'Longitude' : msg[6] / 10000000 , 'ConfidenceEllipse_semiMajor' : msg[7] / 100 , 'ConfidenceEllipse_semiMinor' : msg[8] / 100 , 'ConfidenceEllipse_semiMajorOrientation' : msg[9] / 10 , 'Altitude' : msg[10] / 100 , 'Heading' : msg[11] / 10 , 'Speed' : msg[12] / 100 , 'VehicleLength' : msg[13] / 10 , 'VehicleWidth' : msg[14] / 10 , 'LongitudinalAcceleration' : msg[15] / 10 , 'Lane_ID' : msg[16] / 1 }  
+
+
+ 
+def MAPEM_message_decode_true_values( payload ):
+    # decode MAPEM_message from packed binary data to python dictonary, returning true values (no gain/offset)
+    MAPEM_message_DK = '!QIIBIiiiiBiBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiHHHHHHHHHHHHHHHHBBBBBBBBBBBBBBBBHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB'
+    # size of the serialized version of struct MAPEM_message
+    # MAPEM_message size  243242
+    # MAPEM_message n fields 21
+
+    msg = struct.unpack( MAPEM_message_DK , payload )
+    return { '_message_type_' : 'MAPEM_message' , 'UTC_time' : msg[0] / 1 , 'v2x_header_msgID' : msg[1] / 1 , 'v2x_header_originationStationID' : msg[2] / 1 , 'v2x_map_intersection_name' : msg[3] / 1 , 'v2x_map_intersection_id' : msg[4] / 1 , 'v2x_map_intersection_refLatitude' : msg[5] / 10000 , 'v2x_map_intersection_refLongitude' : msg[6] / 10000 , 'v2x_map_intersection_refAltitude' : msg[7] / 10 , 'v2x_map_intersection_laneWidth' : msg[8] / 100 , 'v2x_map_intersection_speedLimitType' : msg[9] / 1 , 'v2x_map_intersection_speedLimitValue' : msg[10] / 50 , 'v2x_map_intersection_LaneSet_ID' :  [ msg[11] / 1 , msg[12] / 1 , msg[13] / 1 , msg[14] / 1 , msg[15] / 1 , msg[16] / 1 , msg[17] / 1 , msg[18] / 1 , msg[19] / 1 , msg[20] / 1 , msg[21] / 1 , msg[22] / 1 , msg[23] / 1 , msg[24] / 1 , msg[25] / 1 , msg[26] / 1 ]  , 'v2x_map_intersection_LaneSet_approach_ID' :  [ msg[27] / 1 , msg[28] / 1 , msg[29] / 1 , msg[30] / 1 , msg[31] / 1 , msg[32] / 1 , msg[33] / 1 , msg[34] / 1 , msg[35] / 1 , msg[36] / 1 , msg[37] / 1 , msg[38] / 1 , msg[39] / 1 , msg[40] / 1 , msg[41] / 1 , msg[42] / 1 ]  , 'v2x_map_intersection_LaneSet_laneAttributes_directionalUse' :  [ msg[43] / 1 , msg[44] / 1 , msg[45] / 1 , msg[46] / 1 , msg[47] / 1 , msg[48] / 1 , msg[49] / 1 , msg[50] / 1 , msg[51] / 1 , msg[52] / 1 , msg[53] / 1 , msg[54] / 1 , msg[55] / 1 , msg[56] / 1 , msg[57] / 1 , msg[58] / 1 ]  , 'v2x_map_intersection_LaneSet_nodeList_Xoffset' :  [ msg[59] / 100 , msg[60] / 100 , msg[61] / 100 , msg[62] / 100 , msg[63] / 100 , msg[64] / 100 , msg[65] / 100 , msg[66] / 100 , msg[67] / 100 , msg[68] / 100 , msg[69] / 100 , msg[70] / 100 , msg[71] / 100 , msg[72] / 100 , msg[73] / 100 , msg[74] / 100 , msg[75] / 100 , msg[76] / 100 , msg[77] / 100 , msg[78] / 100 , msg[79] / 100 , msg[80] / 100 , msg[81] / 100 , msg[82] / 100 , msg[83] / 100 , msg[84] / 100 , msg[85] / 100 , msg[86] / 100 , msg[87] / 100 , msg[88] / 100 , msg[89] / 100 , msg[90] / 100 , msg[91] / 100 , msg[92] / 100 , msg[93] / 100 , msg[94] / 100 , msg[95] / 100 , msg[96] / 100 , msg[97] / 100 , msg[98] / 100 , msg[99] / 100 , msg[100] / 100 , msg[101] / 100 , msg[102] / 100 , msg[103] / 100 , msg[104] / 100 , msg[105] / 100 , msg[106] / 100 , msg[107] / 100 , msg[108] / 100 , msg[109] / 100 , msg[110] / 100 , msg[111] / 100 , msg[112] / 100 , msg[113] / 100 , msg[114] / 100 , msg[115] / 100 , msg[116] / 100 , msg[117] / 100 , msg[118] / 100 , msg[119] / 100 , msg[120] / 100 , msg[121] / 100 , msg[122] / 100 , msg[123] / 100 , msg[124] / 100 , msg[125] / 100 , msg[126] / 100 , msg[127] / 100 , msg[128] / 100 , msg[129] / 100 , msg[130] / 100 , msg[131] / 100 , msg[132] / 100 , msg[133] / 100 , msg[134] / 100 , msg[135] / 100 , msg[136] / 100 , msg[137] / 100 , msg[138] / 100 , msg[139] / 100 , msg[140] / 100 , msg[141] / 100 , msg[142] / 100 , msg[143] / 100 , msg[144] / 100 , msg[145] / 100 , msg[146] / 100 , msg[147] / 100 , msg[148] / 100 , msg[149] / 100 , msg[150] / 100 , msg[151] / 100 , msg[152] / 100 , msg[153] / 100 , msg[154] / 100 , msg[155] / 100 , msg[156] / 100 , msg[157] / 100 , msg[158] / 100 , msg[159] / 100 , msg[160] / 100 , msg[161] / 100 , msg[162] / 100 , msg[163] / 100 , msg[164] / 100 , msg[165] / 100 , msg[166] / 100 , msg[167] / 100 , msg[168] / 100 , msg[169] / 100 , msg[170] / 100 , msg[171] / 100 , msg[172] / 100 , msg[173] / 100 , msg[174] / 100 , msg[175] / 100 , msg[176] / 100 , msg[177] / 100 , msg[178] / 100 , msg[179] / 100 , msg[180] / 100 , msg[181] / 100 , msg[182] / 100 , msg[183] / 100 , msg[184] / 100 , msg[185] / 100 , msg[186] / 100 , msg[187] / 100 , msg[188] / 100 , msg[189] / 100 , msg[190] / 100 , msg[191] / 100 , msg[192] / 100 , msg[193] / 100 , msg[194] / 100 , msg[195] / 100 , msg[196] / 100 , msg[197] / 100 , msg[198] / 100 , msg[199] / 100 , msg[200] / 100 , msg[201] / 100 , msg[202] / 100 , msg[203] / 100 , msg[204] / 100 , msg[205] / 100 , msg[206] / 100 , msg[207] / 100 , msg[208] / 100 , msg[209] / 100 , msg[210] / 100 , msg[211] / 100 , msg[212] / 100 , msg[213] / 100 , msg[214] / 100 , msg[215] / 100 , msg[216] / 100 , msg[217] / 100 , msg[218] / 100 ]  , 'v2x_map_intersection_LaneSet_nodeList_Yoffset' :  [ msg[219] / 100 , msg[220] / 100 , msg[221] / 100 , msg[222] / 100 , msg[223] / 100 , msg[224] / 100 , msg[225] / 100 , msg[226] / 100 , msg[227] / 100 , msg[228] / 100 , msg[229] / 100 , msg[230] / 100 , msg[231] / 100 , msg[232] / 100 , msg[233] / 100 , msg[234] / 100 , msg[235] / 100 , msg[236] / 100 , msg[237] / 100 , msg[238] / 100 , msg[239] / 100 , msg[240] / 100 , msg[241] / 100 , msg[242] / 100 , msg[243] / 100 , msg[244] / 100 , msg[245] / 100 , msg[246] / 100 , msg[247] / 100 , msg[248] / 100 , msg[249] / 100 , msg[250] / 100 , msg[251] / 100 , msg[252] / 100 , msg[253] / 100 , msg[254] / 100 , msg[255] / 100 , msg[256] / 100 , msg[257] / 100 , msg[258] / 100 , msg[259] / 100 , msg[260] / 100 , msg[261] / 100 , msg[262] / 100 , msg[263] / 100 , msg[264] / 100 , msg[265] / 100 , msg[266] / 100 , msg[267] / 100 , msg[268] / 100 , msg[269] / 100 , msg[270] / 100 , msg[271] / 100 , msg[272] / 100 , msg[273] / 100 , msg[274] / 100 , msg[275] / 100 , msg[276] / 100 , msg[277] / 100 , msg[278] / 100 , msg[279] / 100 , msg[280] / 100 , msg[281] / 100 , msg[282] / 100 , msg[283] / 100 , msg[284] / 100 , msg[285] / 100 , msg[286] / 100 , msg[287] / 100 , msg[288] / 100 , msg[289] / 100 , msg[290] / 100 , msg[291] / 100 , msg[292] / 100 , msg[293] / 100 , msg[294] / 100 , msg[295] / 100 , msg[296] / 100 , msg[297] / 100 , msg[298] / 100 , msg[299] / 100 , msg[300] / 100 , msg[301] / 100 , msg[302] / 100 , msg[303] / 100 , msg[304] / 100 , msg[305] / 100 , msg[306] / 100 , msg[307] / 100 , msg[308] / 100 , msg[309] / 100 , msg[310] / 100 , msg[311] / 100 , msg[312] / 100 , msg[313] / 100 , msg[314] / 100 , msg[315] / 100 , msg[316] / 100 , msg[317] / 100 , msg[318] / 100 , msg[319] / 100 , msg[320] / 100 , msg[321] / 100 , msg[322] / 100 , msg[323] / 100 , msg[324] / 100 , msg[325] / 100 , msg[326] / 100 , msg[327] / 100 , msg[328] / 100 , msg[329] / 100 , msg[330] / 100 , msg[331] / 100 , msg[332] / 100 , msg[333] / 100 , msg[334] / 100 , msg[335] / 100 , msg[336] / 100 , msg[337] / 100 , msg[338] / 100 , msg[339] / 100 , msg[340] / 100 , msg[341] / 100 , msg[342] / 100 , msg[343] / 100 , msg[344] / 100 , msg[345] / 100 , msg[346] / 100 , msg[347] / 100 , msg[348] / 100 , msg[349] / 100 , msg[350] / 100 , msg[351] / 100 , msg[352] / 100 , msg[353] / 100 , msg[354] / 100 , msg[355] / 100 , msg[356] / 100 , msg[357] / 100 , msg[358] / 100 , msg[359] / 100 , msg[360] / 100 , msg[361] / 100 , msg[362] / 100 , msg[363] / 100 , msg[364] / 100 , msg[365] / 100 , msg[366] / 100 , msg[367] / 100 , msg[368] / 100 , msg[369] / 100 , msg[370] / 100 , msg[371] / 100 , msg[372] / 100 , msg[373] / 100 , msg[374] / 100 , msg[375] / 100 , msg[376] / 100 , msg[377] / 100 , msg[378] / 100 ]  , 'v2x_map_intersection_LaneSet_laneAttributes_LaneTypeValue' :  [ msg[379] / 1 , msg[380] / 1 , msg[381] / 1 , msg[382] / 1 , msg[383] / 1 , msg[384] / 1 , msg[385] / 1 , msg[386] / 1 , msg[387] / 1 , msg[388] / 1 , msg[389] / 1 , msg[390] / 1 , msg[391] / 1 , msg[392] / 1 , msg[393] / 1 , msg[394] / 1 ]  , 'v2x_map_intersection_LaneType_ID' :  [ msg[395] / 1 , msg[396] / 1 , msg[397] / 1 , msg[398] / 1 , msg[399] / 1 , msg[400] / 1 , msg[401] / 1 , msg[402] / 1 , msg[403] / 1 , msg[404] / 1 , msg[405] / 1 , msg[406] / 1 , msg[407] / 1 , msg[408] / 1 , msg[409] / 1 , msg[410] / 1 ]  , 'v2x_map_intersection_ConnectingLane_allowedManeuvers' :  [ msg[411] / 1 , msg[412] / 1 , msg[413] / 1 , msg[414] / 1 , msg[415] / 1 , msg[416] / 1 , msg[417] / 1 , msg[418] / 1 , msg[419] / 1 , msg[420] / 1 , msg[421] / 1 , msg[422] / 1 , msg[423] / 1 , msg[424] / 1 , msg[425] / 1 , msg[426] / 1 , msg[427] / 1 , msg[428] / 1 , msg[429] / 1 , msg[430] / 1 , msg[431] / 1 , msg[432] / 1 , msg[433] / 1 , msg[434] / 1 , msg[435] / 1 , msg[436] / 1 , msg[437] / 1 , msg[438] / 1 , msg[439] / 1 , msg[440] / 1 , msg[441] / 1 , msg[442] / 1 , msg[443] / 1 , msg[444] / 1 , msg[445] / 1 , msg[446] / 1 , msg[447] / 1 , msg[448] / 1 , msg[449] / 1 , msg[450] / 1 , msg[451] / 1 , msg[452] / 1 , msg[453] / 1 , msg[454] / 1 , msg[455] / 1 , msg[456] / 1 , msg[457] / 1 , msg[458] / 1 , msg[459] / 1 , msg[460] / 1 , msg[461] / 1 , msg[462] / 1 , msg[463] / 1 , msg[464] / 1 , msg[465] / 1 , msg[466] / 1 , msg[467] / 1 , msg[468] / 1 , msg[469] / 1 , msg[470] / 1 , msg[471] / 1 , msg[472] / 1 , msg[473] / 1 , msg[474] / 1 , msg[475] / 1 , msg[476] / 1 , msg[477] / 1 , msg[478] / 1 , msg[479] / 1 , msg[480] / 1 , msg[481] / 1 , msg[482] / 1 , msg[483] / 1 , msg[484] / 1 , msg[485] / 1 , msg[486] / 1 , msg[487] / 1 , msg[488] / 1 , msg[489] / 1 , msg[490] / 1 , msg[491] / 1 , msg[492] / 1 , msg[493] / 1 , msg[494] / 1 , msg[495] / 1 , msg[496] / 1 , msg[497] / 1 , msg[498] / 1 , msg[499] / 1 , msg[500] / 1 , msg[501] / 1 , msg[502] / 1 , msg[503] / 1 , msg[504] / 1 , msg[505] / 1 , msg[506] / 1 ]  , 'v2x_map_intersection_LaneSet_connectingLaneID' :  [ msg[507] / 1 , msg[508] / 1 , msg[509] / 1 , msg[510] / 1 , msg[511] / 1 , msg[512] / 1 , msg[513] / 1 , msg[514] / 1 , msg[515] / 1 , msg[516] / 1 , msg[517] / 1 , msg[518] / 1 , msg[519] / 1 , msg[520] / 1 , msg[521] / 1 , msg[522] / 1 , msg[523] / 1 , msg[524] / 1 , msg[525] / 1 , msg[526] / 1 , msg[527] / 1 , msg[528] / 1 , msg[529] / 1 , msg[530] / 1 , msg[531] / 1 , msg[532] / 1 , msg[533] / 1 , msg[534] / 1 , msg[535] / 1 , msg[536] / 1 , msg[537] / 1 , msg[538] / 1 , msg[539] / 1 , msg[540] / 1 , msg[541] / 1 , msg[542] / 1 , msg[543] / 1 , msg[544] / 1 , msg[545] / 1 , msg[546] / 1 , msg[547] / 1 , msg[548] / 1 , msg[549] / 1 , msg[550] / 1 , msg[551] / 1 , msg[552] / 1 , msg[553] / 1 , msg[554] / 1 , msg[555] / 1 , msg[556] / 1 , msg[557] / 1 , msg[558] / 1 , msg[559] / 1 , msg[560] / 1 , msg[561] / 1 , msg[562] / 1 , msg[563] / 1 , msg[564] / 1 , msg[565] / 1 , msg[566] / 1 , msg[567] / 1 , msg[568] / 1 , msg[569] / 1 , msg[570] / 1 , msg[571] / 1 , msg[572] / 1 , msg[573] / 1 , msg[574] / 1 , msg[575] / 1 , msg[576] / 1 , msg[577] / 1 , msg[578] / 1 , msg[579] / 1 , msg[580] / 1 , msg[581] / 1 , msg[582] / 1 , msg[583] / 1 , msg[584] / 1 , msg[585] / 1 , msg[586] / 1 , msg[587] / 1 , msg[588] / 1 , msg[589] / 1 , msg[590] / 1 , msg[591] / 1 , msg[592] / 1 , msg[593] / 1 , msg[594] / 1 , msg[595] / 1 , msg[596] / 1 , msg[597] / 1 , msg[598] / 1 , msg[599] / 1 , msg[600] / 1 , msg[601] / 1 , msg[602] / 1 ]  , 'v2x_map_intersection_LaneSet_connectingLaneSignalGroup' :  [ msg[603] / 1 , msg[604] / 1 , msg[605] / 1 , msg[606] / 1 , msg[607] / 1 , msg[608] / 1 , msg[609] / 1 , msg[610] / 1 , msg[611] / 1 , msg[612] / 1 , msg[613] / 1 , msg[614] / 1 , msg[615] / 1 , msg[616] / 1 , msg[617] / 1 , msg[618] / 1 , msg[619] / 1 , msg[620] / 1 , msg[621] / 1 , msg[622] / 1 , msg[623] / 1 , msg[624] / 1 , msg[625] / 1 , msg[626] / 1 , msg[627] / 1 , msg[628] / 1 , msg[629] / 1 , msg[630] / 1 , msg[631] / 1 , msg[632] / 1 , msg[633] / 1 , msg[634] / 1 , msg[635] / 1 , msg[636] / 1 , msg[637] / 1 , msg[638] / 1 , msg[639] / 1 , msg[640] / 1 , msg[641] / 1 , msg[642] / 1 , msg[643] / 1 , msg[644] / 1 , msg[645] / 1 , msg[646] / 1 , msg[647] / 1 , msg[648] / 1 , msg[649] / 1 , msg[650] / 1 , msg[651] / 1 , msg[652] / 1 , msg[653] / 1 , msg[654] / 1 , msg[655] / 1 , msg[656] / 1 , msg[657] / 1 , msg[658] / 1 , msg[659] / 1 , msg[660] / 1 , msg[661] / 1 , msg[662] / 1 , msg[663] / 1 , msg[664] / 1 , msg[665] / 1 , msg[666] / 1 , msg[667] / 1 , msg[668] / 1 , msg[669] / 1 , msg[670] / 1 , msg[671] / 1 , msg[672] / 1 , msg[673] / 1 , msg[674] / 1 , msg[675] / 1 , msg[676] / 1 , msg[677] / 1 , msg[678] / 1 , msg[679] / 1 , msg[680] / 1 , msg[681] / 1 , msg[682] / 1 , msg[683] / 1 , msg[684] / 1 , msg[685] / 1 , msg[686] / 1 , msg[687] / 1 , msg[688] / 1 , msg[689] / 1 , msg[690] / 1 , msg[691] / 1 , msg[692] / 1 , msg[693] / 1 , msg[694] / 1 , msg[695] / 1 , msg[696] / 1 , msg[697] / 1 , msg[698] / 1 ]  }  
+
+
+ 
+def HMI_activations_decode_true_values( payload ):
+    # decode HMI_activations from packed binary data to python dictonary, returning true values (no gain/offset)
+    HMI_activations_DK = '!II'
+    # size of the serialized version of struct HMI_activations
+    # HMI_activations size  8
+    # HMI_activations n fields 2
+
+    msg = struct.unpack( HMI_activations_DK , payload )
+    return { '_message_type_' : 'HMI_activations' , 'UTC_time' : msg[0] / 1 , 'apps_active' : msg[1] / 1 }  
+
+
+ 
+def HMIinputsByApp_active_decode_true_values( payload ):
+    # decode HMIinputsByApp_active from packed binary data to python dictonary, returning true values (no gain/offset)
+    HMIinputsByApp_active_DK = '!QIIBdddiB'
+    # size of the serialized version of struct HMIinputsByApp_active
+    # HMIinputsByApp_active size  46
+    # HMIinputsByApp_active n fields 9
+
+    msg = struct.unpack( HMIinputsByApp_active_DK , payload )
+    return { '_message_type_' : 'HMIinputsByApp_active' , 'UTC_time' : msg[0] / 1 , 'OutputID' : msg[1] / 1 , 'StationID' : msg[2] / 1 , 'WarningLevel' : msg[3] / 1 , 'J0f' : msg[4] / 1 , 'TargetDistancef' : msg[5] / 1 , 'TargetSpeedf' : msg[6] / 1 , 'TargetClassf' : msg[7] / 1 , 'TargetComingDirection' : msg[8] / 1 }  
+
+
+ 
+def HMIinputsByApp_decode_true_values( payload ):
+    # decode HMIinputsByApp from packed binary data to python dictonary, returning true values (no gain/offset)
+    HMIinputsByApp_DK = '!QIIBdddiB'
+    # size of the serialized version of struct HMIinputsByApp
+    # HMIinputsByApp size  46
+    # HMIinputsByApp n fields 9
+
+    msg = struct.unpack( HMIinputsByApp_DK , payload )
+    return { '_message_type_' : 'HMIinputsByApp' , 'UTC_time' : msg[0] / 1 , 'OutputID' : msg[1] / 1 , 'StationID' : msg[2] / 1 , 'WarningLevel' : msg[3] / 1 , 'J0f' : msg[4] / 1 , 'TargetDistancef' : msg[5] / 1 , 'TargetSpeedf' : msg[6] / 1 , 'TargetClassf' : msg[7] / 1 , 'TargetComingDirection' : msg[8] / 1 }  
+
+
+ 
+def FirstTrajectoryMotorPrimitivesParameters_decode_true_values( payload ):
+    # decode FirstTrajectoryMotorPrimitivesParameters from packed binary data to python dictonary, returning true values (no gain/offset)
+    FirstTrajectoryMotorPrimitivesParameters_DK = '!Qidddddddddddddddddddddd'
+    # size of the serialized version of struct FirstTrajectoryMotorPrimitivesParameters
+    # FirstTrajectoryMotorPrimitivesParameters size  188
+    # FirstTrajectoryMotorPrimitivesParameters n fields 24
+
+    msg = struct.unpack( FirstTrajectoryMotorPrimitivesParameters_DK , payload )
+    return { '_message_type_' : 'FirstTrajectoryMotorPrimitivesParameters' , 'UTC_time' : msg[0] / 1 , 'OutputID' : msg[1] / 1 , 'T0' : msg[2] / 1 , 'V0' : msg[3] / 1 , 'A0' : msg[4] / 1 , 'T1f' : msg[5] / 1 , 'J0f' : msg[6] / 1 , 'S0f' : msg[7] / 1 , 'Cr0f' : msg[8] / 1 , 'T2f' : msg[9] / 1 , 'J1f' : msg[10] / 1 , 'S1f' : msg[11] / 1 , 'Cr1f' : msg[12] / 1 , 'Sn0' : msg[13] / 1 , 'Alpha0' : msg[14] / 1 , 'Delta0' : msg[15] / 1 , 'T1nf' : msg[16] / 1 , 'Jdelta0f' : msg[17] / 1 , 'Sdelta0f' : msg[18] / 1 , 'Crdelta0f' : msg[19] / 1 , 'T2nf' : msg[20] / 1 , 'Jdelta1f' : msg[21] / 1 , 'Sdelta1f' : msg[22] / 1 , 'Crdelta1f' : msg[23] / 1 }  
+
+
+ 
+def ManouevreTypes_decode_true_values( payload ):
+    # decode ManouevreTypes from packed binary data to python dictonary, returning true values (no gain/offset)
+    ManouevreTypes_DK = '!QiBBBB'
+    # size of the serialized version of struct ManouevreTypes
+    # ManouevreTypes size  16
+    # ManouevreTypes n fields 6
+
+    msg = struct.unpack( ManouevreTypes_DK , payload )
+    return { '_message_type_' : 'ManouevreTypes' , 'UTC_time' : msg[0] / 1 , 'OutputID' : msg[1] / 1 , 'FirstManoeuverTypeLong' : msg[2] / 1 , 'FirstManoeuverTypeLat' : msg[3] / 1 , 'SecondManoeuverTypeLong' : msg[4] / 1 , 'SecondManoeuverTypeLat' : msg[5] / 1 }  
+
+
+ 
+def StrainGauge_decode_true_values( payload ):
+    # decode StrainGauge from packed binary data to python dictonary, returning true values (no gain/offset)
+    StrainGauge_DK = '!QIiddd'
+    # size of the serialized version of struct StrainGauge
+    # StrainGauge size  40
+    # StrainGauge n fields 6
+
+    msg = struct.unpack( StrainGauge_DK , payload )
+    return { '_message_type_' : 'StrainGauge' , 'UTC_time' : msg[0] / 1 , 'StripID' : msg[1] / 1 , 'Strain_gauge_Sensor_ID' : msg[2] / 1 , 'Strain_gauge_Amplitude' : msg[3] / 1 , 'Strain_gauge_event_time' : msg[4] / 1 , 'Exponential_decay' : msg[5] / 1 }  
+
+
+ 
+def AutomationLevel_decode_true_values( payload ):
+    # decode AutomationLevel from packed binary data to python dictonary, returning true values (no gain/offset)
+    AutomationLevel_DK = '!QB'
+    # size of the serialized version of struct AutomationLevel
+    # AutomationLevel size  9
+    # AutomationLevel n fields 2
+
+    msg = struct.unpack( AutomationLevel_DK , payload )
+    return { '_message_type_' : 'AutomationLevel' , 'UTC_time' : msg[0] / 1 , 'Automation_Level' : msg[1] / 1 }  
+
+
+ 
+def ParkingStatus_decode_true_values( payload ):
+    # decode ParkingStatus from packed binary data to python dictonary, returning true values (no gain/offset)
+    ParkingStatus_DK = '!QiIIIIIIIIIII'
+    # size of the serialized version of struct ParkingStatus
+    # ParkingStatus size  416
+    # ParkingStatus n fields 4
+
+    msg = struct.unpack( ParkingStatus_DK , payload )
+    return { '_message_type_' : 'ParkingStatus' , 'UTC_time' : msg[0] / 1 , 'OutputID' : msg[1] / 1 , 'IDs_free_patkings' :  [ msg[2] / 1 , msg[3] / 1 , msg[4] / 1 , msg[5] / 1 , msg[6] / 1 , msg[7] / 1 , msg[8] / 1 , msg[9] / 1 , msg[10] / 1 , msg[11] / 1 ]  , 'Number_of_free_parkings' : msg[12] / 1 }  
+
+
+ 
+def ParkingEvent_decode_true_values( payload ):
+    # decode ParkingEvent from packed binary data to python dictonary, returning true values (no gain/offset)
+    ParkingEvent_DK = '!QiIIIB'
+    # size of the serialized version of struct ParkingEvent
+    # ParkingEvent size  25
+    # ParkingEvent n fields 6
+
+    msg = struct.unpack( ParkingEvent_DK , payload )
+    return { '_message_type_' : 'ParkingEvent' , 'UTC_time' : msg[0] / 1 , 'OutputID' : msg[1] / 1 , 'RSB_ID' : msg[2] / 1 , 'RFID_ID' : msg[3] / 1 , 'StripID' : msg[4] / 1 , 'Event' : msg[5] / 1 }  
+
+
+ 
+def ParkingOutput_decode_true_values( payload ):
+    # decode ParkingOutput from packed binary data to python dictonary, returning true values (no gain/offset)
+    ParkingOutput_DK = '!QiIII'
+    # size of the serialized version of struct ParkingOutput
+    # ParkingOutput size  24
+    # ParkingOutput n fields 5
+
+    msg = struct.unpack( ParkingOutput_DK , payload )
+    return { '_message_type_' : 'ParkingOutput' , 'UTC_time' : msg[0] / 1 , 'OutputID' : msg[1] / 1 , 'RFID_ID' : msg[2] / 1 , 'Payment_Amount' : msg[3] / 100 , 'Payment_and_parking_status' : msg[4] / 1 }  
+
+
+ 
+def VirtualToll_input_decode_true_values( payload ):
+    # decode VirtualToll_input from packed binary data to python dictonary, returning true values (no gain/offset)
+    VirtualToll_input_DK = '!QBiiiIII'
+    # size of the serialized version of struct VirtualToll_input
+    # VirtualToll_input size  33
+    # VirtualToll_input n fields 8
+
+    msg = struct.unpack( VirtualToll_input_DK , payload )
+    return { '_message_type_' : 'VirtualToll_input' , 'UTC_time' : msg[0] / 1 , 'StationType' : msg[1] / 1 , 'position_latitude' : msg[2] / 10000000 , 'position_longitude' : msg[3] / 10000000 , 'virtual_gate_distance' : msg[4] / 1 , 'StripID' : msg[5] / 1 , 'RSB_ID' : msg[6] / 1 , 'RFID_ID' : msg[7] / 1 }  
+
+
+ 
+def VirtualToll_output_decode_true_values( payload ):
+    # decode VirtualToll_output from packed binary data to python dictonary, returning true values (no gain/offset)
+    VirtualToll_output_DK = '!QIiIB'
+    # size of the serialized version of struct VirtualToll_output
+    # VirtualToll_output size  21
+    # VirtualToll_output n fields 5
+
+    msg = struct.unpack( VirtualToll_output_DK , payload )
+    return { '_message_type_' : 'VirtualToll_output' , 'UTC_time' : msg[0] / 1 , 'RFID_ID' : msg[1] / 1 , 'virtual_gate_distance' : msg[2] / 1 , 'payment_amount' : msg[3] / 100 , 'payment_confirmation' : msg[4] / 1 }  
+
+
+ 
+def EnvironmentData_decode_true_values( payload ):
+    # decode EnvironmentData from packed binary data to python dictonary, returning true values (no gain/offset)
+    EnvironmentData_DK = '!IIIBBiBIIBBBB'
+    # size of the serialized version of struct EnvironmentData
+    # EnvironmentData size  31
+    # EnvironmentData n fields 13
+
+    msg = struct.unpack( EnvironmentData_DK , payload )
+    return { '_message_type_' : 'EnvironmentData' , 'RSB_ID' : msg[0] / 1 , 'StripID' : msg[1] / 1 , 'Fog' : msg[2] / 1 , 'Road_type' : msg[3] / 1 , 'ice' : msg[4] / 1 , 'temperature' : msg[5] / 10 , 'gas_type' : msg[6] / 1 , 'gas_presence' : msg[7] / 100 , 'humidity' : msg[8] / 1000 , 'Reported_surface_state' : msg[9] / 1 , 'water_layer' : msg[10] / 10 , 'show_layer' : msg[11] / 10 , 'ice_layer' : msg[12] / 10 }  
+
+
+ 
+def SetCodriverParameters_decode_true_values( payload ):
+    # decode SetCodriverParameters from packed binary data to python dictonary, returning true values (no gain/offset)
+    SetCodriverParameters_DK = '!Qdddddd'
+    # size of the serialized version of struct SetCodriverParameters
+    # SetCodriverParameters size  56
+    # SetCodriverParameters n fields 7
+
+    msg = struct.unpack( SetCodriverParameters_DK , payload )
+    return { '_message_type_' : 'SetCodriverParameters' , 'UTC_time' : msg[0] / 1 , 'jerk_lower' : msg[1] / 1 , 'jerk_higher' : msg[2] / 1 , 'reaction_time' : msg[3] / 1 , 'p1' : msg[4] / 1 , 'p2' : msg[5] / 1 , 'p3' : msg[6] / 1 }  
 
 
  
@@ -754,6 +985,54 @@ def all_MQTT_decoding( topic , payload ):
         dict = EnvironmentData_decode( payload )
     elif SetCodriverParameters_MQTT_topic_compare( topic ):
         dict = SetCodriverParameters_decode( payload )
+    else:
+        print('unmanaged topic:' + topic + ' - message discarderd')
+    return dict
+
+
+def all_MQTT_decoding_true_values( topic , payload ):
+    # return the proper decoded dictionary based on the base topic
+    dict = {}
+    if not topic: # null string return false
+        print('empty topic')
+    elif HostVehicle_MQTT_topic_compare( topic ):
+        dict = HostVehicle_decode_true_values( payload )
+    elif CAM_message_MQTT_topic_compare( topic ):
+        dict = CAM_message_decode_true_values( payload )
+    elif DENM_message_MQTT_topic_compare( topic ):
+        dict = DENM_message_decode_true_values( payload )
+    elif Strip_CAM_MQTT_topic_compare( topic ):
+        dict = Strip_CAM_decode_true_values( payload )
+    elif MAPEM_message_MQTT_topic_compare( topic ):
+        dict = MAPEM_message_decode_true_values( payload )
+    elif HMI_activations_MQTT_topic_compare( topic ):
+        dict = HMI_activations_decode_true_values( payload )
+    elif HMIinputsByApp_active_MQTT_topic_compare( topic ):
+        dict = HMIinputsByApp_active_decode_true_values( payload )
+    elif HMIinputsByApp_MQTT_topic_compare( topic ):
+        dict = HMIinputsByApp_decode_true_values( payload )
+    elif FirstTrajectoryMotorPrimitivesParameters_MQTT_topic_compare( topic ):
+        dict = FirstTrajectoryMotorPrimitivesParameters_decode_true_values( payload )
+    elif ManouevreTypes_MQTT_topic_compare( topic ):
+        dict = ManouevreTypes_decode_true_values( payload )
+    elif StrainGauge_MQTT_topic_compare( topic ):
+        dict = StrainGauge_decode_true_values( payload )
+    elif AutomationLevel_MQTT_topic_compare( topic ):
+        dict = AutomationLevel_decode_true_values( payload )
+    elif ParkingStatus_MQTT_topic_compare( topic ):
+        dict = ParkingStatus_decode_true_values( payload )
+    elif ParkingEvent_MQTT_topic_compare( topic ):
+        dict = ParkingEvent_decode_true_values( payload )
+    elif ParkingOutput_MQTT_topic_compare( topic ):
+        dict = ParkingOutput_decode_true_values( payload )
+    elif VirtualToll_input_MQTT_topic_compare( topic ):
+        dict = VirtualToll_input_decode_true_values( payload )
+    elif VirtualToll_output_MQTT_topic_compare( topic ):
+        dict = VirtualToll_output_decode_true_values( payload )
+    elif EnvironmentData_MQTT_topic_compare( topic ):
+        dict = EnvironmentData_decode_true_values( payload )
+    elif SetCodriverParameters_MQTT_topic_compare( topic ):
+        dict = SetCodriverParameters_decode_true_values( payload )
     else:
         print('unmanaged topic:' + topic + ' - message discarderd')
     return dict

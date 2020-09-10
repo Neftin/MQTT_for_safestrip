@@ -226,6 +226,10 @@ client.tls_insecure_set(True)
 client.username_pw_set(user, pwd)
 client.connect(ip, port, 60)
 
+#!!! manual ref (greece intersection)
+lat_ref = 40.5738211
+lon_ref = 22.9881428
+
 # update patchlist
 def update_patch_list( property_list ):
     global patches_list
@@ -238,6 +242,15 @@ def update_patch_list( property_list ):
     for p in reversed(property_list): # use reversed for FIFO input
         if k < number_of_maximum_patches:
             if 'Strip_' in p['_message_type_']: # StripCAM case
+                if first_ref: # first Strip_CAM CAM the reference is given
+                    lat_ref   = p['Latitude']/10000000
+                    lon_ref   = p['Longitude']/10000000
+                    UTC_ref   = p['UTC_time'] 
+                    epoch     = datetime.datetime.utcfromtimestamp(0) # 1970-1-1
+                    dt        = datetime.datetime.utcnow()            # utc now
+                    UTC_real_ref   = int(round((dt - epoch).total_seconds() * 1000.0)) # milliseconds precision (UTC)
+                    first_ref = False
+
                 xEast , yNorth , zUp = geodetic_to_enu(p['Latitude']/10000000,p['Longitude']/10000000,0.0,lat_ref,lon_ref,0.0)
                 magnify = 2
                 h = veh_w*magnify#max(veh_w*magnify_stipcam*(p['Speed']/(10*100)),2)  # scale with velocity to see
@@ -251,14 +264,15 @@ def update_patch_list( property_list ):
                 # ax.text( xEast, yNorth, 'boxed italics text in data coords', style='italic',
                 #     bbox={'facecolor': 'black', 'alpha': 0.5, 'pad': 10})
             elif 'CAM_' in p['_message_type_']:
-                if first_ref: # first CAM the reference is given
-                    lat_ref   = p['v2x_cam_Latitude']/10000000
-                    lon_ref   = p['v2x_cam_Longitude']/10000000
-                    UTC_ref   = p['UTC_time'] 
-                    epoch     = datetime.datetime.utcfromtimestamp(0) # 1970-1-1
-                    dt        = datetime.datetime.utcnow()            # utc now
-                    UTC_real_ref   = int(round((dt - epoch).total_seconds() * 1000.0)) # milliseconds precision (UTC)
-                    first_ref = False
+
+                # if first_ref: # first CAM the reference is given
+                #     lat_ref   = p['v2x_cam_Latitude']/10000000
+                #     lon_ref   = p['v2x_cam_Longitude']/10000000
+                #     UTC_ref   = p['UTC_time'] 
+                #     epoch     = datetime.datetime.utcfromtimestamp(0) # 1970-1-1
+                #     dt        = datetime.datetime.utcnow()            # utc now
+                #     UTC_real_ref   = int(round((dt - epoch).total_seconds() * 1000.0)) # milliseconds precision (UTC)
+                #     first_ref = False
 
                 epoch         = datetime.datetime.utcfromtimestamp(0) # 1970-1-1
                 dt            = datetime.datetime.utcnow()            # utc now
